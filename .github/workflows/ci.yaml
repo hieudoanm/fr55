@@ -33,7 +33,7 @@ jobs:
           cache-dependency-path: extensions/vscode/pnpm-lock.yaml
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           package_json_file: extensions/vscode/package.json
           run_install: false
