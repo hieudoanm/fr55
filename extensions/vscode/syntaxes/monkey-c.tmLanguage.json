@@ -1,0 +1,213 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Monkey C",
+  "scopeName": "source.monkeyc",
+  "fileTypes": ["mc"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#annotations"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#function-declaration"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#namespaces"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#variables"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.monkeyc",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.monkeyc",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "annotations": {
+      "patterns": [
+        {
+          "name": "storage.type.annotation.monkeyc",
+          "match": "\\(:\\s*[A-Za-z_][A-Za-z0-9_]*\\s*\\)"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.monkeyc",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.monkeyc",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hex.monkeyc",
+          "match": "\\b0[xX][0-9a-fA-F_]+\\b"
+        },
+        {
+          "name": "constant.numeric.binary.monkeyc",
+          "match": "\\b0[bB][01_]+\\b"
+        },
+        {
+          "name": "constant.numeric.float.monkeyc",
+          "match": "\\b\\d[\\d_]*\\.\\d[\\d_]*(?:[eE][+-]?\\d+)?[fFdD]?\\b|\\b\\d[\\d_]*[eE][+-]?\\d+[fFdD]?\\b"
+        },
+        {
+          "name": "constant.numeric.integer.monkeyc",
+          "match": "\\b\\d[\\d_]*[lL]?\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.monkeyc",
+          "match": "\\b(?:true|false|null)\\b"
+        },
+        {
+          "name": "constant.other.monkeyc",
+          "match": "\\b[A-Z][A-Z0-9_]{1,}\\b"
+        }
+      ]
+    },
+    "function-declaration": {
+      "name": "meta.function.monkeyc",
+      "begin": "\\b(function)\\s+([A-Za-z_]\\w*)\\s*(\\()",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.monkeyc"
+        },
+        "2": {
+          "name": "entity.name.function.monkeyc"
+        },
+        "3": {
+          "name": "punctuation.section.parameters.begin.monkeyc"
+        }
+      },
+      "end": "(\\))",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.section.parameters.end.monkeyc"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#annotations"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#constants"
+        },
+        {
+          "include": "#keywords"
+        },
+        {
+          "include": "#namespaces"
+        },
+        {
+          "include": "#types"
+        },
+        {
+          "match": "\\b[A-Za-z_]\\w*\\b",
+          "name": "variable.parameter.monkeyc"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.other.monkeyc",
+          "match": "\\b(?:as|break|case|catch|class|const|continue|default|do|else|enum|extends|finally|for|function|has|hidden|if|instanceof|me|module|native|new|private|protected|public|return|static|switch|throw|try|using|var|while)\\b"
+        }
+      ]
+    },
+    "namespaces": {
+      "patterns": [
+        {
+          "name": "entity.name.namespace.monkeyc",
+          "match": "\\b(?:Activity|Ant|Application|Attention|Background|BluetoothLowEnergy|Communications|Cryptography|Fit|Graphics|Gregorian|Lang|Layouts|Math|Media|Notifications|PersistedContent|Position|Properties|Rez|Sensor|StringUtil|System|Test|Time|Timer|Toybox|UserProfile|WatchUi|Weather)(?:\\.(?:Activity|Ant|Application|Attention|Background|BluetoothLowEnergy|Communications|Cryptography|Fit|Graphics|Gregorian|Lang|Layouts|Math|Media|Notifications|PersistedContent|Position|Properties|Rez|Sensor|StringUtil|System|Test|Time|Timer|Toybox|UserProfile|WatchUi|Weather))*\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.monkeyc",
+          "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.monkeyc",
+          "match": "\\b[A-Za-z_]\\w*(?=\\s*\\()"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.monkeyc",
+          "match": "=>|->|\\+=|-=|\\*=|/=|%=|&=|\\|=|\\^=|==|!=|<=|>=|&&|\\|\\||<<|>>|[-+*/%=!<>&|^~?:]"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.monkeyc",
+          "match": "\\b[A-Za-z_]\\w*\\b"
+        }
+      ]
+    }
+  }
+}

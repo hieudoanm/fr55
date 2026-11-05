@@ -1,0 +1,20 @@
+{
+  "iconDefinitions": {
+    "_monkeyc-on-dark": {
+      "iconPath": "./svg/monkey-c-on-dark.svg"
+    },
+    "_monkeyc-on-light": {
+      "iconPath": "./svg/monkey-c-on-light.svg"
+    }
+  },
+  "fileExtensions": {
+    "mc": "_monkeyc-on-dark",
+    "jungle": "_monkeyc-on-dark"
+  },
+  "light": {
+    "fileExtensions": {
+      "mc": "_monkeyc-on-light",
+      "jungle": "_monkeyc-on-light"
+    }
+  }
+}

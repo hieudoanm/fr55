@@ -1,0 +1,5 @@
+minimumReleaseAge: 0
+
+allowBuilds:
+  '@vscode/vsce-sign': false
+  'esbuild': false
