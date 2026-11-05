@@ -15,9 +15,9 @@ class TimeZonesView extends WatchUi.WatchFace {
   }
 
   function getHourForTimezone(offsetHours as Lang.Float) {
-    var deviceTime = System.getClockTime();// Get local device time
-    var gmtOffset = deviceTime.timeZoneOffset / 60.0 / 60.0;// Convert minutes to hours
-    var gmtHour = deviceTime.hour - gmtOffset;// Convert to GMT
+    var deviceTime = System.getClockTime(); // Get local device time
+    var gmtOffset = deviceTime.timeZoneOffset / 60.0 / 60.0; // Convert minutes to hours
+    var gmtHour = deviceTime.hour - gmtOffset; // Convert to GMT
 
     var targetHour = (gmtHour + offsetHours).toNumber() % 24;
 
@@ -44,8 +44,8 @@ class TimeZonesView extends WatchUi.WatchFace {
     var clockHour = clockTime.hour;
     var clockMinute = clockTime.min;
     // TimeZones
-    var londonOffset = 0.0;// UTC+0
-    var melbourneOffset = 10.0;// UTC+10 (standard time, no DST)
+    var londonOffset = 0.0; // UTC+0
+    var melbourneOffset = 10.0; // UTC+10 (standard time, no DST)
     var londonHour = getHourForTimezone(londonOffset);
     var melbourneHour = getHourForTimezone(melbourneOffset);
     // Text

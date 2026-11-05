@@ -29,7 +29,7 @@ class HandsView extends WatchUi.WatchFace {
     var minutes = clockTime.min;
 
     // Convert to angles
-    var hourAngle = (hours * 30) + (minutes / 60.0 * 30);// Hour moves slightly with minutes
+    var hourAngle = (hours * 30) + (minutes / 60.0 * 30); // Hour moves slightly with minutes
     var minuteAngle = minutes * 6;
 
     // Draw hour hand (shorter)

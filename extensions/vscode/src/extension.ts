@@ -1,18 +1,21 @@
-const vscode = require('vscode');
-const { formatMonkeyC, formatJungle } = require('./format-monkeyc');
-const { runtimePreview } = require('./runtime-preview');
+import * as vscode from 'vscode';
+import { formatJungle, formatMonkeyC, type FormatOptions } from './format-monkeyc';
+import { runtimePreview } from './runtime-preview';
 
-function fullRange(document) {
+function fullRange(document: vscode.TextDocument): vscode.Range {
   const last = document.lineAt(Math.max(0, document.lineCount - 1));
   return new vscode.Range(0, 0, last.range.end.line, last.range.end.character);
 }
 
-function makeEdit(document, formatted) {
+function makeEdit(document: vscode.TextDocument, formatted: string): vscode.TextEdit[] {
   if (formatted === document.getText()) return [];
   return [vscode.TextEdit.replace(fullRange(document), formatted)];
 }
 
-function formattingOptions(options, document) {
+function formattingOptions(
+  options: vscode.FormattingOptions,
+  document: vscode.TextDocument,
+): FormatOptions {
   return {
     insertSpaces: options.insertSpaces,
     tabSize: options.tabSize,
@@ -20,7 +23,7 @@ function formattingOptions(options, document) {
   };
 }
 
-function activate(context) {
+export function activate(context: vscode.ExtensionContext): void {
   const monkeyc = vscode.languages.registerDocumentFormattingEditProvider(
     { language: 'monkeyc', scheme: 'file' },
     {
@@ -51,6 +54,4 @@ function activate(context) {
   context.subscriptions.push(monkeyc, jungle, formatCommand, previewCommand);
 }
 
-function deactivate() {}
-
-module.exports = { activate, deactivate };
+export function deactivate(): void {}
