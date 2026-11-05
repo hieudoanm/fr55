@@ -1,0 +1,9 @@
+.vscode/**
+node_modules/**
+samples/**
+scripts/**
+dist/**
+package-lock.json
+.gitignore
+*.vsix
+**/.DS_Store

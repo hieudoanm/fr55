@@ -1,0 +1,155 @@
+{
+  "name": "monkey-c",
+  "displayName": "Monkey C",
+  "description": "Monkey C and Jungle syntax highlighting, formatting, dark color theme, and file icons for Garmin Connect IQ.",
+  "version": "0.0.1",
+  "publisher": "hieudoanm",
+  "author": "hieudoanm",
+  "license": "MIT",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Themes"
+  ],
+  "keywords": [
+    "monkey c",
+    "monkeyc",
+    "jungle",
+    "garmin",
+    "connect iq",
+    "watchface",
+    "syntax highlighting",
+    "formatter"
+  ],
+  "icon": "icons/png/monkey-c.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hieudoanm/fr55"
+  },
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:monkeyc",
+    "onLanguage:jungle",
+    "onCommand:monkeyc.formatDocument",
+    "onCommand:monkeyc.runtimePreview"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "monkeyc",
+        "aliases": [
+          "Monkey C",
+          "monkeyc"
+        ],
+        "extensions": [
+          ".mc",
+          ".mb",
+          ".mcgen"
+        ],
+        "configuration": "./languages/monkeyc/language-configuration.json",
+        "icon": {
+          "light": "./icons/svg/monkey-c-on-light.svg",
+          "dark": "./icons/svg/monkey-c-on-dark.svg"
+        }
+      },
+      {
+        "id": "jungle",
+        "aliases": [
+          "Jungle",
+          "jungle"
+        ],
+        "extensions": [
+          ".jungle"
+        ],
+        "configuration": "./languages/jungle/language-configuration.json",
+        "icon": {
+          "light": "./icons/svg/monkey-c-on-light.svg",
+          "dark": "./icons/svg/monkey-c-on-dark.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "monkeyc",
+        "scopeName": "source.monkeyc",
+        "path": "./syntaxes/monkey-c.tmLanguage.json"
+      },
+      {
+        "language": "jungle",
+        "scopeName": "source.jungle",
+        "path": "./syntaxes/jungle.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "id": "monkey-c",
+        "label": "Monkey C",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monkey-c-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "monkey-c-icons",
+        "label": "Monkey C Icons",
+        "path": "./icons/monkey-c-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "title": "Format Document",
+        "command": "monkeyc.formatDocument",
+        "category": "Monkey C"
+      },
+      {
+        "title": "Runtime Preview (Simulator)",
+        "command": "monkeyc.runtimePreview",
+        "category": "Monkey C"
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "monkeyc"
+      }
+    ],
+    "configurationDefaults": {
+      "[monkeyc]": {
+        "editor.defaultFormatter": "hieudoanm.monkey-c"
+      },
+      "[jungle]": {
+        "editor.defaultFormatter": "hieudoanm.monkey-c"
+      }
+    },
+    "configuration": {
+      "title": "Monkey C",
+      "properties": {
+        "monkeyC.sdkPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Connect IQ SDK root (contains bin/monkeyc, bin/monkeydo, bin/connectiq)."
+        },
+        "monkeyC.developerKeyPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Connect IQ developer key (.der) used for simulator builds."
+        },
+        "monkeyC.previewDevice": {
+          "type": "string",
+          "default": "fr55",
+          "description": "Connect IQ device id used for runtime preview builds/launches."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "test:format": "node -e \"const f=require('./src/format-monkeyc'); console.log(f.formatMonkeyC('class A{function x(){return 1;}}')); console.log(f.formatJungle('a=b'))\""
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.1.0"
+  }
+}

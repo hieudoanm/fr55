@@ -1,0 +1,59 @@
+{
+  "name": "Jungle",
+  "scopeName": "source.jungle",
+  "fileTypes": ["jungle"],
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#instruction" }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.jungle",
+          "begin": "#",
+          "end": "$"
+        }
+      ]
+    },
+    "instruction": {
+      "match": "^([^=\\r\\n]*)(=)([^\\r\\n]*)$",
+      "captures": {
+        "1": {
+          "name": "variable.other.lvalue.jungle",
+          "patterns": [{ "include": "#properties" }, { "include": "#lookup" }]
+        },
+        "2": { "name": "keyword.operator.assignment.jungle" },
+        "3": {
+          "name": "variable.other.rvalue.jungle",
+          "patterns": [{ "include": "#lookup" }, { "include": "#path-separators" }]
+        }
+      }
+    },
+    "path-separators": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.path.jungle",
+          "match": "[;:]"
+        }
+      ]
+    },
+    "lookup": {
+      "name": "variable.other.lookup.jungle",
+      "match": "\\$\\((?:[A-Za-z0-9_.-]+)\\)",
+      "captures": {
+        "0": {
+          "patterns": [{ "include": "#properties" }]
+        }
+      }
+    },
+    "properties": {
+      "patterns": [
+        {
+          "name": "storage.type.property.jungle",
+          "match": "\\.(?:manifest|sourcePath|resourcePath|excludeAnnotations|barrelPath|annotations|lang|personality|project\\.manifest|project\\.typecheck)\\b"
+        }
+      ]
+    }
+  }
+}
