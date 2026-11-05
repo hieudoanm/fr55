@@ -46,9 +46,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner,
@@ -87,10 +86,7 @@ a {
 
 .hero {
   padding: 88px 0 72px;
-  background:
-    radial-gradient(circle at top left, rgba(229, 57, 53, 0.18), transparent 28%),
-    radial-gradient(circle at top, #1a202b 0, transparent 45%),
-    linear-gradient(180deg, var(--bg), var(--bg-alt));
+  background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
 }
 
@@ -153,13 +149,11 @@ h2 {
   font-weight: 600;
   transition:
     background 120ms ease,
-    border-color 120ms ease,
-    transform 120ms ease;
+    border-color 120ms ease;
 }
 
 .button:hover {
   border-color: #3a465c;
-  transform: translateY(-1px);
 }
 
 .button.primary {
@@ -194,7 +188,7 @@ h2 {
 }
 
 .feature {
-  background: color-mix(in srgb, var(--card) 92%, black);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 22px;
@@ -220,7 +214,7 @@ h2 {
   justify-content: space-between;
   gap: 20px;
   padding: 28px;
-  background: linear-gradient(135deg, #181d27, #121722);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 20px;
 }
@@ -232,7 +226,7 @@ h2 {
 
 .site-footer {
   border-top: 1px solid var(--border);
-  background: #090b0f;
+  background: var(--bg);
 }
 
 .footer-inner p {
