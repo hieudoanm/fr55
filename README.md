@@ -4,7 +4,7 @@
 
 Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
 
-**Keywords:** Garmin, Forerunner 55, FR55, Connect IQ, Monkey C, Jungle, watchface, VS Code extension, simulator, VSIX.
+**Keywords:** `Garmin`, `Forerunner 55`, `FR55`, `Connect IQ`, `Monkey C`, `Watchfaces`, `VS Code Extension`, `VSIX`.
 
 ## What’s in this repo
 
