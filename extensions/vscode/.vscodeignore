@@ -1,0 +1,16 @@
+.vscode/**
+src/**
+node_modules/**
+samples/**
+scripts/**
+dist/**
+out/**/*.map
+package-lock.json
+pnpm-lock.yaml
+.gitignore
+.prettierignore
+eslint.config.mjs
+prettier.config.mjs
+tsconfig.json
+*.vsix
+**/.DS_Store

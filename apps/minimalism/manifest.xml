@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
+  <iq:application id="97632e2e-318b-41f7-a444-d911596b8bf9" type="watchface" name="@Strings.AppName" entry="MinimalismApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="1.2.0">
+    <iq:products>
+      <iq:product id="fr55"/>
+      <iq:product id="venu3"/>
+      <iq:product id="fenix7"/>
+      <iq:product id="epix2"/>
+      <iq:product id="fr965"/>
+      <iq:product id="vivoactive5"/>
+    </iq:products>
+    <iq:permissions/>
+    <iq:languages><iq:language>eng</iq:language></iq:languages>
+    <iq:barrels/>
+  </iq:application>
+</iq:manifest>
