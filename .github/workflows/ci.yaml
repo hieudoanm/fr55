@@ -8,11 +8,18 @@ on:
   pull_request:
     paths:
       - "extensions/vscode/**"
+      - "extensions/landing/**"
       - ".github/workflows/ci.yaml"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -90,6 +97,29 @@ jobs:
           body_path: extensions/vscode/README.md
           files: dist/monkey-c.vsix
           fail_on_unmatched_files: true
-          prerelease: true
+          prerelease: false
           make_latest: true
           overwrite_files: true
+
+  deploy-pages:
+    name: Deploy landing page
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: extensions/landing
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
