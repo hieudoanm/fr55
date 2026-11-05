@@ -1,5 +1,5 @@
 minimumReleaseAge: 0
 
-onlyBuiltDependencies:
-  - '@vscode/vsce-sign'
-  - esbuild
+allowBuilds:
+  '@vscode/vsce-sign': false
+  'esbuild': false
