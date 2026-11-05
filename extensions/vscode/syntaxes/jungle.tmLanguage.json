@@ -2,10 +2,7 @@
   "name": "Jungle",
   "scopeName": "source.jungle",
   "fileTypes": ["jungle"],
-  "patterns": [
-    { "include": "#comment" },
-    { "include": "#instruction" }
-  ],
+  "patterns": [{ "include": "#comment" }, { "include": "#instruction" }],
   "repository": {
     "comment": {
       "patterns": [

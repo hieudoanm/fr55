@@ -41,10 +41,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Check formatting
+        run: pnpm run format:check
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
+
       - name: Package extension
-        run: |
-          pnpm exec vsce package --no-dependencies --out monkey-c.vsix
-          echo "Built monkey-c.vsix"
+        run: pnpm run package -- --out monkey-c.vsix
 
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v7
