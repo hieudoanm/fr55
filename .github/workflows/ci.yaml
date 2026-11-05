@@ -91,7 +91,7 @@ jobs:
         uses: softprops/action-gh-release@v3.0.4
         with:
           tag_name: latest
-          name: latest
+          name: "Monkey C for VS Code (latest)"
           target_commitish: ${{ github.sha }}
           body_path: extensions/vscode/README.md
           files: dist/monkey-c.vsix
@@ -101,7 +101,7 @@ jobs:
           overwrite_files: true
 
   deploy-pages:
-    name: Deploy landing page
+    name: Deploy Landing Page
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
