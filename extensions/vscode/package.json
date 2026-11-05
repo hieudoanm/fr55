@@ -30,7 +30,7 @@
     "type": "git",
     "url": "https://github.com/hieudoanm/fr55"
   },
-  "main": "./src/extension.js",
+  "main": "./out/extension.js",
   "activationEvents": [
     "onLanguage:monkeyc",
     "onLanguage:jungle",
@@ -146,10 +146,29 @@
     }
   },
   "scripts": {
-    "package": "vsce package",
-    "test:format": "node -e \"const f=require('./src/format-monkeyc'); console.log(f.formatMonkeyC('class A{function x(){return 1;}}')); console.log(f.formatJungle('a=b'))\""
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "lint": "eslint src",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "vscode:prepublish": "pnpm run build",
+    "package": "vsce package --no-dependencies",
+    "test:format": "node -e \"const f=require('./out/format-monkeyc'); console.log(f.formatMonkeyC('class A{function x(){return 1;}}')); console.log(f.formatJungle('a=b'))\"",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
-    "@vscode/vsce": "4.1.0"
+    "@eslint/js": "9.39.1",
+    "@types/node": "22.19.1",
+    "@types/vscode": "1.80.0",
+    "@vscode/vsce": "4.1.0",
+    "eslint": "9.39.1",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "16.5.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.4",
+    "vitest": "^3.2.4"
   }
 }

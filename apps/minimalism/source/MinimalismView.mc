@@ -36,18 +36,18 @@ class MinimalismView extends WatchUi.WatchFace {
     var clockMinute = clockTime.min;
     // Hours
     var hour = clockHour.toFloat() + clockMinute.toFloat() / 60.toFloat();
-    var hourAngle = (hour - 3) * 30 * (Math.PI / 180);// Convert to radians
-    var hourX = centerX + (radius * Math.cos(hourAngle));// Use cos() for X
-    var hourY = centerY + (radius * Math.sin(hourAngle));// Use sin() for Y
+    var hourAngle = (hour - 3) * 30 * (Math.PI / 180); // Convert to radians
+    var hourX = centerX + (radius * Math.cos(hourAngle)); // Use cos() for X
+    var hourY = centerY + (radius * Math.sin(hourAngle)); // Use sin() for Y
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
     dc.fillCircle(hourX.toNumber(), hourY.toNumber(), 10);
     // Minutes
-    var minuteAngle = ((clockMinute + 45) * 6) * (Math.PI / 180);// Convert to radians
-    var minuteX = centerX + (radius * Math.cos(minuteAngle));// Use cos() for X
-    var minuteY = centerY + (radius * Math.sin(minuteAngle));// Use sin() for Y
+    var minuteAngle = ((clockMinute + 45) * 6) * (Math.PI / 180); // Convert to radians
+    var minuteX = centerX + (radius * Math.cos(minuteAngle)); // Use cos() for X
+    var minuteY = centerY + (radius * Math.sin(minuteAngle)); // Use sin() for Y
     dc.fillCircle(minuteX.toNumber(), minuteY.toNumber(), 5);
     // Heart Rate
-    var currentHeartRate = Activity.getActivityInfo().currentHeartRate;//get the latest HR if available
+    var currentHeartRate = Activity.getActivityInfo().currentHeartRate; // get the latest HR if available
     var text = clockHour.format("%02d") + ":" + clockMinute.format("%02d");
     if (currentHeartRate != null) {
       text = currentHeartRate.toString();

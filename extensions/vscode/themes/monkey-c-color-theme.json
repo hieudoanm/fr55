@@ -85,11 +85,7 @@
     },
     {
       "name": "Annotations",
-      "scope": [
-        "storage.type.annotation",
-        "meta.annotation",
-        "entity.name.function.decorator"
-      ],
+      "scope": ["storage.type.annotation", "meta.annotation", "entity.name.function.decorator"],
       "settings": {
         "foreground": "#D7BA7D"
       }

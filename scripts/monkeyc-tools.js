@@ -1,20 +1,27 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const { formatMonkeyC } = require('../extensions/vscode/src/format-monkeyc');
+const cp = require('child_process');
 
 const root = path.resolve(__dirname, '..');
+const extRoot = path.resolve(root, 'extensions/vscode');
+const out = path.resolve(extRoot, 'out/format-monkeyc.js');
+if (!fs.existsSync(out)) {
+  cp.execFileSync('pnpm', ['run', 'build'], { cwd: extRoot, stdio: 'inherit' });
+}
+const { formatMonkeyC } = require(out);
+
 const mode = process.argv[2] || 'lint';
 const targets = process.argv.slice(3);
 
-function walk(dir, out = []) {
+function walk(dir, list = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'bin') continue;
+    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'bin' || entry.name === 'out' || entry.name === 'dist') continue;
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, out);
-    else if (entry.isFile() && full.endsWith('.mc')) out.push(full);
+    if (entry.isDirectory()) walk(full, list);
+    else if (entry.isFile() && full.endsWith('.mc')) list.push(full);
   }
-  return out;
+  return list;
 }
 
 function lintFile(file, text) {
@@ -29,7 +36,8 @@ function lintFile(file, text) {
     else if (inBlock && line.includes('*/')) inBlock = false;
   });
   const formatted = formatMonkeyC(text, { insertSpaces: true, tabSize: 2, eol: '\n' });
-  if (formatted !== text.replace(/\r\n?/g, '\n')) issues.push({ file, n: 1, msg: 'file is not formatted (run scripts/format.sh)' });
+  if (formatted !== text.replace(/\r\n?/g, '\n'))
+    issues.push({ file, n: 1, msg: 'file is not formatted (run scripts/format.sh)' });
   return issues;
 }
 
@@ -57,7 +65,8 @@ if (mode === 'format' || mode === 'fmt') {
 }
 
 if (issues.length) {
-  for (const issue of issues) console.error(`${path.relative(root, issue.file)}:${issue.n}: ${issue.msg}`);
+  for (const issue of issues)
+    console.error(`${path.relative(root, issue.file)}:${issue.n}: ${issue.msg}`);
   console.error(`${issues.length} issue(s) in ${files.length} file(s)`);
   process.exit(1);
 }

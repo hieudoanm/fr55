@@ -40,9 +40,9 @@ class MaximalismView extends WatchUi.WatchFace {
     var clockMinute = clockTime.min;
     // Hours
     for (var i = -2; i < 10; i++) {
-      var angle = i * 30 * (Math.PI / 180);// Convert degrees to radians
-      var x = centerX + (radius * Math.cos(angle));// Use cos() for X
-      var y = centerY + (radius * Math.sin(angle));// Use sin() for Y
+      var angle = i * 30 * (Math.PI / 180); // Convert degrees to radians
+      var x = centerX + (radius * Math.cos(angle)); // Use cos() for X
+      var y = centerY + (radius * Math.sin(angle)); // Use sin() for Y
 
       var hour = i + 3;
       var dotRadius = 5;
@@ -56,22 +56,22 @@ class MaximalismView extends WatchUi.WatchFace {
       dc.fillCircle(x.toNumber(), y.toNumber(), dotRadius);
     }
     // Minutes
-    var minuteAngle = ((clockMinute + 45) * 6) * (Math.PI / 180);// Convert to radians
+    var minuteAngle = ((clockMinute + 45) * 6) * (Math.PI / 180); // Convert to radians
     var minuteX = centerX + (radius * Math.cos(minuteAngle));
     var minuteY = centerY + (radius * Math.sin(minuteAngle));
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
     dc.fillCircle(minuteX, minuteY, 5);
 
     // Get battery level
-    var batteryLevel = "--";// Default
+    var batteryLevel = "--"; // Default
     try {
       var systemStats = System.getSystemStats();
       batteryLevel = systemStats.battery.toNumber().toString();
     } catch (ex) {
-      batteryLevel = "N/A";// Error handling
+      batteryLevel = "N/A"; // Error handling
     }
     // Heart Rate
-    var currentHeartRate = Activity.getActivityInfo().currentHeartRate;//get the latest HR if available
+    var currentHeartRate = Activity.getActivityInfo().currentHeartRate; // get the latest HR if available
     var heartRate = clockHour.format("%02d") + ":" + clockMinute.format("%02d");
     if (currentHeartRate != null) {
       heartRate = currentHeartRate.toString();

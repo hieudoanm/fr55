@@ -72,19 +72,19 @@ code --install-extension dist/monkey-c.vsix --force
 
 ## Scopes
 
-| Scope | Tokens |
-| --- | --- |
-| `comment.line.double-slash.monkeyc` / `comment.block.monkeyc` | `// ...`, `/* ... */` |
-| `string.quoted.double.monkeyc` | `"Hello Garmin"` |
-| `constant.numeric.*.monkeyc` | `0xFF`, `3.14`, `240` |
-| `constant.language.monkeyc` | `true`, `false`, `null` |
-| `keyword.other.monkeyc` | `class`, `function`, `var`, `using`, control flow |
-| `entity.name.function.monkeyc` | `initialize()`, `drawText()` |
-| `storage.type.annotation.monkeyc` | `(:background)` |
-| `comment.line.number-sign.jungle` | `# comment` |
-| `storage.type.property.jungle` | `.sourcePath`, `.resourcePath`, `.manifest` |
-| `keyword.operator.assignment.jungle` | `=` |
-| `variable.other.lookup.jungle` | `$(base.sourcePath)` |
+| Scope                                                         | Tokens                                            |
+| ------------------------------------------------------------- | ------------------------------------------------- |
+| `comment.line.double-slash.monkeyc` / `comment.block.monkeyc` | `// ...`, `/* ... */`                             |
+| `string.quoted.double.monkeyc`                                | `"Hello Garmin"`                                  |
+| `constant.numeric.*.monkeyc`                                  | `0xFF`, `3.14`, `240`                             |
+| `constant.language.monkeyc`                                   | `true`, `false`, `null`                           |
+| `keyword.other.monkeyc`                                       | `class`, `function`, `var`, `using`, control flow |
+| `entity.name.function.monkeyc`                                | `initialize()`, `drawText()`                      |
+| `storage.type.annotation.monkeyc`                             | `(:background)`                                   |
+| `comment.line.number-sign.jungle`                             | `# comment`                                       |
+| `storage.type.property.jungle`                                | `.sourcePath`, `.resourcePath`, `.manifest`       |
+| `keyword.operator.assignment.jungle`                          | `=`                                               |
+| `variable.other.lookup.jungle`                                | `$(base.sourcePath)`                              |
 
 ## Layout
 
