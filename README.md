@@ -4,6 +4,8 @@
 
 Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
 
+**Keywords:** Garmin, Forerunner 55, FR55, Connect IQ, Monkey C, Jungle, watchface, VS Code extension, simulator, VSIX.
+
 ## What’s in this repo
 
 - **[`apps/`](apps/)** — buildable Connect IQ watchface apps. Each app has its own `manifest.xml`, `monkey.jungle`, `resources/`, `*View.mc`, and `*App.mc` so it can be built/run independently.
