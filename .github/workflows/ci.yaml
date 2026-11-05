@@ -47,7 +47,7 @@ jobs:
           echo "Built monkey-c.vsix"
 
       - name: Upload VSIX artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: monkey-c
           path: extensions/vscode/monkey-c.vsix
@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download VSIX artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: monkey-c
           path: dist
