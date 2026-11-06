@@ -6,7 +6,7 @@
   "publisher": "hieudoanm",
   "author": "hieudoanm",
   "license": "MIT",
-  "packageManager": "pnpm@12.16.1",
+  "packageManager": "pnpm@12.18.0",
   "engines": {
     "vscode": "1.145.1"
   },
