@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+grammars/*/node_modules/
+grammars/*/build/

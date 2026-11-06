@@ -1,0 +1,37 @@
+{
+  "$schema": "https://zed.dev/schema/icon_themes/v0.3.0.json",
+  "name": "Monkey C Icons",
+  "author": "hieudoanm",
+  "themes": [
+    {
+      "name": "Monkey C Icons",
+      "appearance": "dark",
+      "file_icons": {
+        "monkey-c": {
+          "path": "icons/monkey-c-on-dark.svg"
+        }
+      },
+      "file_suffixes": {
+        "mc": "monkey-c",
+        "mb": "monkey-c",
+        "mcgen": "monkey-c",
+        "jungle": "monkey-c"
+      }
+    },
+    {
+      "name": "Monkey C Icons",
+      "appearance": "light",
+      "file_icons": {
+        "monkey-c": {
+          "path": "icons/monkey-c-on-light.svg"
+        }
+      },
+      "file_suffixes": {
+        "mc": "monkey-c",
+        "mb": "monkey-c",
+        "mcgen": "monkey-c",
+        "jungle": "monkey-c"
+      }
+    }
+  ]
+}

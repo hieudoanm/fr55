@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Monkey C: Runtime Preview",
+    "command": "monkey-c-preview",
+    "args": ["--file", "$ZED_FILE"],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always",
+    "save": "all"
+  },
+  {
+    "label": "Monkey C: Build PRG",
+    "command": "monkey-c-preview",
+    "args": ["--file", "$ZED_FILE", "--build-only"],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "no_focus",
+    "save": "all"
+  }
+]

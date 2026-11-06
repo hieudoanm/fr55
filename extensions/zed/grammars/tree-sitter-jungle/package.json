@@ -1,0 +1,16 @@
+{
+  "name": "tree-sitter-jungle",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for Garmin Connect IQ Jungle files",
+  "license": "MIT",
+  "main": "bindings/node",
+  "keywords": ["tree-sitter", "jungle", "garmin", "connect-iq"],
+  "files": ["grammar.js", "tree-sitter.json", "queries/**", "src/**"],
+  "devDependencies": {
+    "tree-sitter-cli": "0.25.3"
+  },
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test"
+  }
+}

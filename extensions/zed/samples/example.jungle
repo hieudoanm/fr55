@@ -1,0 +1,9 @@
+# Shared watchface package.
+project.manifest = manifest.xml
+
+base.sourcePath = source
+base.resourcePath = resources
+base.excludeAnnotations = debug
+
+fr55.sourcePath = $(base.sourcePath);devices/fr55/source
+fr55.resourcePath = $(base.resourcePath);devices/fr55/resources

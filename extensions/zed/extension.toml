@@ -1,0 +1,16 @@
+id = "monkey-c"
+name = "Monkey C"
+version = "0.0.1"
+schema_version = 1
+authors = ["hieudoanm"]
+description = "Monkey C and Jungle syntax highlighting, formatting, theme, icons, and Connect IQ runtime preview for Garmin Connect IQ."
+repository = "https://github.com/hieudoanm/fr55"
+
+[grammars.monkeyc]
+repository = "https://github.com/DuckSoft/tree-sitter-monkeyc"
+rev = "f361cf8bf1be8c7d67b2255a4f8d1a394baf9dd2"
+
+[grammars.jungle]
+repository = "https://github.com/hieudoanm/fr55"
+rev = "master"
+path = "extensions/zed/grammars/tree-sitter-jungle"

@@ -1,0 +1,81 @@
+==================
+simple assignments
+==================
+
+# Jungle file
+base.sourcePath = source
+base.resourcePath = resources
+project.manifest = manifest.xml
+
+---
+
+(document
+  (comment)
+  (pair
+    (key
+      (key_segment)
+      (key_segment))
+    (value
+      (value_text)))
+  (pair
+    (key
+      (key_segment)
+      (key_segment))
+    (value
+      (value_text)))
+  (pair
+    (key
+      (key_segment)
+      (key_segment))
+    (value
+      (value_text))))
+
+==================
+lookups and path separators
+==================
+
+foo = $(base.sourcePath)/bar;$(base.resourcePath)/baz:extra
+
+---
+
+(document
+  (pair
+    (key
+      (key_segment))
+    (value
+      (lookup
+        (lookup_name))
+      (value_text)
+      (path_separator)
+      (lookup
+        (lookup_name))
+      (value_text)
+      (path_separator)
+      (value_text))))
+
+==================
+empty value
+==================
+
+empty =
+
+---
+
+(document
+  (pair
+    (key
+      (key_segment))))
+
+==================
+no trailing newline
+==================
+
+a = b
+---
+
+(document
+  (pair
+    (key
+      (key_segment))
+    (value
+      (value_text))))
