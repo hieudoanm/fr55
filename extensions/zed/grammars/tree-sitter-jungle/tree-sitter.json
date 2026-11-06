@@ -1,0 +1,25 @@
+{
+  "grammars": [
+    {
+      "name": "jungle",
+      "camelcase": "Jungle",
+      "scope": "source.jungle",
+      "path": ".",
+      "file-types": ["jungle"],
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for Garmin Connect IQ Jungle files",
+    "authors": [
+      {
+        "name": "hieudoanm"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/hieudoanm/fr55"
+    }
+  }
+}

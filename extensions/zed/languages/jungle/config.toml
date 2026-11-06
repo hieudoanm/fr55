@@ -1,0 +1,9 @@
+name = "Jungle"
+grammar = "jungle"
+path_suffixes = ["jungle"]
+line_comments = ["# "]
+tab_size = 2
+brackets = [
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "[", end = "]", close = true, newline = false },
+]

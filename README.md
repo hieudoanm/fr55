@@ -14,6 +14,7 @@ Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240�
   - `maximalism/` — 12-hour dot ring, minute marker, battery + heart rate.
   - `timezones/` — stacked London, local/Saigon, and Melbourne times.
 - **[`extensions/vscode/`](extensions/vscode/)** — Monkey C/Jungle VS Code extension with syntax highlighting, document formatting, a dark theme, file icons, and a Connect IQ SDK/simulator runtime preview command.
+- **[`extensions/zed/`](extensions/zed/)** — Monkey C/Jungle Zed extension with Tree-sitter highlighting, an external formatter, a dark theme, file icons, and Connect IQ runtime-preview tasks.
 - **[`assets/`](assets/)** — shared assets: design previews (`assets/design/svg|png`), logos (`assets/logo/svg|png`), and Open Graph image (`assets/og/svg|png`).
 - **[`scripts/`](scripts/)** — repo scripts, including Monkey C format/lint helpers (`format.sh`, `lint.sh`, `monkeyc-tools.js`).
 - **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — packages the VS Code extension and publishes a rolling `latest` GitHub release with the VSIX.
@@ -30,6 +31,7 @@ Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240�
 │   └── timezones/
 ├── assets/                     # design previews, logos, OG images, svg-to-png.sh
 ├── extensions/vscode/          # Monkey C/Jungle VS Code extension
+├── extensions/zed/             # Monkey C/Jungle Zed extension
 └── scripts/                    # Monkey C format/lint scripts
 ```
 
@@ -74,6 +76,25 @@ cd extensions/vscode
 pnpm install --frozen-lockfile
 pnpm exec vsce package --no-dependencies --out monkey-c.vsix
 ```
+
+## Zed extension
+
+[`extensions/zed`](extensions/zed) brings the same editor surface to Zed using
+Tree-sitter:
+
+- Monkey C/Jungle highlighting, brackets, indentation, folds, outline, and text objects.
+- External formatter (`monkey-c-format`) for both languages.
+- Dark theme and file icon theme.
+- **Monkey C: Runtime Preview** and **Monkey C: Build PRG** tasks using the Connect IQ SDK/simulator.
+
+```bash
+cd extensions/zed
+./scripts/install.sh   # put monkey-c-format / monkey-c-preview on PATH
+make test              # formatter tests + Jungle grammar tests
+```
+
+See [`extensions/zed/README.md`](extensions/zed/README.md) for Zed formatter
+settings, task usage, and the vendored Jungle grammar requirement.
 
 ## Monkey C scripts
 

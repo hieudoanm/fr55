@@ -244,6 +244,88 @@ code {
   border-radius: 6px;
 }
 
+.editors {
+  padding: 72px 0;
+}
+
+.editors .container {
+  max-width: 900px;
+}
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.editor-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editor-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.editor-card p {
+  margin: 0;
+  color: var(--muted);
+  flex: 1;
+}
+
+.editor-actions {
+  margin-top: auto;
+}
+
+.zed-steps {
+  max-width: 760px;
+}
+
+.zed-steps h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.zed-steps h3:first-child {
+  margin-top: 0;
+}
+
+.zed-steps ol {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.zed-steps li {
+  margin-bottom: 6px;
+}
+
+.zed-steps pre {
+  margin: 12px 0;
+  padding: 16px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.zed-steps code {
+  font-size: 0.9rem;
+}
+
+.zed-steps pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 720px) {
   .container {
     width: min(var(--max), calc(100% - 32px));
