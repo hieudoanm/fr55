@@ -209,7 +209,7 @@ tests with `tree-sitter test`. You can also run them individually:
 
 ```bash
 node --test formatter/
-cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.25.3 test
+cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.27.1 test
 ```
 
 Validate JSON/TOML files with any JSON parser and Python's `tomllib`:

@@ -105,7 +105,7 @@ settings, task usage, and the vendored Jungle grammar requirement.
 
 ## CI and releases
 
-`.github/workflows/ci.yaml` runs for changes under `extensions/vscode/**` and on workflow dispatch. On pushes to `master`/`main`, it updates the rolling GitHub release tagged `latest`:
+`.github/workflows/ci.yaml` runs for changes under `apps/**`, `scripts/**`, `extensions/vscode/**`, `extensions/zed/**`, `extensions/landing/**`, and on workflow dispatch. On pushes to `master`, it updates the rolling GitHub release tagged `latest`:
 
 - asset: `monkey-c.vsix`
 - release notes: [`extensions/vscode/README.md`](extensions/vscode/README.md)

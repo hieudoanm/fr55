@@ -1,13 +1,10 @@
 import Toybox.Activity;
 import Toybox.Graphics;
-import Toybox.Lang;
 import Toybox.Math;
 import Toybox.System;
 import Toybox.WatchUi;
 
 class MaximalismView extends WatchUi.WatchFace {
-  var heartRate = "--";
-
   function initialize() {
     WatchFace.initialize();
   }
@@ -21,6 +18,7 @@ class MaximalismView extends WatchUi.WatchFace {
   // the state of this View and prepare it to be shown. This includes
   // loading resources into memory.
   function onShow() as Void {
+    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
   }
 
   // Update the view
@@ -39,6 +37,10 @@ class MaximalismView extends WatchUi.WatchFace {
     var clockHour = clockTime.hour;
     var clockMinute = clockTime.min;
     // Hours
+    var currentHour = clockHour % 12;
+    if (currentHour == 0) {
+      currentHour = 12;
+    }
     for (var i = -2; i < 10; i++) {
       var angle = i * 30 * (Math.PI / 180); // Convert degrees to radians
       var x = centerX + (radius * Math.cos(angle)); // Use cos() for X
@@ -46,7 +48,7 @@ class MaximalismView extends WatchUi.WatchFace {
 
       var hour = i + 3;
       var dotRadius = 5;
-      if (clockHour % 12 == hour) {
+      if (currentHour == hour) {
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
         dotRadius = 10;
       } else {
@@ -60,7 +62,7 @@ class MaximalismView extends WatchUi.WatchFace {
     var minuteX = centerX + (radius * Math.cos(minuteAngle));
     var minuteY = centerY + (radius * Math.sin(minuteAngle));
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-    dc.fillCircle(minuteX, minuteY, 5);
+    dc.fillCircle(minuteX.toNumber(), minuteY.toNumber(), 5);
 
     // Get battery level
     var batteryLevel = "--"; // Default

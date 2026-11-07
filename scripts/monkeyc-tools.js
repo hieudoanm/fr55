@@ -12,11 +12,19 @@ if (!fs.existsSync(out)) {
 const { formatMonkeyC } = require(out);
 
 const mode = process.argv[2] || 'lint';
+const isFormat = mode === 'format' || mode === 'fmt';
+const isLint = mode === 'lint';
+if (!isFormat && !isLint) {
+  console.error(`usage: monkeyc-tools.js <format|lint> [files-or-dirs...]`);
+  process.exit(2);
+}
 const targets = process.argv.slice(3);
+
+const SKIP_DIRS = new Set(['node_modules', '.git', 'bin', 'out', 'dist']);
 
 function walk(dir, list = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'bin' || entry.name === 'out' || entry.name === 'dist') continue;
+    if (SKIP_DIRS.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full, list);
     else if (entry.isFile() && full.endsWith('.mc')) list.push(full);
@@ -24,16 +32,29 @@ function walk(dir, list = []) {
   return list;
 }
 
+function collectFiles(targets) {
+  if (!targets.length) return walk(root);
+  const files = [];
+  for (const target of targets) {
+    const full = path.resolve(root, target);
+    if (!fs.existsSync(full)) {
+      console.error(`not found: ${target}`);
+      process.exit(2);
+    }
+    if (fs.statSync(full).isDirectory()) files.push(...walk(full));
+    else if (full.endsWith('.mc')) files.push(full);
+    else console.error(`skipping non-Monkey C file: ${target}`);
+  }
+  return files;
+}
+
 function lintFile(file, text) {
   const issues = [];
   const lines = text.split(/\r?\n/);
-  let inBlock = false;
   lines.forEach((line, i) => {
     const n = i + 1;
     if (/[ \t]+$/.test(line)) issues.push({ file, n, msg: 'trailing whitespace' });
     if (/\t/.test(line)) issues.push({ file, n, msg: 'tab indentation (use spaces)' });
-    if (!inBlock && line.includes('/*')) inBlock = !line.includes('*/');
-    else if (inBlock && line.includes('*/')) inBlock = false;
   });
   const formatted = formatMonkeyC(text, { insertSpaces: true, tabSize: 2, eol: '\n' });
   if (formatted !== text.replace(/\r\n?/g, '\n'))
@@ -41,13 +62,12 @@ function lintFile(file, text) {
   return issues;
 }
 
-const files = targets.length ? targets.map((p) => path.resolve(root, p)) : walk(root);
+const files = collectFiles(targets);
 let changed = 0;
 let issues = [];
 for (const file of files) {
-  if (!fs.existsSync(file) || !file.endsWith('.mc')) continue;
   const text = fs.readFileSync(file, 'utf8');
-  if (mode === 'format' || mode === 'fmt') {
+  if (isFormat) {
     const formatted = formatMonkeyC(text, { insertSpaces: true, tabSize: 2, eol: '\n' });
     if (formatted !== text) {
       fs.writeFileSync(file, formatted);
@@ -59,7 +79,7 @@ for (const file of files) {
   }
 }
 
-if (mode === 'format' || mode === 'fmt') {
+if (isFormat) {
   console.log(`${changed} file(s) formatted, ${files.length} checked`);
   process.exit(0);
 }

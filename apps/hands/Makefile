@@ -1,4 +1,4 @@
-.PHONY: build run clean
+.PHONY: build run simulator clean
 
 DEVICE ?= fr55
 SDK ?= $(HOME)/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.3.0-2026-10-20-95888f262
@@ -13,7 +13,9 @@ build:
 	"$(MONKEYC)" -f monkey.jungle -d $(DEVICE) -o "$(OUTPUT)" -y "$(DEVELOPER_KEY)" -w
 
 simulator:
-	"$(CONNECTIQ)" >/dev/null 2>&1 &
+	@if ! pgrep -f "$(CONNECTIQ)" >/dev/null 2>&1; then \
+		"$(CONNECTIQ)" >/dev/null 2>&1 & \
+	fi
 
 run: build simulator
 	sleep 2
