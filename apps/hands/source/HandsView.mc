@@ -1,8 +1,8 @@
 import Toybox.Graphics;
+import Toybox.Lang;
 import Toybox.Math;
 import Toybox.System;
 import Toybox.WatchUi;
-import Toybox.Time.Gregorian;
 
 class HandsView extends WatchUi.WatchFace {
   function initialize() {
@@ -14,7 +14,11 @@ class HandsView extends WatchUi.WatchFace {
     setLayout(Rez.Layouts.HandsLayout(dc));
   }
 
-  function onUpdate(dc) {
+  function onShow() as Void {
+    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
+  }
+
+  function onUpdate(dc as Dc) as Void {
     // Draw a circle at the center
     var screenWidth = dc.getWidth();
     var screenHeight = dc.getHeight();
@@ -37,18 +41,15 @@ class HandsView extends WatchUi.WatchFace {
 
     // Draw minute hand (longer)
     drawHand(dc, centerX, centerY, minuteAngle, screenWidth * 0.45, 4);
-
-    // Request update every minute
-    WatchUi.requestUpdate();
   }
 
-  function drawHand(dc, x, y, angle, length, thickness) {
+  function drawHand(dc as Dc, x as Lang.Number, y as Lang.Number, angle as Lang.Float, length as Lang.Float, thickness as Lang.Number) as Void {
     var rad = angle * Math.PI / 180;
     var endX = x + length * Math.sin(rad);
     var endY = y - length * Math.cos(rad);
 
     dc.setPenWidth(thickness);
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-    dc.drawLine(x, y, endX, endY);
+    dc.drawLine(x, y, endX.toNumber(), endY.toNumber());
   }
 }

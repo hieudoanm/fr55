@@ -12,10 +12,9 @@ Guidance for coding agents working in `apps/maximalism`.
 - `source/MaximalismApp.mc` — app entry.
 - `source/MaximalismView.mc` — drawing logic:
   - Ring radius `((centerX + centerY) / 2.0) / 1.25`.
-  - Hour ring: 12 dots every 30°. Non-current hours white radius `5`; current hour (`clockHour % 12`) red radius `10`.
+  - Hour ring: 12 dots every 30°. Non-current hours white radius `5`; current hour red radius `10`. Current hour is `clockHour % 12` with `0` mapped to `12` so 12:00/00:xx highlight correctly.
   - Minute marker: angle `(clockMinute + 45) * 6` degrees (radians), red filled circle radius `5`.
   - Center text (`FONT_SYSTEM_SMALL`): battery from `System.getSystemStats().battery` (`N/A` on error) and heart rate from `Activity.getActivityInfo().currentHeartRate` (fallback to `HH:mm`).
-  - Note: class field `heartRate = "--"` is currently unused; the displayed text is computed in `onUpdate`.
 - `resources/strings/strings.xml` — `AppName` = `Maximalism`.
 - `Makefile` — `build`, `simulator`, `run`, `clean` (outputs `bin/maximalism.prg`).
 

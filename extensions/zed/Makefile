@@ -6,7 +6,7 @@ format-test:
 	node --test formatter/
 
 grammar-test:
-	cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.25.3 test
+	cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.27.1 test
 
 install:
 	./scripts/install.sh

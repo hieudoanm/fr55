@@ -40,7 +40,7 @@ without custom Rust.
 ## Tooling
 
 - Node.js 26+ (no npm dependencies).
-- Tree-sitter CLI `0.25.3` via `npx`.
+- Tree-sitter CLI `0.27.1` via `npx`.
 - Python 3.11+ (`tomllib`) for TOML validation in docs/CI.
 
 ## Commands
@@ -50,7 +50,7 @@ Run from `extensions/zed`:
 ```bash
 make test                 # formatter tests + Jungle grammar tests
 node --test formatter/    # formatter tests only
-cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.25.3 test
+cd grammars/tree-sitter-jungle && npx --yes tree-sitter-cli@0.27.1 test
 ./scripts/install.sh      # symlink monkey-c-format / monkey-c-preview
 ```
 
@@ -58,8 +58,8 @@ Regenerate the Jungle parser after changing `grammar.js`:
 
 ```bash
 cd grammars/tree-sitter-jungle
-npx --yes tree-sitter-cli@0.25.3 generate
-npx --yes tree-sitter-cli@0.25.3 test
+npx --yes tree-sitter-cli@0.27.1 generate
+npx --yes tree-sitter-cli@0.27.1 test
 ```
 
 Commit the generated `src/parser.c`, `src/grammar.json`, `src/node-types.json`,

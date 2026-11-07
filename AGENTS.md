@@ -80,7 +80,7 @@ make test                 # node --test formatter/ + Jungle grammar corpus
 
 ## CI/release
 
-- CI is triggered by changes under `extensions/vscode/**`, `extensions/zed/**`, `extensions/landing/**`, and workflow dispatch.
+- CI is triggered by changes under `apps/**`, `scripts/**`, `extensions/vscode/**`, `extensions/zed/**`, `extensions/landing/**`, and workflow dispatch.
 - On pushes to `master`/`main`, CI updates GitHub release tag `latest` with `monkey-c.vsix`; release notes come from `extensions/vscode/README.md`.
 - Be careful changing `.github/workflows/ci.yaml`: pnpm must be available before `actions/setup-node` when using `cache: pnpm`.
 

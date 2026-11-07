@@ -1,7 +1,6 @@
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
-import Toybox.Time;
 import Toybox.WatchUi;
 
 class TimeZonesView extends WatchUi.WatchFace {
@@ -14,19 +13,18 @@ class TimeZonesView extends WatchUi.WatchFace {
     setLayout(Rez.Layouts.TimeZonesLayout(dc));
   }
 
-  function getHourForTimezone(offsetHours as Lang.Float) {
-    var deviceTime = System.getClockTime(); // Get local device time
-    var gmtOffset = deviceTime.timeZoneOffset / 60.0 / 60.0; // Convert minutes to hours
-    var gmtHour = deviceTime.hour - gmtOffset; // Convert to GMT
-
-    var targetHour = (gmtHour + offsetHours).toNumber() % 24;
-
-    // Ensure positive hour values (Monkey C can return negative mod results)
-    if (targetHour < 0) {
-      targetHour += 24;
+  function getTimeForTimezone(offsetHours as Lang.Float) as Lang.String {
+    var deviceTime = System.getClockTime();
+    // Work in minutes so half-hour UTC offsets and day rollover stay correct
+    var targetMinutes = deviceTime.hour * 60 + deviceTime.min
+    - deviceTime.timeZoneOffset + offsetHours * 60;
+    targetMinutes = targetMinutes % 1440;
+    if (targetMinutes < 0) {
+      targetMinutes += 1440;
     }
-
-    return targetHour;
+    var hour = (targetMinutes / 60).toNumber();
+    var minute = (targetMinutes % 60).toNumber();
+    return hour.format("%02d") + ":" + minute.format("%02d");
   }
 
   // Update the view
@@ -46,12 +44,10 @@ class TimeZonesView extends WatchUi.WatchFace {
     // TimeZones
     var londonOffset = 0.0; // UTC+0
     var melbourneOffset = 10.0; // UTC+10 (standard time, no DST)
-    var londonHour = getHourForTimezone(londonOffset);
-    var melbourneHour = getHourForTimezone(melbourneOffset);
     // Text
-    var londonText = londonHour.format("%02d") + ":" + clockMinute.format("%02d");
+    var londonText = getTimeForTimezone(londonOffset);
     var saigonText = clockHour.format("%02d") + ":" + clockMinute.format("%02d");
-    var melbourneText = melbourneHour.format("%02d") + ":" + clockMinute.format("%02d");
+    var melbourneText = getTimeForTimezone(melbourneOffset);
     var text = londonText + "\n" + saigonText + "\n" + melbourneText;
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
     dc.drawText(centerX, centerY - 60, Graphics.FONT_SYSTEM_NUMBER_MILD, text, Graphics.TEXT_JUSTIFY_CENTER);
@@ -61,6 +57,7 @@ class TimeZonesView extends WatchUi.WatchFace {
   // the state of this View and prepare it to be shown. This includes
   // loading resources into memory.
   function onShow() as Void {
+    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
   }
   // Called when this View is removed from the screen. Save the
   // state of this View here. This includes freeing resources from

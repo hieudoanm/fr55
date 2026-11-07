@@ -16,7 +16,7 @@ Design previews live in [`../assets/design/svg/`](../assets/design/svg/).
   - Hour hand: length `screenWidth * 0.35`, stroke width `6`, red (`Graphics.COLOR_RED`).
   - Minute hand: length `screenWidth * 0.45`, stroke width `4`, red.
   - `drawHand` converts degrees to radians and draws a line from center using `sin`/`cos`.
-- **Behavior note:** `onUpdate()` calls `WatchUi.requestUpdate()` every update, which can create a redraw loop and extra battery drain; a minute timer / low-power watchface cycle is the intended fix.
+- **Behavior:** `onShow()` calls `WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE)` so the face redraws once per minute without a redraw loop.
 
 ## Minimalism (`minimalism/`)
 
@@ -37,10 +37,10 @@ Design previews live in [`../assets/design/svg/`](../assets/design/svg/).
 
 - **Look:** black background, a 12-dot hour ring, a minute marker, and centered status text.
 - **Drawing:** same ring radius formula as Minimalism.
-  - Hour ring: 12 dots placed every 30 degrees. Non-current hours are white, radius `5`. The current hour (`clockHour % 12`) is highlighted red, radius `10`.
+  - Hour ring: 12 dots placed every 30 degrees. Non-current hours are white, radius `5`. The current hour is highlighted red, radius `10` (`clockHour % 12`, with `0` mapped to `12` so midnight/noon highlight correctly).
   - Minute marker: angle `(clockMinute + 45) * 6` degrees, red filled circle radius `5`.
   - Center text (`FONT_SYSTEM_SMALL`, centered): battery percentage from `System.getSystemStats().battery` (or `N/A` on error) and heart rate from `Activity.getActivityInfo().currentHeartRate` (falls back to `HH:mm` if unavailable).
-- **State:** class has an unused `heartRate = "--"` field; actual text is computed in `onUpdate`.
+- **State:** all text is computed in `onUpdate`.
 
 ## TimeZones (`timezones/`)
 
@@ -49,8 +49,8 @@ Design previews live in [`../assets/design/svg/`](../assets/design/svg/).
 
 - **Look:** black background with three stacked red time rows for quick comparison.
 - **Drawing:** centered red text block using `FONT_SYSTEM_NUMBER_MILD`.
-  - `getHourForTimezone(offsetHours)`: derives GMT hour from device time and `timeZoneOffset`, adds the target UTC offset, normalizes to `0..23`.
-  - Rows (all share device minute, zero-padded): **London** = UTC+0, **Saigon** = device local hour, **Melbourne** = UTC+10.
+  - `getTimeForTimezone(offsetHours)`: converts device time to minutes-since-midnight, subtracts `timeZoneOffset`, adds the target UTC offset, normalizes to `0..1439`, and returns a zero-padded `HH:mm` string (handles half-hour offsets and day rollover).
+  - Rows: **London** = UTC+0, **Saigon** = device local time, **Melbourne** = UTC+10.
 - **Limitations:** London/Melbourne use fixed offsets (no daylight saving rules). Saigon is represented by the watch’s local time.
 
 ## Build / runtime preview
