@@ -40,6 +40,7 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-content">
         <h1>Monkey C &amp; Jungle for Connect IQ watchfaces.</h1>
         <p class="lede">
           Syntax highlighting, document formatting, a dark theme, file icons,
@@ -55,6 +56,14 @@
           <div><dt>4</dt><dd>watchfaces bundled</dd></div>
           <div><dt>1</dt><dd>vsix to install</dd></div>
         </dl>
+        </div>
+        <figure class="terminal hero-demo">
+          <figcaption>Install &amp; format</figcaption>
+          <pre><code><span class="prompt">$</span> code --install-extension monkey-c.vsix
+<span class="out">Extension 'monkey-c' was successfully installed.</span>
+<span class="prompt">$</span> monkey-c-format source/HandsView.mc
+<span class="out">formatted HandsView.mc</span></code></pre>
+        </figure>
       </div>
     </section>
 
