@@ -2,7 +2,7 @@
  * Lightweight Monkey C/Jungle formatter.
  * Conservative and not Garmin's official formatter.
  *
- * Ported from `extensions/vscode/src/format-monkeyc.ts` so the VS Code and Zed
+ * Ported from `packages/extensions/vscode/src/format-monkeyc.ts` so the VS Code and Zed
  * extensions share the same formatting behavior.
  */
 

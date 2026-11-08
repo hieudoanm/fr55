@@ -3,7 +3,7 @@
  * Connect IQ runtime preview: find the SDK, build the nearest buildable
  * package, start the simulator, and launch the PRG with `monkeydo`.
  *
- * Ported from `extensions/vscode/src/runtime-preview.ts`. Zed cannot expose
+ * Ported from `packages/extensions/vscode/src/runtime-preview.ts`. Zed cannot expose
  * VS Code-style commands, so this runs as a task instead.
  */
 import { spawn } from 'node:child_process';

@@ -4,7 +4,7 @@ const path = require('path');
 const cp = require('child_process');
 
 const root = path.resolve(__dirname, '..');
-const extRoot = path.resolve(root, 'extensions/vscode');
+const extRoot = path.resolve(root, 'packages/extensions/vscode');
 const out = path.resolve(extRoot, 'out/format-monkeyc.js');
 if (!fs.existsSync(out)) {
   cp.execFileSync('pnpm', ['run', 'build'], { cwd: extRoot, stdio: 'inherit' });

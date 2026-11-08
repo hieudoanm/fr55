@@ -2,7 +2,7 @@
 set -euo pipefail
 
 EXT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-REPO_ROOT="$(cd "$EXT_DIR/../.." && pwd)"
+REPO_ROOT="$(cd "$EXT_DIR/../../.." && pwd)"
 SVG_DIR="$REPO_ROOT/assets/svg"
 ICON_DIR="$EXT_DIR/icons"
 ICON_SVG_DIR="$ICON_DIR/svg"

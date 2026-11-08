@@ -5,7 +5,7 @@ dark theme, file icons, and a Connect IQ runtime-preview task for
 [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) and
 `monkey.jungle` project files.
 
-This is the Zed port of [`extensions/vscode`](../vscode). Zed uses Tree-sitter
+This is the Zed port of [`packages/extensions/vscode`](../vscode). Zed uses Tree-sitter
 instead of TextMate grammars and has no extension command API, so formatting and
 the runtime preview are exposed as an external formatter and tasks.
 
@@ -46,19 +46,19 @@ official Garmin tools and the Connect IQ SDK.
 
 ### Development / local checkout
 
-1. Commit and push `extensions/zed/grammars/tree-sitter-jungle` to `master` (or
+1. Commit and push `packages/extensions/zed/grammars/tree-sitter-jungle` to `master` (or
    change the `[grammars.jungle]` revision in `extension.toml` to a commit that
    contains it). Zed downloads grammars by Git revision; it cannot read the
    uncommitted working tree. For local-only testing you can temporarily set the
    `[grammars.jungle]` `repository` to a `file://` URL pointing at the grammar
    directory instead.
 2. In Zed, open the Extensions page and choose **Install Dev Extension**.
-3. Select `extensions/zed`.
+3. Select `packages/extensions/zed`.
 4. Run `./scripts/install.sh` so `monkey-c-format` and `monkey-c-preview` are on
    `PATH` (by default in `~/.local/bin`).
 
 ```bash
-cd extensions/zed
+cd packages/extensions/zed
 ./scripts/install.sh
 ```
 
@@ -162,7 +162,7 @@ monkey-c-preview --help
 ## Layout
 
 ```text
-extensions/zed/
+packages/extensions/zed/
 ├── extension.toml
 ├── languages/
 │   ├── monkeyc/
@@ -200,7 +200,7 @@ pinned in `extension.toml`. The Jungle grammar is vendored in this repository.
 ## Development checks
 
 ```bash
-cd extensions/zed
+cd packages/extensions/zed
 make test
 ```
 
@@ -232,4 +232,4 @@ PY
   preview task calls the `monkey-c-preview` command installed on `PATH`.
 - The graphics simulator requires a local Connect IQ SDK, a developer key, and a
   running graphical session.
-- Design previews for the watchfaces remain in [`assets/design`](../../assets/design).
+- Design previews for the watchfaces remain in [`assets/design`](../../../assets/design).
