@@ -1,26 +1,27 @@
 #!/usr/bin/env bash
+# Convert every SVG under assets/**/svg/ to a sibling PNG under assets/**/png/.
+# Output keeps each SVG's intrinsic size and aspect ratio.
+#
+# Usage: assets/svg-to-png.sh
+
 set -euo pipefail
 
 ASSETS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-WIDTH="${WIDTH:-1280}"
-HEIGHT="${HEIGHT:-}"
 JOBS="${JOBS:-4}"
 
 command -v rsvg-convert >/dev/null 2>&1 || {
   echo "rsvg-convert is required but not installed" >&2
+  echo "  macOS:  brew install librsvg" >&2
+  echo "  Debian: sudo apt-get install librsvg2-bin" >&2
+  echo "  Arch:   sudo pacman -S librsvg" >&2
   exit 1
 }
 
-# Find SVG files under any "svg" directory and create a parallel "png" file.
-# Keeps original aspect ratio: scales to WIDTH; if HEIGHT is set, fits within
-# WIDTH x HEIGHT while preserving ratio.
-# Run conversions in parallel, limited to $JOBS.
 pids=()
 count=0
 while IFS= read -r -d '' svg; do
   (
-    png="${svg/\/svg\///png/}"
-    png="${png%.svg}.png"
+    png="$(dirname "$svg" | sed 's|/svg$|/png|')/$(basename "${svg%.svg}").png"
 
     if [ ! -s "$svg" ]; then
       echo "skip (empty): $svg" >&2
@@ -28,11 +29,7 @@ while IFS= read -r -d '' svg; do
     fi
 
     mkdir -p "$(dirname "$png")"
-    args=(-w "$WIDTH")
-    if [ -n "$HEIGHT" ]; then
-      args+=(-h "$HEIGHT" --keep-aspect-ratio)
-    fi
-    if rsvg-convert "${args[@]}" -o "$png" "$svg"; then
+    if rsvg-convert -o "$png" "$svg"; then
       echo "converted $svg -> $png"
     else
       echo "failed: $svg" >&2
