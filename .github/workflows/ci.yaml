@@ -8,10 +8,10 @@ on:
     paths:
       - "apps/**"
       - "scripts/**"
-      - "extensions/vscode/**"
-      - "extensions/zed/**"
-      - "extensions/landing/**"
-      - "extensions/README.md"
+      - "packages/extensions/vscode/**"
+      - "packages/extensions/zed/**"
+      - "packages/landing/**"
+      - "packages/README.md"
       - ".github/workflows/ci.yaml"
   workflow_dispatch:
 
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: extensions/vscode
+        working-directory: packages/extensions/vscode
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -36,7 +36,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6.1.1
         with:
-          package_json_file: extensions/vscode/package.json
+          package_json_file: packages/extensions/vscode/package.json
           run_install: false
 
       - name: Setup Node.js
@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: 26.13.0
           cache: pnpm
-          cache-dependency-path: extensions/vscode/pnpm-lock.yaml
+          cache-dependency-path: packages/extensions/vscode/pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -74,7 +74,7 @@ jobs:
         uses: actions/upload-artifact@v7.0.2
         with:
           name: monkey-c
-          path: extensions/vscode/monkey-c.vsix
+          path: packages/extensions/vscode/monkey-c.vsix
           if-no-files-found: error
 
   zed:
@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: extensions/zed
+        working-directory: packages/extensions/zed
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -99,7 +99,7 @@ jobs:
         run: python3 -c 'import json,pathlib,tomllib; [json.loads(p.read_text()) for p in pathlib.Path(".").rglob("*.json")]; [tomllib.loads(p.read_text()) for p in pathlib.Path(".").rglob("*.toml")]; print("json/toml ok")'
 
       - name: Test Jungle grammar
-        working-directory: extensions/zed/grammars/tree-sitter-jungle
+        working-directory: packages/extensions/zed/grammars/tree-sitter-jungle
         run: npx --yes tree-sitter-cli@0.27.1 test
 
       - name: Check install script
@@ -128,7 +128,7 @@ jobs:
           tag_name: latest
           name: "Monkey C for VS Code (latest)"
           target_commitish: ${{ github.sha }}
-          body_path: extensions/vscode/README.md
+          body_path: packages/extensions/vscode/README.md
           files: dist/monkey-c.vsix
           fail_on_unmatched_files: true
           prerelease: false
@@ -156,7 +156,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5.0.0
         with:
-          path: extensions/landing
+          path: packages/landing
 
       - name: Deploy to GitHub Pages
         id: deployment

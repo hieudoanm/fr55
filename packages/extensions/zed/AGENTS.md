@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guidance for coding agents working in `extensions/zed`.
+Guidance for coding agents working in `packages/extensions/zed`.
 
 ## Purpose
 
@@ -26,7 +26,7 @@ without custom Rust.
 - `grammars/tree-sitter-jungle/` — vendored Jungle grammar. `src/parser.c` is
   generated and committed; do not hand-edit it.
 - `formatter/format-monkeyc.mjs` — formatter logic ported from
-  `extensions/vscode/src/format-monkeyc.ts`.
+  `packages/extensions/vscode/src/format-monkeyc.ts`.
 - `formatter/cli.mjs` — stdin/stdout formatter entry point.
 - `formatter/format-monkeyc.test.mjs` — Node built-in test suite.
 - `scripts/runtime-preview.mjs` — SDK/key/package discovery, build, simulator,
@@ -45,7 +45,7 @@ without custom Rust.
 
 ## Commands
 
-Run from `extensions/zed`:
+Run from `packages/extensions/zed`:
 
 ```bash
 make test                 # formatter tests + Jungle grammar tests
@@ -73,14 +73,14 @@ and `src/tree_sitter/*.h` files.
   Do not read the file from `--path`; Zed passes unsaved buffers on stdin.
 - Keep formatter behavior aligned with the VS Code implementation. When changing
   formatting, update `formatter/format-monkeyc.test.mjs` and consider whether
-  `extensions/vscode/src/format-monkeyc.ts` needs the same change.
+  `packages/extensions/vscode/src/format-monkeyc.ts` needs the same change.
 - Runtime preview must not hardcode machine-specific paths. Use CLI flags/env
   vars and the SDK/key discovery in `scripts/runtime-preview.mjs`.
 - Zed language tasks cannot execute files inside the extension directory, so
   `tasks.json` calls `monkey-c-preview` from `PATH`. `scripts/install.sh` is what
   makes that work.
 - The Jungle grammar is referenced from this repository with
-  `rev = "master"` and `path = "extensions/zed/grammars/tree-sitter-jungle"`.
+  `rev = "master"` and `path = "packages/extensions/zed/grammars/tree-sitter-jungle"`.
   Zed fetches grammars by Git revision, so that directory must be committed and
   pushed before a dev install or release can resolve it. Pin `rev` to a commit
   for a published release.
@@ -92,7 +92,7 @@ and `src/tree_sitter/*.h` files.
 Before finishing extension changes:
 
 ```bash
-cd extensions/zed
+cd packages/extensions/zed
 make test
 python3 - <<'PY'
 import json, pathlib, tomllib

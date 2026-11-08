@@ -13,4 +13,4 @@ rev = "f361cf8bf1be8c7d67b2255a4f8d1a394baf9dd2"
 [grammars.jungle]
 repository = "https://github.com/hieudoanm/fr55"
 rev = "master"
-path = "extensions/zed/grammars/tree-sitter-jungle"
+path = "packages/extensions/zed/grammars/tree-sitter-jungle"

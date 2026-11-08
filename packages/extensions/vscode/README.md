@@ -56,7 +56,7 @@ Behavior:
 
 ### From source (development)
 
-1. Open `extensions/vscode` in VS Code.
+1. Open `packages/extensions/vscode` in VS Code.
 2. Press `F5` to launch the Extension Development Host.
 3. Open a `.mc` or `.jungle` file.
 4. Run **Format Document** or select **Preferences: Color Theme → Monkey C**.
@@ -64,7 +64,7 @@ Behavior:
 ### Packaged VSIX
 
 ```bash
-cd extensions/vscode
+cd packages/extensions/vscode
 npm install
 npx @vscode/vsce package --out dist/monkey-c.vsix
 code --install-extension dist/monkey-c.vsix --force
@@ -89,7 +89,7 @@ code --install-extension dist/monkey-c.vsix --force
 ## Layout
 
 ```text
-extensions/vscode/
+packages/extensions/vscode/
 ├── package.json
 ├── languages/
 │   ├── monkeyc/language-configuration.json
@@ -114,7 +114,7 @@ extensions/vscode/
 ## Development checks
 
 ```bash
-cd extensions/vscode
+cd packages/extensions/vscode
 npm run test:format
 node -e "JSON.parse(require('fs').readFileSync('package.json','utf8')); console.log('ok')"
 node -e "JSON.parse(require('fs').readFileSync('syntaxes/jungle.tmLanguage.json','utf8')); console.log('ok')"

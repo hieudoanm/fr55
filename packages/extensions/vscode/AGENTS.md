@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Guidance for coding agents working in `extensions/vscode`.
+Guidance for coding agents working in `packages/extensions/vscode`.
 
 ## Purpose
 
@@ -33,7 +33,7 @@ The formatter and runtime preview are local extension features; this extension i
 
 ## Commands
 
-Run from `extensions/vscode`:
+Run from `packages/extensions/vscode`:
 
 ```bash
 pnpm install

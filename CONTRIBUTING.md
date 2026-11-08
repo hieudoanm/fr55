@@ -7,7 +7,7 @@ Thanks for contributing to the Forerunner 55 Connect IQ repo.
 This repo contains:
 
 - `apps/*` — buildable Connect IQ watchface apps (Monkey C).
-- `extensions/vscode` — VS Code extension for Monkey C/Jungle (TypeScript).
+- `packages/extensions/vscode` — VS Code extension for Monkey C/Jungle (TypeScript).
 - `assets/*` — design, logo, and OG assets.
 - `scripts/*` — repo-level Monkey C format/lint helpers.
 
@@ -27,7 +27,7 @@ cd fr55
 VS Code extension dependencies:
 
 ```bash
-cd extensions/vscode
+cd packages/extensions/vscode
 pnpm install
 ```
 
@@ -62,12 +62,12 @@ Use the repo scripts from the repository root:
 
 `lint.sh` checks trailing whitespace, tabs, and formatter drift for `*.mc` files. Fix formatting issues with `format.sh` before opening a PR.
 
-## VS Code extension (`extensions/vscode`)
+## VS Code extension (`packages/extensions/vscode`)
 
 The extension is written in TypeScript and uses ESLint, Prettier, and Vitest.
 
 ```bash
-cd extensions/vscode
+cd packages/extensions/vscode
 pnpm run format:check
 pnpm run lint
 pnpm run typecheck
@@ -84,13 +84,13 @@ Useful commands:
 
 ## CI
 
-`.github/workflows/ci.yaml` runs for changes under `extensions/vscode/**` and workflow dispatch. It installs dependencies with pnpm, runs lint/format/typecheck/tests/build, packages `monkey-c.vsix`, and updates the rolling `latest` GitHub release on pushes to `master`/`main`.
+`.github/workflows/ci.yaml` runs for changes under `packages/extensions/vscode/**` and workflow dispatch. It installs dependencies with pnpm, runs lint/format/typecheck/tests/build, packages `monkey-c.vsix`, and updates the rolling `latest` GitHub release on pushes to `master`/`main`.
 
 ## Pull requests
 
 - Make small, focused changes.
 - Update docs/assets when behavior or structure changes.
-- Run relevant checks locally (`./scripts/lint.sh` for Monkey C changes; extension checks above for `extensions/vscode` changes).
+- Run relevant checks locally (`./scripts/lint.sh` for Monkey C changes; extension checks above for `packages/extensions/vscode` changes).
 - Do not commit secrets, developer keys, or local SDK credentials.
 
 ## License

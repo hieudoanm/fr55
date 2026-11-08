@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <base href="/fr55/" />
     <title>Monkey C — FR55</title>
     <meta
       name="description"
       content="Monkey C and Jungle editor support for Garmin Connect IQ / Forerunner 55 development: VS Code extension and Zed extension — syntax highlighting, formatting, dark theme, file icons, and simulator preview." />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -26,32 +26,77 @@
     <main>
       <section class="hero" aria-labelledby="title">
         <div class="container hero-inner">
-          <p class="eyebrow">Forerunner 55 · Garmin Connect IQ</p>
-          <h1 id="title">Monkey C &amp; Jungle</h1>
-          <p class="lede">
-            Editor support for building Connect IQ watchfaces and apps. Syntax
-            highlighting and formatting for <code>.mc</code> and
-            <code>.jungle</code>, a dark theme, file icons, and local SDK
-            simulator preview — for VS Code and Zed.
-          </p>
-          <div class="actions">
-            <a
-              class="button primary"
-              href="https://github.com/hieudoanm/fr55/releases/download/latest/monkey-c.vsix"
-              download="monkey-c.vsix"
-              >Download VS Code VSIX</a
-            >
-            <a class="button" href="#zed-install"
-              >Install for Zed</a
-            >
-            <a class="button" href="https://github.com/hieudoanm/fr55"
-              >View on GitHub</a
-            >
+          <div class="hero-copy">
+            <p class="eyebrow">Forerunner 55 · Garmin Connect IQ</p>
+            <h1 id="title">Monkey C &amp; Jungle for Connect IQ watchfaces</h1>
+            <p class="lede">
+              Syntax highlighting, document formatting, a dark theme, file
+              icons, and local SDK simulator preview for <code>.mc</code> and
+              <code>.jungle</code> — in VS Code and Zed.
+            </p>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://github.com/hieudoanm/fr55/releases/download/latest/monkey-c.vsix"
+                download="monkey-c.vsix"
+                >Download VS Code extension</a
+              >
+              <a class="button" href="#zed-install">Install for Zed</a>
+            </div>
+            <p class="hint">
+              <code>code --install-extension monkey-c.vsix</code>
+            </p>
           </div>
-          <p class="hint">
-            VS Code:
-            <code>code --install-extension monkey-c.vsix</code>
-          </p>
+          <ul class="watch-grid" aria-label="Watchface previews">
+            <li>
+              <figure>
+                <span class="watch-frame">
+                  <img
+                    src="assets/hands.png"
+                    alt="Hands watchface: red analog hands on black"
+                    width="240"
+                    height="240" />
+                </span>
+                <figcaption>Hands</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <span class="watch-frame">
+                  <img
+                    src="assets/minimalism.png"
+                    alt="Minimalism watchface: red dots on a ring"
+                    width="240"
+                    height="240" />
+                </span>
+                <figcaption>Minimalism</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <span class="watch-frame">
+                  <img
+                    src="assets/maximalism.png"
+                    alt="Maximalism watchface: hour ring with status text"
+                    width="240"
+                    height="240" />
+                </span>
+                <figcaption>Maximalism</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure>
+                <span class="watch-frame">
+                  <img
+                    src="assets/timezones.png"
+                    alt="TimeZones watchface: three stacked times"
+                    width="240"
+                    height="240" />
+                </span>
+                <figcaption>TimeZones</figcaption>
+              </figure>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -60,25 +105,25 @@
           <h2 id="features-title">Features</h2>
           <div class="grid">
             <article class="feature">
-              <h3>Monkey C &amp; Jungle</h3>
+              <h3>Language support</h3>
               <p>
-                Language support for <code>.mc</code>, <code>.mb</code>,
-                <code>.mcgen</code>, and <code>.jungle</code> files with syntax
-                highlighting and editor configuration.
+                Highlighting and editor configuration for
+                <code>.mc</code>, <code>.mb</code>, <code>.mcgen</code>, and
+                <code>.jungle</code> files.
               </p>
             </article>
             <article class="feature">
-              <h3>Formatting &amp; Theme</h3>
+              <h3>Formatting &amp; theme</h3>
               <p>
-                Built-in document formatting for Monkey C and Jungle, plus a
-                dark color theme and file icons for Connect IQ projects.
+                Built-in document formatter for Monkey C and Jungle, plus a
+                dark color theme and file icons.
               </p>
             </article>
             <article class="feature">
-              <h3>Simulator Preview</h3>
+              <h3>Simulator preview</h3>
               <p>
-                Builds and launches the nearest Connect IQ package using your
-                local SDK and developer key.
+                Builds the nearest Connect IQ package with your local SDK and
+                developer key, then launches it in the simulator.
               </p>
             </article>
           </div>
@@ -87,14 +132,14 @@
 
       <section id="editors" class="section editors" aria-labelledby="editors-title">
         <div class="container">
-          <h2 id="editors-title">Supported Editors</h2>
+          <h2 id="editors-title">Supported editors</h2>
           <div class="editor-grid">
             <article class="editor-card">
               <h3>VS Code</h3>
               <p>
                 Packaged as a <code>.vsix</code> from the rolling
                 <code>latest</code> release. Install with the VS Code CLI or
-                from the Extensions view.
+                the Extensions view.
               </p>
               <div class="editor-actions">
                 <a
@@ -111,9 +156,9 @@
             <article class="editor-card">
               <h3>Zed</h3>
               <p>
-                Loaded as a dev extension from source. Tree-sitter highlighting,
-                external formatter, runtime-preview tasks, and the Monkey C
-                theme/icons.
+                Loaded as a dev extension from source: Tree-sitter
+                highlighting, external formatter, runtime-preview tasks, and
+                the Monkey C theme and icons.
               </p>
               <div class="editor-actions">
                 <a class="button" href="#zed-install">Install for Zed</a>
@@ -128,7 +173,7 @@
           <div>
             <h2 id="zed-title">Install for Zed</h2>
             <p>
-              Zed extensions are loaded from source — there is no
+              Zed extensions load from source — there is no
               <code>.vsix</code> to download.
             </p>
           </div>
@@ -139,21 +184,21 @@
                 In Zed, open the Extensions page and choose <b>Install Dev
                 Extension</b>.
               </li>
-              <li>Select <code>extensions/zed</code> from this repository.</li>
+              <li>Select <code>packages/extensions/zed</code> from this repository.</li>
               <li>
-                Make sure <code>extensions/zed/grammars/tree-sitter-jungle</code>
-                is committed and pushed to <code>master</code> (Zed fetches
-                grammars by Git revision).
+                Make sure <code>packages/extensions/zed/grammars/tree-sitter-jungle</code>
+                is committed and pushed to <code>master</code> — Zed fetches
+                grammars by Git revision.
               </li>
             </ol>
             <h3>2. Install the CLI helpers</h3>
-            <pre><code>cd extensions/zed
+            <pre><code>cd packages/extensions/zed
 ./scripts/install.sh</code></pre>
             <p>
               This symlinks <code>monkey-c-format</code> and
               <code>monkey-c-preview</code> into <code>~/.local/bin</code> (or
-              <code>$MONKEYC_BIN_DIR</code>) so Zed's external formatter and
-              tasks can find them.
+              <code>$MONKEYC_BIN_DIR</code>) so Zed's formatter and tasks can
+              find them.
             </p>
             <h3>3. Configure the formatter</h3>
             <pre><code class="language-json">{
@@ -192,8 +237,8 @@
           <div>
             <h2 id="cta-title">Get the latest VSIX</h2>
             <p>
-              Download the rolling <code>latest</code> release built from the
-              FR55 repository. This is the VS Code extension package.
+              Rolling <code>latest</code> release built from this repository —
+              the VS Code extension package.
             </p>
           </div>
           <a

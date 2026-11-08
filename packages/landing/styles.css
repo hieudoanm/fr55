@@ -8,6 +8,11 @@
   --accent: #e53935;
   --accent-hover: #ff5a56;
   --border: #273040;
+  --border-strong: #3a465c;
+  --radius-chip: 6px;
+  --radius-inner: 10px;
+  --radius-card: 16px;
+  --radius-cta: 20px;
   --max: 1080px;
 }
 
@@ -35,6 +40,13 @@ body {
 
 a {
   color: inherit;
+}
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+  border-radius: var(--radius-chip);
 }
 
 .container {
@@ -91,7 +103,14 @@ a {
 }
 
 .hero-inner {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-copy {
+  max-width: 560px;
 }
 
 .eyebrow {
@@ -112,9 +131,10 @@ p {
 
 h1 {
   margin-bottom: 14px;
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  line-height: 1.02;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.05;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 h2 {
@@ -127,7 +147,7 @@ h2 {
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.6;
-  max-width: 62ch;
+  max-width: 56ch;
 }
 
 .actions {
@@ -149,11 +169,16 @@ h2 {
   font-weight: 600;
   transition:
     background 120ms ease,
-    border-color 120ms ease;
+    border-color 120ms ease,
+    transform 120ms ease;
 }
 
 .button:hover {
-  border-color: #3a465c;
+  border-color: var(--border-strong);
+}
+
+.button:active {
+  transform: translateY(1px);
 }
 
 .button.primary {
@@ -177,6 +202,45 @@ h2 {
   color: var(--muted);
 }
 
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.watch-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.watch-frame {
+  display: block;
+  width: min(100%, 168px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.watch-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.watch-grid figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .section {
   padding: 72px 0;
 }
@@ -190,8 +254,16 @@ h2 {
 .feature {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 22px;
+  transition:
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.feature:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
 }
 
 .feature h3 {
@@ -216,7 +288,7 @@ h2 {
   padding: 28px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: var(--radius-cta);
 }
 
 .cta-inner p {
@@ -241,7 +313,8 @@ code {
   font-size: 0.92em;
   background: rgba(255, 255, 255, 0.06);
   padding: 0.12em 0.35em;
-  border-radius: 6px;
+  border-radius: var(--radius-chip);
+  font-variant-numeric: tabular-nums;
 }
 
 .editors {
@@ -261,11 +334,19 @@ code {
 .editor-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition:
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.editor-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
 }
 
 .editor-card h3 {
@@ -312,7 +393,7 @@ code {
   padding: 16px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-inner);
   overflow-x: auto;
 }
 
@@ -324,6 +405,22 @@ code {
   background: transparent;
   padding: 0;
   font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .watch-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .watch-frame {
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -342,7 +439,29 @@ code {
     padding: 56px 0 48px;
   }
 
+  .watch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .section {
     padding: 52px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .feature,
+  .editor-card {
+    transition: none;
+  }
+
+  .button:active,
+  .feature:hover,
+  .editor-card:hover {
+    transform: none;
   }
 }
