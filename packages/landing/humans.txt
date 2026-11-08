@@ -1,0 +1,9 @@
+/* TEAM */
+Project: Monkey C — FR55
+Site: https://hieudoanm.github.io/fr55/
+Source: https://github.com/hieudoanm/fr55
+
+/* SITE */
+Last update: 2026/11/08
+Language: English
+Doctype: HTML5
