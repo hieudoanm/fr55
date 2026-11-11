@@ -37,7 +37,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6.1.1
         with:
-          package_json_file: packages/extensions/vscode/package.json
+          package_json_file: package.json
           run_install: false
 
       - name: Setup Node.js
@@ -45,7 +45,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
-          cache-dependency-path: packages/extensions/vscode/pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
