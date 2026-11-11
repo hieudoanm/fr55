@@ -1,6 +1,11 @@
+packages:
+  - 'packages/**/*'
+
 overrides:
   minimatch: '11.0.8'
 
 allowBuilds:
   '@vscode/vsce-sign': true
   esbuild: true
+
+minimumReleaseAge: 0
