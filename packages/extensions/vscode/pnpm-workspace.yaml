@@ -1,5 +1,2 @@
-minimumReleaseAge: 0
-
-allowBuilds:
-  '@vscode/vsce-sign': false
-  'esbuild': false
+overrides:
+  minimatch: ">=11.0.1"
