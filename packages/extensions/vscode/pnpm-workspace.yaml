@@ -1,2 +1,6 @@
 overrides:
   minimatch: "11.0.5"
+
+onlyBuiltDependencies:
+  - "@vscode/vsce-sign"
+  - esbuild
