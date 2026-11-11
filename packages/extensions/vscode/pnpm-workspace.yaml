@@ -1,6 +1,6 @@
 overrides:
-  minimatch: "11.0.5"
+  minimatch: '11.0.5'
 
 allowBuilds:
-  "@vscode/vsce-sign": true
+  '@vscode/vsce-sign': true
   esbuild: true
