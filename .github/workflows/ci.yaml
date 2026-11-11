@@ -65,7 +65,7 @@ jobs:
         run: pnpm run build
 
       - name: Lint Monkey C sources
-        run: node ../../scripts/monkeyc-tools.js lint
+        run: node ../../../scripts/monkeyc-tools.js lint
 
       - name: Package extension
         run: pnpm exec vsce package --no-dependencies --out monkey-c.vsix
