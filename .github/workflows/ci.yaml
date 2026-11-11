@@ -123,6 +123,13 @@ jobs:
           name: monkey-c
           path: dist
 
+      - name: Delete existing latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          git push origin :refs/tags/latest || true
+
       - name: Create or update latest release
         uses: softprops/action-gh-release@v3.0.4
         with:
