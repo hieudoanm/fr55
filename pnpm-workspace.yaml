@@ -7,5 +7,6 @@ overrides:
 allowBuilds:
   '@vscode/vsce-sign': true
   esbuild: true
+  tree-sitter-cli: true
 
 minimumReleaseAge: 0
