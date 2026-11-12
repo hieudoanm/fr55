@@ -2,10 +2,14 @@
 
 [![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+keywords: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
+
 
 <p align="center">
   <img src="assets/branding/png/og.png" alt="fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55" width="720">
 </p>
+
+**Live demo:** <https://hieudoanm.github.io/fr55/>
 
 Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
 
