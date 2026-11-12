@@ -1,53 +1,43 @@
-# AGENTS.md
+# AGENTS.md — packages/landing
 
-Guidance for coding agents working in `packages/landing`.
+Next.js 16 (App Router) static-export landing page + Tailwind CSS v4 + DaisyUI
+5, deployed to GitHub Pages at `https://hieudoanm.github.io/fr55/` (project site
+— `basePath: "/fr55"`, `assetPrefix` likewise in production).
 
-## Purpose
-
-Static marketing/download page for the FR55 Monkey C tooling (VS Code + Zed extensions and the bundled watchfaces). Deployed to GitHub Pages by `.github/workflows/ci.yaml` (`deploy-pages` job).
-
-## Key constraints
-
-- **This directory is the site root.** `actions/upload-pages-artifact` packages the *contents* of `packages/landing/`, so the site is served at `https://hieudoanm.github.io/fr55/`. Only files inside this directory are deployed.
-- **All local URLs must be relative** (`./styles.css`, `assets/*.png`, `#anchors`). No `<base>` tag, no root-relative paths — the page must also work over `file://`.
-- **Vendored assets:** `assets/*.png` are copies of `assets/design/png/*.png` from the repo root. If the watchface designs change, re-copy them here (or update both).
-- Keep the dark theme and red accent; design tokens are in `styles.css` `:root`.
-
-## Files
-
-- `index.html` — markup only; no inline styles. The only script allowed is the tiny year-injection snippet in the footer.
-- `styles.css` — tokens + component styles; responsive breakpoints at 860px/720px; honors `prefers-reduced-motion`.
-- `favicon.ico` — regenerate from `packages/extensions/vscode/icons/png/monkey-c-on-dark.png` if the icon changes.
-- `README.md` — deploy/preview details.
-
-## Validation
-
-No build step. Before finishing:
+## Commands
 
 ```bash
-# serve the directory and check it renders
-python3 -m http.server 8000
-# or simply open index.html in a browser (file:// must work too)
+pnpm install
+pnpm run dev      # dev server (basePath applies)
+pnpm run build    # static export → out/ (uploaded to Pages by CI)
+pnpm run lint
 ```
 
-Check that `index.html` is well-formed (every tag closed — `<img>` included) and that all `src`/`href` targets exist relative to this directory.
+## Structure
+
+- `src/app/layout.tsx` — metadata, fonts, and the global `Navbar`/`Footer` (all
+  content passed as props).
+- `src/app/page.tsx` — page content as data passed to the shared components.
+- `src/components/molecules/` — shared components (`Navbar`, `Hero`, `Features`,
+  `CTA`, `Footer`, `SectionHead`, `Terminal`). These files are **byte-identical
+  across all `hieudoanm/*/packages/landing` repos** — do not fork them; pass
+  content via props instead.
+- `src/app/globals.css` — Tailwind v4 imports + the custom DaisyUI `fr55` light
+  theme.
+- `public/` — `favicon.ico`, `favicon.svg`, `logo.*`, `og.png`, `robots.txt`,
+  `sitemap.xml`, `humans.txt`, served under `/fr55/` in production.
 
 ## Conventions
 
-- **Fonts:** Inter (sans) loaded via the Google Fonts `<link>` in `index.html`; mono stack `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace`. Tokens: `--font-sans` / `--font-mono`. Do not add other typefaces.
-
-## Footer
-
-The footer follows the shared contract: `© {year} {repo-name}` (lowercase
-repo name, dynamic year via `<span id="year">` + the year script), a
-one-line tagline/license descriptor, and a right-aligned `<nav
-aria-label="Footer">` with exactly two links — `GitHub` (repo root) and
-`README` (`<repo>#readme`), both `target="_blank" rel="noreferrer"`.
-
-## Features & CTA sections
-
-`#features` and `#install` follow the shared template: centered
-`.section-head` (h2 + one supporting paragraph), a `.grid-3` card grid
-(`article.card` = `.card-icon` + h3 + p), and a closing CTA section on the
-alt background (`.section-alt`, `.container-narrow`) ending in a
-`.cta-row` with a primary `btn-lg` action plus at most one ghost button.
+- Keep `output: "export"` in `next.config.ts` — the site must build to static
+  HTML in `out/`; no server features or API routes.
+- `basePath`/`assetPrefix` are `/fr55` in production builds; `next/link` and
+  metadata get it automatically, raw `<img src>` paths must include it (see the
+  `LOGO` constant in `layout.tsx`).
+- Theme is light-only via `data-theme="fr55"` on `<html>`; accent colours differ
+  per repo but every theme is light.
+- Fonts: Inter via `next/font`; mono stack for terminal/code only.
+- Design follows the "AI unslop" rules: no filler badges, monospace only for
+  code/commands, real CLI output in demos.
+- `public/assets/*.png` are vendored copies of `assets/design/png/*.png` from
+  the repo root — re-copy them if the watchface designs change.
