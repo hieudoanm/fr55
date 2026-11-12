@@ -15,7 +15,7 @@ Static marketing/download page for the FR55 Monkey C tooling (VS Code + Zed exte
 
 ## Files
 
-- `index.html` — markup only; no inline styles or scripts.
+- `index.html` — markup only; no inline styles. The only script allowed is the tiny year-injection snippet in the footer.
 - `styles.css` — tokens + component styles; responsive breakpoints at 860px/720px; honors `prefers-reduced-motion`.
 - `favicon.ico` — regenerate from `packages/extensions/vscode/icons/png/monkey-c-on-dark.png` if the icon changes.
 - `README.md` — deploy/preview details.
@@ -35,3 +35,11 @@ Check that `index.html` is well-formed (every tag closed — `<img>` included) a
 ## Conventions
 
 - **Fonts:** Inter (sans) loaded via the Google Fonts `<link>` in `index.html`; mono stack `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace`. Tokens: `--font-sans` / `--font-mono`. Do not add other typefaces.
+
+## Footer
+
+The footer follows the shared contract: `© {year} {repo-name}` (lowercase
+repo name, dynamic year via `<span id="year">` + the year script), a
+one-line tagline/license descriptor, and a right-aligned `<nav
+aria-label="Footer">` with exactly two links — `GitHub` (repo root) and
+`README` (`<repo>#readme`), both `target="_blank" rel="noreferrer"`.

@@ -217,13 +217,16 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>© 2026 FR55 / Monkey C</span>
+      <span>© <span id="year">2026</span> fr55</span>
       <span>Connect IQ tooling for Garmin Forerunner 55</span>
-      <nav>
+      <nav aria-label="Footer">
         <a href="https://github.com/hieudoanm/fr55" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://github.com/hieudoanm/fr55/releases/tag/latest" target="_blank" rel="noreferrer">Latest release</a>
+        <a href="https://github.com/hieudoanm/fr55#readme" target="_blank" rel="noreferrer">README</a>
       </nav>
     </div>
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
