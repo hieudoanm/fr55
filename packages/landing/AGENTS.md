@@ -31,3 +31,7 @@ python3 -m http.server 8000
 ```
 
 Check that `index.html` is well-formed (every tag closed — `<img>` included) and that all `src`/`href` targets exist relative to this directory.
+
+## Conventions
+
+- **Fonts:** Inter (sans) loaded via the Google Fonts `<link>` in `index.html`; mono stack `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace`. Tokens: `--font-sans` / `--font-mono`. Do not add other typefaces.
