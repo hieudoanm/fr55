@@ -133,7 +133,7 @@ const HomePage: NextPage = () => (
         { value: '4', label: 'watchfaces bundled' },
         { value: '1', label: 'vsix to install' },
       ]}>
-      <Terminal caption="Install & format" lines={HERO_LINES} />
+      <Terminal lines={HERO_LINES} />
     </Hero>
 
     <Features
@@ -152,7 +152,6 @@ const HomePage: NextPage = () => (
           {DEMO_TERMINALS.map((t) => (
             <Terminal
               key={t.caption}
-              caption={t.caption}
               lines={t.lines}
               className={t.wide ? 'lg:col-span-2' : ''}
             />
@@ -181,7 +180,7 @@ const HomePage: NextPage = () => (
           title="Get the latest VSIX"
           description="Rolling latest release built from this repository — the VS Code extension package. Zed extensions load from source; there is no .vsix to download."
         />
-        <Terminal caption="Download and install" lines={INSTALL_LINES} />
+        <Terminal lines={INSTALL_LINES} />
         <p className="text-base-content/60 mt-6 text-center text-sm">
           For Zed: open the Extensions page, choose{' '}
           <em>Install Dev Extension</em>, and select packages/extensions/zed —
