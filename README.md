@@ -1,9 +1,11 @@
-# Forerunner 55
+# fr55
 
 [![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
-![Forerunner 55 Connect IQ Watchfaces](assets/og/png/og.png)
+<p align="center">
+  <img src="assets/branding/png/og.png" alt="fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55" width="720">
+</p>
 
 Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
 
@@ -20,7 +22,7 @@ Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240�
 - **[`packages/extensions/zed/`](packages/extensions/zed/)** — Monkey C/Jungle Zed extension with Tree-sitter highlighting, an external formatter, a dark theme, file icons, and Connect IQ runtime-preview tasks.
 - **[`packages/landing/`](packages/landing/)** — static landing/download page deployed to GitHub Pages.
 - **[`packages/README.md`](packages/README.md)** — overview of the editor extensions.
-- **[`assets/`](assets/)** — shared assets: design previews (`assets/design/svg|png`), logos (`assets/logo/svg|png`), and Open Graph image (`assets/og/svg|png`).
+- **[`assets/`](assets/)** — shared assets: design previews (`assets/design/svg|png`) and branding (`assets/branding/svg|png`: logo, Open Graph image).
 - **[`scripts/`](scripts/)** — repo scripts, including Monkey C format/lint helpers (`format.sh`, `lint.sh`, `monkeyc-tools.js`).
 - **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — packages the VS Code extension and publishes a rolling `latest` GitHub release with the VSIX.
 
@@ -124,3 +126,7 @@ settings, task usage, and the vendored Jungle grammar requirement.
 - Primary target: **Garmin Forerunner 55** (`fr55`), 240×240, API level target depends on each app manifest.
 - Watchface drawing is generally resolution-independent (`dc.getWidth()` / `dc.getHeight()`), but manifests/products should be checked before targeting other devices.
 - Install a built PRG by copying it to `GARMIN/APPS/` on the watch (USB mass storage) or use Garmin tools/simulator workflows.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
