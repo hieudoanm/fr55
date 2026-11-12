@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-keywords: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
+Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
 
 
 <p align="center">
