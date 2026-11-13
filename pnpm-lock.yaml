@@ -228,6 +228,9 @@ importers:
       daisyui:
         specifier: 5.8.0
         version: 5.8.0
+      marked:
+        specifier: 18.2.0
+        version: 18.2.0
       next:
         specifier: 16.4.6
         version: 16.4.6(@babel/core@7.29.13)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
