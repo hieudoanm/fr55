@@ -5,9 +5,7 @@
 Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
 
 
-<p align="center">
-  <img src="assets/branding/png/og.png" alt="fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55" width="720">
-</p>
+![fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55](assets/branding/png/og.png)
 
 **Live demo:** <https://hieudoanm.github.io/fr55/>
 

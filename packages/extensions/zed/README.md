@@ -25,18 +25,18 @@ the runtime preview are exposed as an external formatter and tasks.
 
 ## Compared with the VS Code extension
 
-| Feature | VS Code | Zed |
-| --- | --- | --- |
-| Monkey C / Jungle languages | TextMate grammar | Tree-sitter grammar |
-| Syntax highlighting | ✅ | ✅ |
-| Brackets, indentation, folding | Language configuration | ✅ Tree-sitter queries |
-| Outline | — | ✅ |
-| Format Document | Built-in provider | ✅ External formatter |
-| Dark theme | ✅ | ✅ |
-| File icons | ✅ | ✅ |
-| Runtime Preview command | ✅ Command Palette | ✅ Task + CLI |
-| Breakpoints | ✅ Contribution | ❌ Zed has no equivalent contribution |
-| Language server / debugger | ❌ | ❌ |
+| Feature                        | VS Code                | Zed                                  |
+| ------------------------------ | ---------------------- | ------------------------------------ |
+| Monkey C / Jungle languages    | TextMate grammar       | Tree-sitter grammar                  |
+| Syntax highlighting            | ✅                      | ✅                                    |
+| Brackets, indentation, folding | Language configuration | ✅ Tree-sitter queries                |
+| Outline                        | —                      | ✅                                    |
+| Format Document                | Built-in provider      | ✅ External formatter                 |
+| Dark theme                     | ✅                      | ✅                                    |
+| File icons                     | ✅                      | ✅                                    |
+| Runtime Preview command        | ✅ Command Palette      | ✅ Task + CLI                         |
+| Breakpoints                    | ✅ Contribution         | ❌ Zed has no equivalent contribution |
+| Language server / debugger     | ❌                      | ❌                                    |
 
 The extension intentionally does not bundle Garmin's proprietary language
 server, debugger, or project tooling. For full Connect IQ workflows use the
@@ -124,7 +124,7 @@ The extension ships two tasks for Monkey C and Jungle buffers:
 - **Monkey C: Runtime Preview** — build, start the simulator, and launch the PRG.
 - **Monkey C: Build PRG** — build only.
 
-Run them from **task: spawn** (<kbd>cmd-shift-p</kbd> → `task: spawn`).
+Run them from **task: spawn** (`Cmd+Shift+P` → `task: spawn`).
 
 The task finds the nearest directory containing both `monkey.jungle` and
 `manifest.xml`, walking up from the current file. It then runs:
@@ -138,11 +138,11 @@ monkeydo bin/<package>.prg fr55
 Configuration through environment variables (set them in your shell, or in the
 task's `env` object):
 
-| Variable | Purpose |
-| --- | --- |
-| `MONKEYC_SDK_PATH` | SDK root containing `bin/monkeyc` |
-| `MONKEYC_DEVELOPER_KEY` | Developer key used for the build |
-| `MONKEYC_DEVICE` | Device id (default `fr55`) |
+| Variable                | Purpose                           |
+| ----------------------- | --------------------------------- |
+| `MONKEYC_SDK_PATH`      | SDK root containing `bin/monkeyc` |
+| `MONKEYC_DEVELOPER_KEY` | Developer key used for the build  |
+| `MONKEYC_DEVICE`        | Device id (default `fr55`)        |
 
 Without `MONKEYC_SDK_PATH`, the CLI checks
 `~/Library/Application Support/Garmin/ConnectIQ/current-sdk.cfg`,
