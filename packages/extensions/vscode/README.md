@@ -1,9 +1,6 @@
 # Monkey C for VS Code
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="icons/png/monkey-c-on-dark.png">
-  <img src="icons/png/monkey-c-on-light.png" alt="Monkey C" width="96" height="96">
-</picture>
+![Monkey C](icons/png/monkey-c-on-dark.png)
 
 Syntax highlighting, document formatting, a dark color theme, and file icons for
 [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) and
