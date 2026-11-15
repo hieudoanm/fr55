@@ -1,10 +1,10 @@
-import type { Metadata, NextPage } from 'next';
-import type { FC } from 'react';
 import CTA from '@/components/molecules/CTA';
 import Features, { type Feature } from '@/components/molecules/Features';
 import Hero from '@/components/molecules/Hero';
 import SectionHead from '@/components/molecules/SectionHead';
 import Terminal from '@/components/molecules/Terminal';
+import type { Metadata, NextPage } from 'next';
+import type { FC } from 'react';
 import {
   LuClock,
   LuCode,

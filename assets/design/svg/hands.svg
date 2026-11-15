@@ -7,10 +7,10 @@
   </defs>
   <g clip-path="url(#face)">
     <rect width="240" height="240" fill="#000000"/>
-    <!-- hour points to 4, minute points to 8 -->
-    <line x1="120" y1="120" x2="192.75" y2="162.00" stroke="#ff0000" stroke-width="6" stroke-linecap="round"/>
-    <line x1="120" y1="120" x2="26.47" y2="174.00" stroke="#ff0000" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="120" cy="120" r="4" fill="#ff0000"/>
+    <!-- 10:10 — hour hand at 305deg (len 84), minute hand at 60deg (len 108) -->
+    <line x1="120" y1="120" x2="51.19" y2="71.81" stroke="#ff0000" stroke-width="7" stroke-linecap="round"/>
+    <line x1="120" y1="120" x2="213.53" y2="66.00" stroke="#ff0000" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="120" cy="120" r="5" fill="#ff0000"/>
   </g>
   <circle cx="120" cy="120" r="119" fill="none" stroke="#222222" stroke-width="2"/>
 </svg>

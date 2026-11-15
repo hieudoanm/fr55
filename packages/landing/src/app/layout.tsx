@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { label: 'Demo', href: '#demo' },
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Install', href: '#install' },
+  { label: 'Gallery', href: '/gallery/' },
   { label: 'Docs', href: '/docs/' },
 ];
 
@@ -29,6 +30,18 @@ export const metadata: Metadata = {
     template: '%s — FR55',
   },
   description: DESCRIPTION,
+  keywords: [
+    'Monkey C',
+    'Connect IQ',
+    'Garmin',
+    'Forerunner 55',
+    'watchface',
+    'VS Code extension',
+    'Zed extension',
+    'Monkey C formatter',
+  ],
+  authors: [{ name: 'hieudoan', url: GITHUB }],
+  category: 'developer tools',
   openGraph: {
     siteName: 'Monkey C — FR55',
     type: 'website',
@@ -46,6 +59,28 @@ export const metadata: Metadata = {
   },
 };
 
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'Monkey C — FR55',
+      url: 'https://hieudoanm.github.io/fr55/',
+      description: DESCRIPTION,
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Monkey C — FR55',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'VS Code, Zed',
+      description: DESCRIPTION,
+      url: 'https://hieudoanm.github.io/fr55/',
+      codeRepository: GITHUB,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+  ],
+};
+
 interface RootLayoutProps {
   children: ReactNode;
 }
@@ -56,6 +91,10 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
     data-theme="fr55"
     className={`scroll-smooth antialiased motion-reduce:scroll-auto ${inter.className}`}>
     <body className="bg-base-100 text-base-content m-0 leading-relaxed">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <Navbar
         name="FR55 / Monkey C"
         logoSrc={LOGO}
