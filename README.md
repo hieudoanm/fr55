@@ -4,7 +4,6 @@
 
 Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
 
-
 ![fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55](assets/branding/png/og.png)
 
 **Live demo:** <https://hieudoanm.github.io/fr55/>

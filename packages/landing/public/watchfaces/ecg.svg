@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="title">
+  <title id="title">ECG watch face</title>
+  <defs>
+    <clipPath id="face">
+      <circle cx="120" cy="120" r="120"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#face)">
+    <rect width="240" height="240" fill="#000000"/>
+
+    <path d="M10 128 L50 128 L58 120 L66 132 L74 112 L82 140 L92 128 L230 128" fill="none" stroke="#ff0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="120" y="72" text-anchor="middle" dominant-baseline="middle" fill="#ff0000" font-family="system-ui, sans-serif" font-size="44">10:10</text>
+    <text x="120" y="196" text-anchor="middle" dominant-baseline="middle" fill="#555555" font-family="system-ui, sans-serif" font-size="18">♥ 72 BPM</text>
+  </g>
+  <circle cx="120" cy="120" r="119" fill="none" stroke="#222222" stroke-width="2"/>
+</svg>

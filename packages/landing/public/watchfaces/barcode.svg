@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="title">
+  <title id="title">Barcode watch face</title>
+  <defs>
+    <clipPath id="face">
+      <circle cx="120" cy="120" r="120"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#face)">
+    <rect width="240" height="240" fill="#000000"/>
+
+    <text x="26" y="99" text-anchor="middle" dominant-baseline="middle" fill="#555555" font-family="system-ui, sans-serif" font-size="20">H</text>
+    <rect x="51" y="68" width="10" height="48" fill="#ff0000"/>
+    <rect x="98.5" y="68" width="3" height="48" fill="#2e2e2e"/>
+    <rect x="139" y="68" width="10" height="48" fill="#ff0000"/>
+    <rect x="186.5" y="68" width="3" height="48" fill="#2e2e2e"/>
+    <text x="26" y="155" text-anchor="middle" dominant-baseline="middle" fill="#555555" font-family="system-ui, sans-serif" font-size="20">M</text>
+    <rect x="51" y="124" width="10" height="48" fill="#ff0000"/>
+    <rect x="98.5" y="124" width="3" height="48" fill="#2e2e2e"/>
+    <rect x="139" y="124" width="10" height="48" fill="#ff0000"/>
+    <rect x="186.5" y="124" width="3" height="48" fill="#2e2e2e"/>
+  </g>
+  <circle cx="120" cy="120" r="119" fill="none" stroke="#222222" stroke-width="2"/>
+</svg>

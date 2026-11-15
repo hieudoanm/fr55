@@ -26,6 +26,11 @@ pnpm run lint
   theme.
 - `public/` — `favicon.ico`, `favicon.svg`, `logo.*`, `og.png`, `robots.txt`,
   `sitemap.xml`, `humans.txt`, served under `/fr55/` in production.
+- `public/watchfaces/*.svg` — vendored copies of `assets/design/svg/*.svg` from
+  the repo root, used by the gallery. Re-copy them if the watchface designs
+  change.
+- `src/app/gallery/` — watchface gallery page: `index.tsx` holds the component
+  and metadata, `page.tsx` is the route (App Router requires `page.tsx`).
 
 ## Conventions
 
