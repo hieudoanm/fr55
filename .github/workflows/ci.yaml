@@ -136,7 +136,7 @@ jobs:
           tag_name: latest
           name: "Monkey C for VS Code (latest)"
           target_commitish: ${{ github.sha }}
-          body_path: packages/extensions/vscode/README.md
+          body_path: RELEASE.md
           files: dist/monkey-c.vsix
           fail_on_unmatched_files: true
           prerelease: false
