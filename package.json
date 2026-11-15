@@ -19,7 +19,9 @@
     "node": "26.13.1"
   },
   "scripts": {
+    "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "build": "turbo run build",
     "format": "turbo run format",
     "prepare": "husky || true"
   },

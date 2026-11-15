@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-labelledby="title">
+  <title id="title">Spiral watch face</title>
+  <defs>
+    <clipPath id="face">
+      <circle cx="120" cy="120" r="120"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#face)">
+    <rect width="240" height="240" fill="#000000"/>
+
+    <circle cx="126.00" cy="120.00" r="3" fill="#ffffff"/>
+    <circle cx="113.29" cy="126.15" r="3" fill="#888888"/>
+    <circle cx="121.07" cy="107.85" r="3" fill="#888888"/>
+    <circle cx="129.31" cy="132.14" r="3" fill="#ffffff"/>
+    <circle cx="101.88" cy="116.79" r="3" fill="#888888"/>
+    <circle cx="138.14" cy="108.46" r="3" fill="#888888"/>
+    <circle cx="113.61" cy="143.76" r="3" fill="#ffffff"/>
+    <circle cx="107.23" cy="95.42" r="3" fill="#888888"/>
+    <circle cx="148.93" cy="130.57" r="3" fill="#888888"/>
+    <circle cx="88.66" cy="132.93" r="3" fill="#ffffff"/>
+    <circle cx="135.68" cy="86.49" r="3" fill="#888888"/>
+    <circle cx="132.00" cy="158.26" r="3" fill="#888888"/>
+    <circle cx="82.62" cy="98.34" r="3" fill="#ffffff"/>
+    <circle cx="165.22" cy="110.06" r="3" fill="#888888"/>
+    <circle cx="91.59" cy="160.41" r="3" fill="#888888"/>
+    <circle cx="113.26" cy="67.93" r="3" fill="#ffffff"/>
+    <circle cx="162.51" cy="155.83" r="3" fill="#888888"/>
+    <circle cx="61.35" cy="122.42" r="3" fill="#888888"/>
+    <circle cx="163.81" cy="76.41" r="3" fill="#ffffff"/>
+    <circle cx="117.00" cy="184.83" r="3" fill="#888888"/>
+    <circle cx="76.44" cy="67.79" r="3" fill="#888888"/>
+    <circle cx="190.46" cy="129.49" r="3" fill="#ffffff"/>
+    <circle cx="59.09" cy="162.37" r="3" fill="#888888"/>
+    <circle cx="136.97" cy="44.59" r="3" fill="#888888"/>
+    <circle cx="159.97" cy="189.76" r="3" fill="#ffffff"/>
+    <circle cx="40.45" cy="94.61" r="3" fill="#888888"/>
+    <circle cx="198.62" cy="83.69" r="3" fill="#888888"/>
+    <circle cx="85.36" cy="202.74" r="3" fill="#ffffff"/>
+    <circle cx="88.60" cy="32.67" r="3" fill="#888888"/>
+    <circle cx="204.88" cy="164.63" r="3" fill="#888888"/>
+    <circle cx="24.27" cy="145.22" r="3" fill="#ffffff"/>
+    <circle cx="175.23" cy="34.13" r="4.5" fill="#ff0000"/>
+    <text x="120" y="140" text-anchor="middle" dominant-baseline="middle" fill="#ff0000" font-family="system-ui, sans-serif" font-size="30">10:10</text>
+  </g>
+  <circle cx="120" cy="120" r="119" fill="none" stroke="#222222" stroke-width="2"/>
+</svg>
