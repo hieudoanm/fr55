@@ -2,7 +2,7 @@ packages:
   - 'packages/**/*'
 
 overrides:
-  minimatch: '11.0.8'
+  minimatch: '11.0.9'
 
 allowBuilds:
   '@vscode/vsce-sign': true
