@@ -34,5 +34,5 @@ make build DEVICE=fr55 SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/S
 
 - Primary target is `fr55`; keep layout/device-size calculations resolution-aware (`dc.getWidth/Height`).
 - Watch faces get `onUpdate()` automatically (once per minute in low-power mode, once per second in high-power mode) — do not call `WatchUi.requestUpdate()` inside `onUpdate()`; that creates a redraw loop and battery drain.
-- After `.mc` changes, match the surrounding style; formatting/linting lives in the `hieudoanm/monkey` repo (`monkey check` / `monkey format`).
+- After `.mc` changes, run `monkey check apps/` and `monkey format --write apps/` (the `monkey` CLI from `hieudoanm/monkey`, on PATH).
 - Do not commit `bin/`, local SDK paths, or developer keys.

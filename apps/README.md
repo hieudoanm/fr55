@@ -50,8 +50,8 @@ Each app follows the same shape:
   call `WatchUi.requestUpdate()` inside `onUpdate()` (redraw loop).
 - Heart rate (`Activity.getActivityInfo().currentHeartRate`) may be `null`;
   keep safe fallbacks.
-- Formatting/linting lives in the companion repo `hieudoanm/monkey`
-  (`monkey check` / `monkey format`).
+- Formatting/linting: `monkey check apps/` and `monkey format --write apps/`
+  (the `monkey` CLI from `hieudoanm/monkey`, on PATH).
 
 ## Build / runtime preview
 

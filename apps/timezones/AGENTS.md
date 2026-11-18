@@ -33,5 +33,5 @@ make build DEVICE=fr55 SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/S
 
 - London/Melbourne use **fixed** UTC offsets (no DST rules). Saigon is represented by the watch’s local time. Preserve/clearly document these limitations if changing behavior.
 - Keep hour normalization correct for negative/overflow values.
-- After `.mc` changes, match the surrounding style; formatting/linting lives in the `hieudoanm/monkey` repo (`monkey check` / `monkey format`).
+- After `.mc` changes, run `monkey check apps/` and `monkey format --write apps/` (the `monkey` CLI from `hieudoanm/monkey`, on PATH).
 - Do not commit `bin/`, local SDK paths, or developer keys.

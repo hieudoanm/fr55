@@ -82,15 +82,9 @@ class View extends WatchUi.WatchFace {
   // Called when this View is removed from the screen. Save the
   // state of this View here. This includes freeing resources from
   // memory.
-  function onHide() as Void {
-  }
 
   // The user has just looked at their watch. Timers and animations may be started here.
-  function onExitSleep() as Void {
-  }
 
   // Terminate any active timers and prepare for slow updates.
-  function onEnterSleep() as Void {
-  }
 
 }

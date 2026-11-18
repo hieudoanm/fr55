@@ -53,8 +53,8 @@ make build DEVICE=fr55 SDK="/path/to/ConnectIQ/Sdks/<sdk>" DEVELOPER_KEY="/path/
 
 Keep changes focused, preserve the Forerunner 55 (`fr55`) target unless intentionally expanding device support, and check manifests when adding products/permissions.
 
-Monkey C formatting/linting is handled by the `monkey` CLI in the
-`hieudoanm/monkey` repo — see its README for `monkey check` / `monkey format`.
+Monkey C formatting/linting uses the `monkey` CLI (from `hieudoanm/monkey`,
+on PATH): `monkey check apps/` and `monkey format --write apps/`.
 
 ## Landing page (`packages/landing`)
 

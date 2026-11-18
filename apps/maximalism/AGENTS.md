@@ -34,5 +34,5 @@ make build DEVICE=fr55 SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/S
 
 - Primary target is `fr55`; keep geometry device-size aware.
 - Battery/HR access can fail or return `null`; preserve safe fallbacks.
-- After `.mc` changes, match the surrounding style; formatting/linting lives in the `hieudoanm/monkey` repo (`monkey check` / `monkey format`).
+- After `.mc` changes, run `monkey check apps/` and `monkey format --write apps/` (the `monkey` CLI from `hieudoanm/monkey`, on PATH).
 - Do not commit `bin/`, local SDK paths, or developer keys.

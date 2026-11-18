@@ -6,7 +6,7 @@ import Toybox.WatchUi;
 
 class View extends WatchUi.WatchFace {
   // ECG trace in 240x240 design space
-  var TRACE = [[10,128],[50,128],[58,120],[66,132],[74,112],[82,140],[92,128],[230,128]];
+  var TRACE = [[10, 128], [50, 128], [58, 120], [66, 132], [74, 112], [82, 140], [92, 128], [230, 128]];
 
   function initialize() {
     WatchFace.initialize();
