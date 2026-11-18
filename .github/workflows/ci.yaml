@@ -74,8 +74,10 @@ jobs:
 
       - name: Build watchface PRGs
         run: |
-          SDK_DIR=$(find "$HOME/connectiq-sdk" -maxdepth 1 -type d -name 'connectiq-sdk-*' | head -1)
-          echo "SDK_DIR=$SDK_DIR"
+          MONKEYC_BIN=$(find "$HOME/connectiq-sdk" -path '*/bin/monkeyc' | head -1)
+          SDK_DIR=$(dirname "$(dirname "$MONKEYC_BIN")")
+          echo "SDK_DIR=$SDK_DIR (monkeyc: $MONKEYC_BIN)"
+          test -x "$SDK_DIR/bin/monkeyc"
           mkdir -p dist
           for app in hands minimalism maximalism timezones; do
             echo "== building $app"
@@ -143,7 +145,7 @@ jobs:
           version: 12.21.0
 
       - name: Set up Node.js
-        uses: actions/setup-node@v7.0.1
+        uses: actions/setup-node@v7.1.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
