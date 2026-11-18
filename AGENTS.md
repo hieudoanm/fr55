@@ -4,44 +4,34 @@ Guidance for coding agents working in this repository.
 
 ## Repository purpose
 
-Connect IQ watchfaces and tooling for **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
+Connect IQ watchfaces for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
+Monkey C editor tooling (VS Code/Zed extensions, `monkey` CLI) lives in the
+companion repo `hieudoanm/monkey` — do not re-add it here.
 
 ## Layout
 
 - `apps/` — buildable Connect IQ watchface apps. Each app is self-contained: `manifest.xml`, `monkey.jungle`, `resources/`, `source/*App.mc`, `source/*View.mc`, and a `Makefile`.
   - Current apps: `hands`, `minimalism`, `maximalism`, `timezones`.
-- `crates/` — Rust workspace with the `monkey-*` toolchain (zero dependencies):
-  - `monkey-syntax` — Monkey C lexer/token model.
-  - `monkey-formatter` — Monkey C + Jungle formatter (parity with the extension formatter).
-  - `monkey-linter` — lint rules (`no-trailing-whitespace`, `no-multiple-empty-lines`, `use-space-indent`, `eof-newline`, `no-request-update-in-onupdate`).
-  - `monkey-cli` — `monkey` binary: `format`, `lint`, `check`, `tokens` subcommands.
-- `packages/extensions/vscode/` — VS Code extension for Monkey C/Jungle (TypeScript). Has its own `AGENTS.md` and README.
-- `packages/extensions/zed/` — Zed extension for Monkey C/Jungle (Tree-sitter, theme, icons, formatter CLI, runtime-preview task). Has its own `AGENTS.md` and README.
-- `assets/` — design previews, logos, OG assets, and `svg-to-png.sh`.
-- `crates/` — see above; build with `cd crates && cargo build --workspace`, test with `cargo test --workspace`, binary at `crates/target/debug/monkey`.
-- `scripts/` — repo-level helper scripts (`install.sh`, `install-local.sh`).
-- `.github/workflows/ci.yaml` — extension CI/release: VS Code lint/typecheck/Vitest/build/VSIX packaging, Zed formatter/grammar validation, and the rolling `latest` VSIX release on `master`/`main`.
+- `packages/landing/` — Next.js static-export landing page + docs, deployed to GitHub Pages. Has its own `AGENTS.md`.
+- `assets/` — design previews (`design/svg|png`), branding, `svg-to-png.sh`, `sync-assets.sh`.
+- `.github/workflows/ci.yaml` — apps PRG build (throwaway openssl signing key generated in CI), rolling `latest` GitHub release with `.prg` files, and landing build + GitHub Pages deploy on `master`/`main`.
+- `ci/devices/fr55.zip` — vendored Connect IQ `fr55` device files used by CI (the devices API requires Garmin login; only `fr55` is needed since all Makefiles build `DEVICE=fr55`).
 
 ## Working conventions
 
 - Keep changes focused and match existing project structure.
-- Prefer editing existing files; do not create new watchface packages/apps unless requested.
+- Prefer editing existing files; do not create new watchface apps unless requested.
 - Preserve `fr55` as the primary target unless intentionally changing device support. Check each app `manifest.xml` before changing products, permissions, languages, or API level.
 - Do not commit secrets, developer keys, SDK credentials, or local machine paths as required defaults beyond existing local-dev conventions.
-- `apps/*/bin/`, `packages/extensions/vscode/out/`, `packages/extensions/vscode/dist/`, `node_modules/`, and generated artifacts should not be committed unless explicitly intended.
+- `apps/*/bin/`, `node_modules/`, `packages/landing/out/`, and generated artifacts should not be committed unless explicitly intended.
 
 ## Monkey C (`apps/`, `*.mc`)
 
-- Run from repo root after Monkey C changes:
-
-```bash
-cd crates && cargo build --release
-./target/release/monkey check ..   # lint + format-check *.mc/*.jungle
-./target/release/monkey format --write <paths>   # apply formatting
-```
-
-- `monkey check` must pass before considering Monkey C edits complete.
-- The formatter is conservative (indentation/brace/common spacing). Review diffs after formatting.
+- Formatting/linting for `*.mc`/`*.jungle` is handled by the `monkey` CLI in the
+  `hieudoanm/monkey` repo (`cd crates && cargo build --release` there, then
+  `monkey check`/`monkey format`). It is not part of this repo.
+- Match the surrounding code style manually; the formatter is conservative
+  (indentation/brace/common spacing).
 - App builds require the Connect IQ SDK and a developer key:
 
 ```bash
@@ -51,45 +41,29 @@ make build DEVICE=fr55 SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/S
 
 Do not claim an app build/run succeeded unless you actually ran it in an environment with the required SDK/key.
 
-## VS Code extension (`packages/extensions/vscode`)
-
-Use pnpm in `packages/extensions/vscode`:
+## Landing page (`packages/landing`)
 
 ```bash
-cd packages/extensions/vscode
+cd packages/landing
 pnpm install
-pnpm run format:check
-pnpm run lint
-pnpm run typecheck
-pnpm run test
-pnpm run build
+pnpm run dev
+pnpm run build   # static export → out/
 ```
 
-CI runs these checks for extension changes. See `packages/extensions/vscode/AGENTS.md` for TypeScript/tooling details.
+- `output: "export"` must stay — the site must build to static HTML in `out/`; no server features or API routes.
+- `basePath`/`assetPrefix` are `/fr55` in production; raw `<img src>` paths must include it.
+- See `packages/landing/AGENTS.md` for details.
 
-## Zed extension (`packages/extensions/zed`)
+## CI/pages
 
-No package install is required; the formatter uses Node built-ins and the grammar uses the Tree-sitter CLI via `npx`:
-
-```bash
-cd packages/extensions/zed
-make test                 # node --test formatter/ + Jungle grammar corpus
-./scripts/install.sh      # symlink monkey-c-format / monkey-c-preview into ~/.local/bin
-```
-
-- Zed uses Tree-sitter queries under `languages/*/` and a vendored Jungle grammar under `grammars/tree-sitter-jungle/`. Commit generated parser files after editing `grammar.js`.
-- The Jungle grammar is fetched from this repository at `rev = "master"`. It must be committed and pushed before a Zed dev install or release can resolve it; pin `rev` to a commit for releases.
-- `scripts/runtime-preview.mjs` mirrors `packages/extensions/vscode/src/runtime-preview.ts` and discovers the SDK/key via flags, env vars, and standard Garmin paths.
-- See `packages/extensions/zed/AGENTS.md` for details.
-
-## CI/release
-
-- CI is triggered by changes under `apps/**`, `crates/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and workflow dispatch.
-- On pushes to `master`/`main`, CI updates GitHub release tag `latest` with `monkey-c.vsix`, `monkey-c-zed.zip`, and `monkey-*` CLI binaries; release notes come from `RELEASE.md`.
+- CI is triggered by changes under `apps/**`, `assets/**`, `packages/landing/**`, `ci/**`, and workflow dispatch.
+- On pushes to `master`/`main`, CI builds all `apps/*` into signed `.prg` files (Connect IQ SDK downloaded publicly; `fr55` device files from `ci/devices/fr55.zip`; a throwaway PKCS#8 key generated with openssl signs each build), publishes them to the rolling `latest` GitHub release (notes from `RELEASE.md`), and deploys `packages/landing/out` to GitHub Pages.
+- The CI signing key is ephemeral — fine for sideloaded PRGs. If the apps are ever submitted to the Garmin store, sign with the real developer key instead.
 - Be careful changing `.github/workflows/ci.yaml`: pnpm must be available before `actions/setup-node` when using `cache: pnpm`.
 
 ## Docs/assets
 
-- Update `README.md`, `apps/README.md`, or extension docs when behavior/commands/structure change.
-- Design previews live in `assets/design/svg|png`; OG assets in `assets/og/svg|png`.
-- `assets/svg-to-png.sh` converts SVGs under `assets/*/svg/` to parallel `png/` outputs while preserving aspect ratio by default.
+- Update `README.md`, `apps/README.md`, or landing docs when behavior/commands/structure change.
+- Design previews live in `assets/design/svg|png`; OG/branding assets in `assets/branding/` and `assets/og/`.
+- `assets/svg-to-png.sh` converts SVGs under `assets/*/svg/` to parallel `png/` outputs; `assets/sync-assets.sh` syncs branding into `packages/landing/public/`.
+- `packages/landing/public/watchfaces/` vendors `assets/design/svg/*.svg` — re-copy when designs change.

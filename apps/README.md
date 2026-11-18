@@ -16,7 +16,7 @@ Design previews live in [`../assets/design/svg/`](../assets/design/svg/).
   - Hour hand: length `screenWidth * 0.35`, stroke width `6`, red (`Graphics.COLOR_RED`).
   - Minute hand: length `screenWidth * 0.45`, stroke width `4`, red.
   - `drawHand` converts degrees to radians and draws a line from center using `sin`/`cos`.
-- **Behavior:** `onShow()` calls `WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE)` so the face redraws once per minute without a redraw loop.
+- **Behavior:** the face redraws automatically — Connect IQ calls `onUpdate()` once per minute in low-power mode and once per second in high-power mode.
 
 ## Minimalism (`minimalism/`)
 
@@ -62,4 +62,4 @@ monkeyc -f apps/hands/monkey.jungle -d fr55 -o apps/hands/bin/hands.prg -y /path
 monkeydo apps/hands/bin/hands.prg fr55
 ```
 
-From VS Code, use the custom extension command **Monkey C: Runtime Preview (Simulator)** (requires `monkeyC.sdkPath` or installed Connect IQ SDK and `monkeyC.developerKeyPath`), or use the official Garmin Monkey C extension workflow.
+Editor integrations (VS Code/Zed extensions, `monkey` CLI) live in the companion repo `hieudoanm/monkey`; the official Garmin Monkey C extension workflow also works for SDK builds.
