@@ -10,13 +10,16 @@ Connect IQ watchfaces and tooling for **Garmin Forerunner 55** (`fr55`, 240×240
 
 - `apps/` — buildable Connect IQ watchface apps. Each app is self-contained: `manifest.xml`, `monkey.jungle`, `resources/`, `source/*App.mc`, `source/*View.mc`, and a `Makefile`.
   - Current apps: `hands`, `minimalism`, `maximalism`, `timezones`.
+- `crates/` — Rust workspace with the `monkey-*` toolchain (zero dependencies):
+  - `monkey-syntax` — Monkey C lexer/token model.
+  - `monkey-formatter` — Monkey C + Jungle formatter (parity with the extension formatter).
+  - `monkey-linter` — lint rules (`no-trailing-whitespace`, `no-multiple-empty-lines`, `use-space-indent`, `eof-newline`, `no-request-update-in-onupdate`).
+  - `monkey-cli` — `monkey` binary: `format`, `lint`, `check`, `tokens` subcommands.
 - `packages/extensions/vscode/` — VS Code extension for Monkey C/Jungle (TypeScript). Has its own `AGENTS.md` and README.
 - `packages/extensions/zed/` — Zed extension for Monkey C/Jungle (Tree-sitter, theme, icons, formatter CLI, runtime-preview task). Has its own `AGENTS.md` and README.
 - `assets/` — design previews, logos, OG assets, and `svg-to-png.sh`.
-- `scripts/` — repo-level Monkey C helpers:
-  - `format.sh` — format all `*.mc` files.
-  - `lint.sh` — check trailing whitespace, tabs, and formatter drift.
-  - `monkeyc-tools.js` — uses `packages/extensions/vscode/out/format-monkeyc.js` (builds the extension formatter if missing).
+- `crates/` — see above; build with `cd crates && cargo build --workspace`, test with `cargo test --workspace`, binary at `crates/target/debug/monkey`.
+- `scripts/` — repo-level helper scripts (`install.sh`, `install-local.sh`).
 - `.github/workflows/ci.yaml` — extension CI/release: VS Code lint/typecheck/Vitest/build/VSIX packaging, Zed formatter/grammar validation, and the rolling `latest` VSIX release on `master`/`main`.
 
 ## Working conventions
@@ -32,11 +35,12 @@ Connect IQ watchfaces and tooling for **Garmin Forerunner 55** (`fr55`, 240×240
 - Run from repo root after Monkey C changes:
 
 ```bash
-./scripts/format.sh
-./scripts/lint.sh
+cd crates && cargo build --release
+./target/release/monkey check ..   # lint + format-check *.mc/*.jungle
+./target/release/monkey format --write <paths>   # apply formatting
 ```
 
-- `lint.sh` must pass before considering Monkey C edits complete.
+- `monkey check` must pass before considering Monkey C edits complete.
 - The formatter is conservative (indentation/brace/common spacing). Review diffs after formatting.
 - App builds require the Connect IQ SDK and a developer key:
 
@@ -80,8 +84,8 @@ make test                 # node --test formatter/ + Jungle grammar corpus
 
 ## CI/release
 
-- CI is triggered by changes under `apps/**`, `scripts/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and workflow dispatch.
-- On pushes to `master`/`main`, CI updates GitHub release tag `latest` with `monkey-c.vsix`; release notes come from `packages/extensions/vscode/README.md`.
+- CI is triggered by changes under `apps/**`, `crates/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and workflow dispatch.
+- On pushes to `master`/`main`, CI updates GitHub release tag `latest` with `monkey-c.vsix`, `monkey-c-zed.zip`, and `monkey-*` CLI binaries; release notes come from `RELEASE.md`.
 - Be careful changing `.github/workflows/ci.yaml`: pnpm must be available before `actions/setup-node` when using `cache: pnpm`.
 
 ## Docs/assets

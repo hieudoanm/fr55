@@ -47,14 +47,14 @@ pnpm run build
 pnpm run package -- --out monkey-c.vsix
 ```
 
-`pnpm run build` is required before behavior that depends on compiled `out/*.js` (including repo-root `scripts/format.sh`/`lint.sh`, which load `out/format-monkeyc.js`).
+`pnpm run build` is required before behavior that depends on compiled `out/*.js` (editor formatting providers and the runtime preview load `out/*.js` at activation).
 
 ## Implementation notes
 
 - Keep the extension lightweight and safe; the Monkey C formatter is conservative, not a full parser and not Garmin's official formatter.
 - When changing `format-monkeyc.ts`, add/update Vitest tests for representative Monkey C/Jungle cases (idempotency, comments, strings, braces/indentation, common control flow).
-- After formatter behavior changes, run extension tests and then run repo-root `./scripts/format.sh` / `./scripts/lint.sh` if the change affects `*.mc` formatting.
-- `tsconfig.json` currently uses CommonJS + `Node10` module resolution with `"ignoreDeprecations": "6.0"` for TS6 compatibility because the extension emits Node-consumed `out/*.js`. If migrating module settings, verify build output, VS Code runtime, Vitest, and root Monkey C scripts still work.
+- After formatter behavior changes, run extension tests and then run `crates/target/release/monkey check ..` from the repo root if the change affects `*.mc` formatting (the Rust formatter in `crates/` is the canonical repo-wide formatter; keep it behaviorally aligned).
+- `tsconfig.json` currently uses CommonJS + `Node10` module resolution with `"ignoreDeprecations": "6.0"` for TS6 compatibility because the extension emits Node-consumed `out/*.js`. If migrating module settings, verify build output, VS Code runtime, and Vitest still work.
 - Runtime preview depends on local Connect IQ SDK layout and a developer key; do not hardcode machine-specific SDK/key paths. Use settings/config discovery (`monkeyC.sdkPath`, `monkeyC.developerKeyPath`, `monkeyC.previewDevice`, SDK config paths).
 - Preserve VS Code contribution IDs/commands/settings unless intentionally making a breaking change; update `package.json`, README, and tests/docs accordingly.
 

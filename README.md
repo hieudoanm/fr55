@@ -1,6 +1,6 @@
 # fr55
 
-[![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
 
@@ -24,7 +24,8 @@ Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240�
 - **[`packages/landing/`](packages/landing/)** — static landing/download page deployed to GitHub Pages.
 - **[`packages/README.md`](packages/README.md)** — overview of the editor extensions.
 - **[`assets/`](assets/)** — shared assets: design previews (`assets/design/svg|png`) and branding (`assets/branding/svg|png`: logo, Open Graph image).
-- **[`scripts/`](scripts/)** — repo scripts, including Monkey C format/lint helpers (`format.sh`, `lint.sh`, `monkeyc-tools.js`).
+- **[`crates/`](crates/)** — Rust toolchain for Monkey C/Jungle (lexer, formatter, linter, `monkey` CLI), built with Cargo.
+- **[`scripts/`](scripts/)** — repo helper scripts (`install.sh`, `install-local.sh`).
 - **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — packages the VS Code extension and publishes a rolling `latest` GitHub release with the VSIX.
 
 ## Repository layout
@@ -44,7 +45,8 @@ Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240�
 │   │   ├── vscode/             # Monkey C/Jungle VS Code extension
 │   │   └── zed/                # Monkey C/Jungle Zed extension
 │   └── landing/                # GitHub Pages landing page
-└── scripts/                    # Monkey C format/lint scripts
+├── crates/                     # monkey-* Rust toolchain (format/lint CLI)
+└── scripts/                    # install helper scripts
 ```
 
 ## Build and preview an app
@@ -108,19 +110,23 @@ make test              # formatter tests + Jungle grammar tests
 See [`packages/extensions/zed/README.md`](packages/extensions/zed/README.md) for Zed formatter
 settings, task usage, and the vendored Jungle grammar requirement.
 
-## Monkey C scripts
+## Monkey C toolchain
+
+The `crates/` workspace provides a `monkey` CLI for formatting and linting
+`*.mc`/`*.jungle` files (replaces the old `scripts/format.sh`/`lint.sh`).
 
 ```bash
-./scripts/format.sh   # format all *.mc files
-./scripts/lint.sh     # check trailing whitespace/tabs/format drift
+cd crates && cargo build --release
+./target/release/monkey check ..   # lint + format-check the repo
+./target/release/monkey format --write <paths>
 ```
 
 ## CI and releases
 
-`.github/workflows/ci.yaml` runs for changes under `apps/**`, `scripts/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and on workflow dispatch. On pushes to `master`, it updates the rolling GitHub release tagged `latest`:
+`.github/workflows/ci.yaml` runs for changes under `apps/**`, `crates/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and on workflow dispatch. On pushes to `master`, it updates the rolling GitHub release tagged `latest`:
 
-- asset: `monkey-c.vsix`
-- release notes: [`packages/extensions/vscode/README.md`](packages/extensions/vscode/README.md)
+- assets: `monkey-c.vsix` (VS Code), `monkey-c-zed.zip` (Zed), `monkey-*` CLI binaries (Linux/macOS/Windows)
+- release notes: [`RELEASE.md`](RELEASE.md)
 
 ## Device notes
 

@@ -53,14 +53,16 @@ Keep changes focused, preserve the Forerunner 55 (`fr55`) target unless intentio
 
 ## Monkey C formatting/linting
 
-Use the repo scripts from the repository root:
+Use the `monkey` CLI from the `crates/` workspace (build once with
+`cargo build --release`):
 
 ```bash
-./scripts/format.sh
-./scripts/lint.sh
+cd crates && cargo build --release
+./target/release/monkey check ..   # lint + format-check *.mc/*.jungle
+./target/release/monkey format --write <paths>
 ```
 
-`lint.sh` checks trailing whitespace, tabs, and formatter drift for `*.mc` files. Fix formatting issues with `format.sh` before opening a PR.
+`monkey check` verifies formatting and lints for whitespace/format drift. Fix formatting issues with `monkey format --write` before opening a PR.
 
 ## VS Code extension (`packages/extensions/vscode`)
 
@@ -90,7 +92,7 @@ Useful commands:
 
 - Make small, focused changes.
 - Update docs/assets when behavior or structure changes.
-- Run relevant checks locally (`./scripts/lint.sh` for Monkey C changes; extension checks above for `packages/extensions/vscode` changes).
+- Run relevant checks locally (`crates/target/release/monkey check` for Monkey C changes; extension checks above for `packages/extensions/vscode` changes).
 - Do not commit secrets, developer keys, or local SDK credentials.
 
 ## License
