@@ -2,7 +2,7 @@
   "name": "@fr55/workspace",
   "version": "0.0.1",
   "private": true,
-  "description": "Forerunner 55",
+  "description": "Connect IQ watchfaces for the Garmin Forerunner 55",
   "keywords": [
     "garmin",
     "forerunner",
