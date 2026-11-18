@@ -5,8 +5,7 @@ Forerunner 55** (`fr55`, 240×240 MIP display), written in Monkey C.
 
 ## What's inside
 
-- **`apps/`** — buildable watchface apps: `hands`, `minimalism`, `maximalism`,
-  and `timezones`.
+- **`apps/`** — 16 buildable watchface apps, one per design preview.
 - **`assets/design/svg/`** — 16 watchface design previews.
 - **`packages/landing/`** — this site, deployed to GitHub Pages.
 

@@ -79,13 +79,13 @@ jobs:
           echo "SDK_DIR=$SDK_DIR (monkeyc: $MONKEYC_BIN)"
           test -x "$SDK_DIR/bin/monkeyc"
           mkdir -p dist
-          for app in hands minimalism maximalism timezones; do
+          for app in barcode binary chronograph compass dotmatrix ecg hands maximalism minimalism moon pie rings roman spiral split timezones; do
             echo "== building $app"
             make -C "apps/$app" build \
               DEVICE=fr55 \
               SDK="$SDK_DIR" \
               DEVELOPER_KEY="$RUNNER_TEMP/developer_key.der"
-            cp "apps/$app/bin/$app.prg" "dist/$app-fr55.prg"
+            cp "apps/$app/bin/$app.prg" "dist/fr55-$app.prg"
           done
 
       - name: Upload PRG artifacts

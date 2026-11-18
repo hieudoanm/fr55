@@ -23,13 +23,13 @@ const GITHUB = 'https://github.com/hieudoanm/fr55';
 const FEATURES: Feature[] = [
   {
     icon: LuWatch,
-    title: 'Four watchfaces',
-    body: 'hands, minimalism, maximalism, and timezones — each a self-contained Connect IQ app under apps/ that builds independently.',
+    title: '16 watchfaces',
+    body: 'hands, rings, dotmatrix, compass, and more — each a self-contained Connect IQ app under apps/ that builds independently.',
   },
   {
     icon: LuImages,
-    title: '16 design concepts',
-    body: 'Analog, minimal, world clock, chronograph, rings, binary, dot-matrix, and more — previewed in the gallery.',
+    title: 'Design previews',
+    body: 'Every app ships with an SVG/PNG design preview — analog, minimal, world clock, chronograph, rings, binary, dot-matrix, and more.',
   },
   {
     icon: LuGlobe,
@@ -127,12 +127,12 @@ const HomePage: NextPage = () => (
   <main>
     <Hero
       title="Connect IQ watchfaces for the Garmin Forerunner 55."
-      description="Four buildable Monkey C watchfaces — hands, minimalism, maximalism, and timezones — plus 16 design concepts, all targeting the fr55 240×240 MIP display."
+      description="Sixteen buildable Monkey C watchfaces — hands, rings, dotmatrix, compass, and more — all targeting the fr55 240×240 MIP display."
       primary={{ label: 'Browse the gallery', href: '/gallery/' }}
       secondary={{ label: 'Build an app', href: '#build' }}
       stats={[
-        { value: '4', label: 'watchface apps' },
-        { value: '16', label: 'design concepts' },
+        { value: '16', label: 'watchface apps' },
+        { value: '16', label: 'design previews' },
         { value: '240×240', label: 'MIP display' },
       ]}>
       <Terminal lines={HERO_LINES} />
@@ -205,7 +205,7 @@ const HomePage: NextPage = () => (
 
     <CTA
       title="Ready for a new face?"
-      description="Pick a design from the gallery, or build one of the four apps yourself."
+      description="Pick a design from the gallery, or build any of the 16 apps yourself."
       primary={{ label: 'Open the gallery', href: '/gallery/' }}
       secondary={{ label: 'View on GitHub', href: GITHUB, external: true }}
     />

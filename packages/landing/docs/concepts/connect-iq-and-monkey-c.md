@@ -11,7 +11,7 @@ Every app directory contains:
 - `manifest.xml` — app metadata (name, version, permissions, device support)
 - `monkey.jungle` — the project file listing source files and resources
 - `resources/` — images, strings, and other assets
-- `*App.mc` / `*View.mc` — the application and view classes
+- `App.mc` / `View.mc` — the application and view classes
 
 ## The fr55 target
 

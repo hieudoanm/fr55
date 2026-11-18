@@ -5,12 +5,24 @@ Compiled Connect IQ watchface apps (`.prg`) for the **Garmin Forerunner 55**
 
 ### Apps
 
-| File                  | Watchface                                             |
-| --------------------- | ----------------------------------------------------- |
-| `hands-fr55.prg`      | Analog hour/minute hands                              |
-| `minimalism-fr55.prg` | Hour/minute dots on a ring with heart rate/time       |
-| `maximalism-fr55.prg` | 12-hour dot ring, minute marker, battery + heart rate |
-| `timezones-fr55.prg`  | Stacked London, local/Saigon, and Melbourne times     |
+| File                   | Watchface                                             |
+| ---------------------- | ----------------------------------------------------- |
+| `fr55-hands.prg`       | Analog hour/minute hands                              |
+| `fr55-minimalism.prg`  | Hour/minute dots on a ring with heart rate/time       |
+| `fr55-maximalism.prg`  | 12-hour dot ring, minute marker, battery + heart rate |
+| `fr55-timezones.prg`   | Stacked London, local/Saigon, and Melbourne times     |
+| `fr55-chronograph.prg` | 60-tick chapter ring, hour/minute/second hands        |
+| `fr55-rings.prg`       | Concentric progress rings for hour/minute/second      |
+| `fr55-binary.prg`      | Hour/minute as binary dot rows                        |
+| `fr55-dotmatrix.prg`   | 3×5 dot-matrix digits spelling the time               |
+| `fr55-roman.prg`       | Roman numerals at the cardinal points, analog hands   |
+| `fr55-pie.prg`         | 12 pie sectors, current hour in red                   |
+| `fr55-ecg.prg`         | Heartbeat trace, time, and live BPM                   |
+| `fr55-barcode.prg`     | Hour/minute encoded as vertical bars                  |
+| `fr55-spiral.prg`      | Golden-angle dot spiral                               |
+| `fr55-split.prg`       | Mini analog dial on top, large digital readout        |
+| `fr55-compass.prg`     | Cardinal markers with time-as-compass needles         |
+| `fr55-moon.prg`        | Crescent moon over a starfield                        |
 
 ### Install
 

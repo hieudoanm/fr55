@@ -8,9 +8,9 @@ Guidance for coding agents working in `apps/hands`.
 
 ## Key files
 
-- `manifest.xml` — app id `60b87680-1472-426d-b580-eceafdb82dc8`, `type="watchface"`, entry `HandsApp`, `minApiLevel="1.2.0"`, products include `fr55`/`venu3`/`fenix7`/`epix2`/`fr965`/`vivoactive5`, `eng`, no permissions.
-- `source/HandsApp.mc` — app entry.
-- `source/HandsView.mc` — drawing logic:
+- `manifest.xml` — app id `60b87680-1472-426d-b580-eceafdb82dc8`, `type="watchface"`, entry `App`, `minApiLevel="1.2.0"`, products include `fr55`/`venu3`/`fenix7`/`epix2`/`fr965`/`vivoactive5`, `eng`, no permissions.
+- `source/App.mc` — app entry.
+- `source/View.mc` — drawing logic:
   - Reads `System.getClockTime()` (`hour % 12`, `min`).
   - Hour angle `(hours * 30) + (minutes / 60.0 * 30)` degrees; minute angle `minutes * 6`.
   - Hour hand length `width * 0.35`, stroke 6; minute hand `width * 0.45`, stroke 4; both red.
