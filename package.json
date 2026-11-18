@@ -1,5 +1,5 @@
 {
-  "name": "fr55",
+  "name": "@fr55/workspace",
   "version": "0.0.1",
   "private": true,
   "description": "Forerunner 55",
@@ -35,7 +35,6 @@
     "turbo": "2.11.12"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs,json,jsonc,md,mdx,css,scss,html,yml,yaml}": "prettier --cache --write",
-    "!(vendor)/**/*.rs": "rustfmt --edition 2024"
+    "*.{js,jsx,ts,tsx,mjs,cjs,json,jsonc,md,mdx,css,scss,html,yml,yaml}": "prettier --cache --write"
   }
 }

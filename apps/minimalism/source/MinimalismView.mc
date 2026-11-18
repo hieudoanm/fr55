@@ -17,9 +17,6 @@ class MinimalismView extends WatchUi.WatchFace {
   // Called when this View is brought to the foreground. Restore
   // the state of this View and prepare it to be shown. This includes
   // loading resources into memory.
-  function onShow() as Void {
-    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
-  }
 
   // Update the view
   function onUpdate(dc as Dc) as Void {

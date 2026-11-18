@@ -14,9 +14,6 @@ class HandsView extends WatchUi.WatchFace {
     setLayout(Rez.Layouts.HandsLayout(dc));
   }
 
-  function onShow() as Void {
-    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
-  }
 
   function onUpdate(dc as Dc) as Void {
     // Draw a circle at the center
@@ -34,7 +31,7 @@ class HandsView extends WatchUi.WatchFace {
 
     // Convert to angles
     var hourAngle = (hours * 30) + (minutes / 60.0 * 30); // Hour moves slightly with minutes
-    var minuteAngle = minutes * 6;
+    var minuteAngle = minutes * 6.0;
 
     // Draw hour hand (shorter)
     drawHand(dc, centerX, centerY, hourAngle, screenWidth * 0.35, 6);

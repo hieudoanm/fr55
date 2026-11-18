@@ -3,15 +3,15 @@ import Features, { type Feature } from '@/components/molecules/Features';
 import Hero from '@/components/molecules/Hero';
 import SectionHead from '@/components/molecules/SectionHead';
 import Terminal from '@/components/molecules/Terminal';
+import Link from 'next/link';
 import type { Metadata, NextPage } from 'next';
 import type { FC } from 'react';
 import {
-  LuClock,
-  LuCode,
+  LuBookOpen,
   LuGlobe,
-  LuMonitor,
-  LuPalette,
-  LuPlay,
+  LuHeartPulse,
+  LuImages,
+  LuWatch,
 } from 'react-icons/lu';
 
 export const metadata: Metadata = {
@@ -19,88 +19,90 @@ export const metadata: Metadata = {
 };
 
 const GITHUB = 'https://github.com/hieudoanm/fr55';
-const VSIX = `${GITHUB}/releases/download/latest/monkey-c.vsix`;
 
 const FEATURES: Feature[] = [
   {
-    icon: LuCode,
-    title: 'Language support',
-    body: 'Highlighting and editor configuration for .mc, .mb, .mcgen, and .jungle files.',
+    icon: LuWatch,
+    title: 'Four watchfaces',
+    body: 'hands, minimalism, maximalism, and timezones — each a self-contained Connect IQ app under apps/ that builds independently.',
   },
   {
-    icon: LuPalette,
-    title: 'Formatting & theme',
-    body: 'Built-in document formatter for Monkey C and Jungle, plus a dark color theme and file icons.',
-  },
-  {
-    icon: LuPlay,
-    title: 'Simulator preview',
-    body: 'Builds the nearest Connect IQ package with your local SDK and developer key, then launches it in the simulator.',
-  },
-  {
-    icon: LuMonitor,
-    title: 'VS Code extension',
-    body: 'Packaged as a .vsix from the rolling latest release. Install with the VS Code CLI or the Extensions view.',
+    icon: LuImages,
+    title: '16 design concepts',
+    body: 'Analog, minimal, world clock, chronograph, rings, binary, dot-matrix, and more — previewed in the gallery.',
   },
   {
     icon: LuGlobe,
-    title: 'Zed extension',
-    body: 'Loaded as a dev extension from source: Tree-sitter highlighting, external formatter, runtime-preview tasks, and the Monkey C theme and icons.',
+    title: 'World clock',
+    body: 'The timezones face stacks London, your local time, and Melbourne at a glance.',
   },
   {
-    icon: LuClock,
-    title: 'Watchfaces included',
-    body: 'Four Connect IQ watchfaces for the Forerunner 55 ship in apps/ — hands, minimalism, maximalism, and timezones.',
+    icon: LuHeartPulse,
+    title: 'Health at a glance',
+    body: 'Minimalism and maximalism surface heart rate, battery, and the time in clean monochrome layouts.',
+  },
+  {
+    icon: LuBookOpen,
+    title: 'Docs included',
+    body: 'Getting-started, Connect IQ concepts, and per-app guides — readable right here on the site.',
+  },
+  {
+    icon: LuWatch,
+    title: 'Forerunner 55 first',
+    body: 'Targeted at the fr55 240×240 MIP display, with resolution-aware drawing for other Connect IQ devices.',
   },
 ];
 
 const HERO_LINES = [
-  '$ code --install-extension monkey-c.vsix',
-  "Extension 'monkey-c' was successfully installed.",
-  '$ monkey-c-format source/HandsView.mc',
-  'formatted HandsView.mc',
+  '$ cd apps/hands && make build DEVICE=fr55',
+  'Built bin/hands.prg',
+  '$ monkeydo bin/hands.prg fr55',
+  'Simulator running — hands watchface active',
 ];
 
 const DEMO_TERMINALS: { caption: string; lines: string[]; wide?: boolean }[] = [
   {
-    caption: 'Install the VS Code extension',
+    caption: 'Build a watchface PRG',
     wide: true,
+    lines: ['$ cd apps/hands && make build DEVICE=fr55', 'Built bin/hands.prg'],
+  },
+  {
+    caption: 'Direct SDK commands',
     lines: [
-      '$ code --install-extension monkey-c.vsix',
-      "Extension 'monkey-c' was successfully installed.",
+      '$ monkeyc -f apps/hands/monkey.jungle -d fr55 -o apps/hands/bin/hands.prg -y developer_key.der -w',
+      'Built hands.prg',
     ],
   },
   {
-    caption: 'Format a Monkey C file',
-    lines: ['$ monkey-c-format source/HandsView.mc', 'formatted HandsView.mc'],
-  },
-  {
-    caption: 'Build a watchface PRG',
-    lines: ['$ cd apps/hands && make build DEVICE=fr55', 'Built bin/hands.prg'],
+    caption: 'Preview in the simulator',
+    lines: ['$ monkeydo apps/hands/bin/hands.prg fr55', 'Simulator running'],
   },
 ];
 
 const STEPS = [
   {
-    title: 'Install the extension',
-    body: 'Download the .vsix for VS Code, or load packages/extensions/zed as a dev extension in Zed.',
-    snippet: 'monkey-c.vsix → Extensions',
+    title: 'Clone the repo',
+    body: 'Each watchface lives in its own directory under apps/ with a Makefile, manifest, and Monkey C sources.',
+    snippet: 'git clone https://github.com/hieudoanm/fr55.git',
   },
   {
-    title: 'Configure helpers',
-    body: 'Run the install script to symlink monkey-c-format and monkey-c-preview into ~/.local/bin so formatters and tasks find them.',
-    snippet: './scripts/install.sh',
+    title: 'Build with the SDK',
+    body: 'Point make at your Connect IQ SDK and developer key — no other dependencies.',
+    snippet: 'make build DEVICE=fr55 SDK=… DEVELOPER_KEY=…',
   },
   {
-    title: 'Preview in the simulator',
-    body: 'Open task: spawn and choose Monkey C: Runtime Preview or Build PRG — the extension builds the package with your SDK and launches the simulator.',
-    snippet: 'task: Monkey C: Runtime Preview',
+    title: 'Install on the watch',
+    body: 'Copy the .prg to GARMIN/APPS over USB, or launch it in the simulator with monkeydo.',
+    snippet: 'cp bin/hands.prg /Volumes/GARMIN/APPS/',
   },
 ];
 
 const INSTALL_LINES = [
-  '$ curl -fsSLO https://github.com/hieudoanm/fr55/releases/download/latest/monkey-c.vsix',
-  '$ code --install-extension monkey-c.vsix',
+  '$ cd apps/hands',
+  '$ make build DEVICE=fr55 \\',
+  '    SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/<sdk>" \\',
+  '    DEVELOPER_KEY="$HOME/.config/garmin/developer_key"',
+  'Built bin/hands.prg',
 ];
 
 const StepCard: FC<{ step: (typeof STEPS)[number]; index: number }> = ({
@@ -124,21 +126,21 @@ const StepCard: FC<{ step: (typeof STEPS)[number]; index: number }> = ({
 const HomePage: NextPage = () => (
   <main>
     <Hero
-      title="Monkey C & Jungle for Connect IQ watchfaces."
-      description="Syntax highlighting, document formatting, a dark theme, file icons, and local SDK simulator preview for .mc and .jungle — in VS Code and Zed, targeting the Forerunner 55."
-      primary={{ label: 'Download', href: '#install' }}
-      secondary={{ label: 'See it in action', href: '#demo' }}
+      title="Connect IQ watchfaces for the Garmin Forerunner 55."
+      description="Four buildable Monkey C watchfaces — hands, minimalism, maximalism, and timezones — plus 16 design concepts, all targeting the fr55 240×240 MIP display."
+      primary={{ label: 'Browse the gallery', href: '/gallery/' }}
+      secondary={{ label: 'Build an app', href: '#build' }}
       stats={[
-        { value: '2', label: 'editors' },
-        { value: '4', label: 'watchfaces bundled' },
-        { value: '1', label: 'vsix to install' },
+        { value: '4', label: 'watchface apps' },
+        { value: '16', label: 'design concepts' },
+        { value: '240×240', label: 'MIP display' },
       ]}>
       <Terminal lines={HERO_LINES} />
     </Hero>
 
     <Features
-      title="Editor support for Monkey C"
-      description="Everything needed to write Connect IQ apps without leaving your editor."
+      title="Watchfaces, not widgets"
+      description="Purpose-built faces for the Forerunner 55 — glanceable time, health, and world clock in clean monochrome."
       features={FEATURES}
     />
 
@@ -146,7 +148,7 @@ const HomePage: NextPage = () => (
       <div className="mx-auto w-full max-w-6xl px-5">
         <SectionHead
           title="See it in action"
-          description="Install the extension, then format, preview, and build a watchface."
+          description="Build a .prg with the Connect IQ SDK, then preview it in the simulator."
         />
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {DEMO_TERMINALS.map((t) => (
@@ -160,11 +162,11 @@ const HomePage: NextPage = () => (
       </div>
     </section>
 
-    <section id="how-it-works" className="py-20">
+    <section id="build" className="py-20">
       <div className="mx-auto w-full max-w-6xl px-5">
         <SectionHead
-          title="How it works"
-          description="From download to simulator in three steps."
+          title="Build and install"
+          description="From clone to wrist in three steps."
         />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {STEPS.map((step, i) => (
@@ -177,30 +179,34 @@ const HomePage: NextPage = () => (
     <section id="install" className="bg-base-200 py-20">
       <div className="mx-auto w-full max-w-3xl px-5">
         <SectionHead
-          title="Get the latest VSIX"
-          description="Rolling latest release built from this repository — the VS Code extension package. Zed extensions load from source; there is no .vsix to download."
+          title="Build from source"
+          description="There are no prebuilt binaries — each app compiles to a .prg with your own Connect IQ SDK and developer key."
         />
         <Terminal lines={INSTALL_LINES} />
         <p className="text-base-content/60 mt-6 text-center text-sm">
-          For Zed: open the Extensions page, choose{' '}
-          <em>Install Dev Extension</em>, and select packages/extensions/zed —
-          see the{' '}
+          Full walkthrough in the{' '}
+          <Link
+            href="/docs/getting-started/build-and-preview/"
+            className="text-primary font-semibold">
+            build and preview guide
+          </Link>{' '}
+          — or browse the{' '}
           <a
-            href={`${GITHUB}#readme`}
+            href={`${GITHUB}`}
             target="_blank"
             rel="noreferrer"
             className="text-primary font-semibold">
-            README
-          </a>{' '}
-          for the full setup.
+            repository
+          </a>
+          .
         </p>
       </div>
     </section>
 
     <CTA
-      title="Ready to build watchfaces?"
-      description="Download the VS Code extension or load the Zed extension from source."
-      primary={{ label: 'Download monkey-c.vsix', href: VSIX, external: true }}
+      title="Ready for a new face?"
+      description="Pick a design from the gallery, or build one of the four apps yourself."
+      primary={{ label: 'Open the gallery', href: '/gallery/' }}
       secondary={{ label: 'View on GitHub', href: GITHUB, external: true }}
     />
   </main>

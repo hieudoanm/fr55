@@ -13,7 +13,7 @@ class TimeZonesView extends WatchUi.WatchFace {
     setLayout(Rez.Layouts.TimeZonesLayout(dc));
   }
 
-  function getTimeForTimezone(offsetHours as Lang.Float) as Lang.String {
+  function getTimeForTimezone(offsetHours as Lang.Number) as Lang.String {
     var deviceTime = System.getClockTime();
     // Work in minutes so half-hour UTC offsets and day rollover stay correct
     var targetMinutes = deviceTime.hour * 60 + deviceTime.min
@@ -42,8 +42,8 @@ class TimeZonesView extends WatchUi.WatchFace {
     var clockHour = clockTime.hour;
     var clockMinute = clockTime.min;
     // TimeZones
-    var londonOffset = 0.0; // UTC+0
-    var melbourneOffset = 10.0; // UTC+10 (standard time, no DST)
+    var londonOffset = 0; // UTC+0
+    var melbourneOffset = 10; // UTC+10 (standard time, no DST)
     // Text
     var londonText = getTimeForTimezone(londonOffset);
     var saigonText = clockHour.format("%02d") + ":" + clockMinute.format("%02d");
@@ -56,9 +56,6 @@ class TimeZonesView extends WatchUi.WatchFace {
   // Called when this View is brought to the foreground. Restore
   // the state of this View and prepare it to be shown. This includes
   // loading resources into memory.
-  function onShow() as Void {
-    WatchUi.requestUpdate(WatchUi.UPDATE_EVERY_MINUTE);
-  }
   // Called when this View is removed from the screen. Save the
   // state of this View here. This includes freeing resources from
   // memory.
