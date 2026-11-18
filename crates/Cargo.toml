@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+    "monkey-syntax",
+    "monkey-formatter",
+    "monkey-linter",
+    "monkey-cli",
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/hieudoanm/fr55"
