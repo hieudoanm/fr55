@@ -1,1 +1,0 @@
-(lookup "$(" @open ")" @close)

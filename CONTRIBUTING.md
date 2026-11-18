@@ -1,20 +1,22 @@
 # Contributing
 
-Thanks for contributing to the Forerunner 55 Connect IQ repo.
+Thanks for contributing to the Forerunner 55 Connect IQ watchface repo.
 
 ## Scope
 
 This repo contains:
 
 - `apps/*` — buildable Connect IQ watchface apps (Monkey C).
-- `packages/extensions/vscode` — VS Code extension for Monkey C/Jungle (TypeScript).
-- `assets/*` — design, logo, and OG assets.
-- `scripts/*` — repo-level Monkey C format/lint helpers.
+- `packages/landing` — static landing page + docs deployed to GitHub Pages.
+- `assets/*` — design previews, logos, and OG assets.
+
+Monkey C editor tooling (VS Code/Zed extensions, `monkey` CLI) lives in the
+companion repo `hieudoanm/monkey`.
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) for the VS Code extension.
-- [Garmin Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) and a developer key for building/running watchface apps or using runtime preview.
+- [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) for the landing page.
+- [Garmin Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) and a developer key for building/running watchface apps.
 - `monkeyc`/`monkeydo`/simulator access as needed for Connect IQ workflows.
 
 ## Setup
@@ -24,10 +26,10 @@ git clone https://github.com/hieudoanm/fr55.git
 cd fr55
 ```
 
-VS Code extension dependencies:
+Landing page dependencies:
 
 ```bash
-cd packages/extensions/vscode
+cd packages/landing
 pnpm install
 ```
 
@@ -51,48 +53,29 @@ make build DEVICE=fr55 SDK="/path/to/ConnectIQ/Sdks/<sdk>" DEVELOPER_KEY="/path/
 
 Keep changes focused, preserve the Forerunner 55 (`fr55`) target unless intentionally expanding device support, and check manifests when adding products/permissions.
 
-## Monkey C formatting/linting
+Monkey C formatting/linting is handled by the `monkey` CLI in the
+`hieudoanm/monkey` repo — see its README for `monkey check` / `monkey format`.
 
-Use the `monkey` CLI from the `crates/` workspace (build once with
-`cargo build --release`):
+## Landing page (`packages/landing`)
 
-```bash
-cd crates && cargo build --release
-./target/release/monkey check ..   # lint + format-check *.mc/*.jungle
-./target/release/monkey format --write <paths>
-```
-
-`monkey check` verifies formatting and lints for whitespace/format drift. Fix formatting issues with `monkey format --write` before opening a PR.
-
-## VS Code extension (`packages/extensions/vscode`)
-
-The extension is written in TypeScript and uses ESLint, Prettier, and Vitest.
+Next.js 16 static export (Tailwind v4 + DaisyUI). See `packages/landing/AGENTS.md` for conventions.
 
 ```bash
-cd packages/extensions/vscode
-pnpm run format:check
-pnpm run lint
+cd packages/landing
 pnpm run typecheck
-pnpm run test
+pnpm run lint
 pnpm run build
-pnpm run package -- --out monkey-c.vsix
 ```
-
-Useful commands:
-
-- `pnpm run watch` — TypeScript watch build.
-- `pnpm run test:watch` — Vitest watch mode.
-- `pnpm run format` — format extension files with Prettier.
 
 ## CI
 
-`.github/workflows/ci.yaml` runs for changes under `packages/extensions/vscode/**` and workflow dispatch. It installs dependencies with pnpm, runs lint/format/typecheck/tests/build, packages `monkey-c.vsix`, and updates the rolling `latest` GitHub release on pushes to `master`/`main`.
+`.github/workflows/ci.yaml` runs for changes under `apps/**`, `assets/**`, `packages/landing/**`, and workflow dispatch. It builds the landing page and deploys it to GitHub Pages on pushes to `master`/`main`.
 
 ## Pull requests
 
 - Make small, focused changes.
 - Update docs/assets when behavior or structure changes.
-- Run relevant checks locally (`crates/target/release/monkey check` for Monkey C changes; extension checks above for `packages/extensions/vscode` changes).
+- Run relevant checks locally (landing `pnpm run typecheck && pnpm run lint && pnpm run build` for `packages/landing` changes).
 - Do not commit secrets, developer keys, or local SDK credentials.
 
 ## License

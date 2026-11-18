@@ -2,51 +2,43 @@
 
 [![CI](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml?branch=master) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`, `vscode-extension`
+Topics: `garmin`, `connect-iq`, `monkey-c`, `watchface`
 
-![fr55 — Connect IQ watchfaces and tooling for the Garmin Forerunner 55](assets/branding/png/og.png)
+![fr55 — Connect IQ watchfaces for the Garmin Forerunner 55](assets/branding/png/og.png)
 
 **Live demo:** <https://hieudoanm.github.io/fr55/>
 
-Connect IQ watchfaces and tooling for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP).
+Connect IQ watchfaces for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP), written in Monkey C.
 
-**Keywords:** `Garmin`, `Forerunner 55`, `FR55`, `Connect IQ`, `Monkey C`, `Watchfaces`, `VS Code Extension`, `VSIX`.
+**Keywords:** `Garmin`, `Forerunner 55`, `FR55`, `Connect IQ`, `Monkey C`, `Watchfaces`.
 
-## What’s in this repo
+## What's in this repo
 
 - **[`apps/`](apps/)** — buildable Connect IQ watchface apps. Each app has its own `manifest.xml`, `monkey.jungle`, `resources/`, `*View.mc`, and `*App.mc` so it can be built/run independently.
   - `hands/` — analog hour/minute hands.
   - `minimalism/` — hour/minute dots on a ring with centered heart rate/time.
   - `maximalism/` — 12-hour dot ring, minute marker, battery + heart rate.
   - `timezones/` — stacked London, local/Saigon, and Melbourne times.
-- **[`packages/extensions/vscode/`](packages/extensions/vscode/)** — Monkey C/Jungle VS Code extension with syntax highlighting, document formatting, a dark theme, file icons, and a Connect IQ SDK/simulator runtime preview command.
-- **[`packages/extensions/zed/`](packages/extensions/zed/)** — Monkey C/Jungle Zed extension with Tree-sitter highlighting, an external formatter, a dark theme, file icons, and Connect IQ runtime-preview tasks.
-- **[`packages/landing/`](packages/landing/)** — static landing/download page deployed to GitHub Pages.
-- **[`packages/README.md`](packages/README.md)** — overview of the editor extensions.
-- **[`assets/`](assets/)** — shared assets: design previews (`assets/design/svg|png`) and branding (`assets/branding/svg|png`: logo, Open Graph image).
-- **[`crates/`](crates/)** — Rust toolchain for Monkey C/Jungle (lexer, formatter, linter, `monkey` CLI), built with Cargo.
-- **[`scripts/`](scripts/)** — repo helper scripts (`install.sh`, `install-local.sh`).
-- **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — packages the VS Code extension and publishes a rolling `latest` GitHub release with the VSIX.
+- **[`packages/landing/`](packages/landing/)** — static landing page and documentation site deployed to GitHub Pages.
+- **[`assets/`](assets/)** — design previews (`assets/design/svg|png`, 16 watchface concepts) and branding (`assets/branding/`).
+- **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — builds all watchface apps into `.prg` files, publishes them to a rolling `latest` GitHub release, and deploys the landing page to GitHub Pages on `master`.
+- **[`ci/devices/`](ci/devices/)** — vendored Connect IQ `fr55` device files for CI builds.
+
+Monkey C editor tooling (VS Code/Zed extensions, `monkey` CLI) lives in the companion repo: <https://github.com/hieudoanm/monkey>.
 
 ## Repository layout
 
 ```text
 .
-├── .github/workflows/ci.yaml   # package VS Code extension + publish latest VSIX
+├── .github/workflows/ci.yaml   # build landing + deploy to GitHub Pages
 ├── apps/                       # buildable Connect IQ watchface apps
 │   ├── hands/
 │   ├── maximalism/
 │   ├── minimalism/
 │   └── timezones/
 ├── assets/                     # design previews, logos, OG images, svg-to-png.sh
-├── packages/
-│   ├── README.md               # editor extensions overview
-│   ├── extensions/
-│   │   ├── vscode/             # Monkey C/Jungle VS Code extension
-│   │   └── zed/                # Monkey C/Jungle Zed extension
-│   └── landing/                # GitHub Pages landing page
-├── crates/                     # monkey-* Rust toolchain (format/lint CLI)
-└── scripts/                    # install helper scripts
+└── packages/
+    └── landing/                # GitHub Pages landing page + docs
 ```
 
 ## Build and preview an app
@@ -74,59 +66,19 @@ monkeyc -f apps/hands/monkey.jungle -d fr55 -o apps/hands/bin/hands.prg -y /path
 monkeydo apps/hands/bin/hands.prg fr55
 ```
 
-## VS Code extension
+## Watchface designs
 
-[`packages/extensions/vscode`](packages/extensions/vscode) provides editor support for `.mc` and `.jungle` files:
+`assets/design/svg/` holds 16 watchface design previews (240×240 circular MIP
+style); `assets/design/png/` holds the rendered PNGs. The landing gallery at
+`/gallery` showcases all of them, and `packages/landing/public/watchfaces/`
+vendors the SVGs for the site.
 
-- Monkey C/Jungle syntax highlighting and language configuration.
-- Built-in document formatting (`Format Document` / `Monkey C: Format Document`).
-- Dark theme and file icons.
-- **Monkey C: Runtime Preview (Simulator)** — builds the nearest Connect IQ package (`monkey.jungle` + `manifest.xml`), starts the simulator, and runs the PRG with `monkeydo`. Configure `monkeyC.sdkPath`, `monkeyC.developerKeyPath`, and `monkeyC.previewDevice` as needed.
+## CI and pages
 
-Packaging:
+`.github/workflows/ci.yaml` runs for changes under `apps/**`, `assets/**`, `packages/landing/**`, `ci/**`, and on workflow dispatch. On pushes to `master`, it:
 
-```bash
-cd packages/extensions/vscode
-pnpm install --frozen-lockfile
-pnpm exec vsce package --no-dependencies --out monkey-c.vsix
-```
-
-## Zed extension
-
-[`packages/extensions/zed`](packages/extensions/zed) brings the same editor surface to Zed using
-Tree-sitter:
-
-- Monkey C/Jungle highlighting, brackets, indentation, folds, outline, and text objects.
-- External formatter (`monkey-c-format`) for both languages.
-- Dark theme and file icon theme.
-- **Monkey C: Runtime Preview** and **Monkey C: Build PRG** tasks using the Connect IQ SDK/simulator.
-
-```bash
-cd packages/extensions/zed
-./scripts/install.sh   # put monkey-c-format / monkey-c-preview on PATH
-make test              # formatter tests + Jungle grammar tests
-```
-
-See [`packages/extensions/zed/README.md`](packages/extensions/zed/README.md) for Zed formatter
-settings, task usage, and the vendored Jungle grammar requirement.
-
-## Monkey C toolchain
-
-The `crates/` workspace provides a `monkey` CLI for formatting and linting
-`*.mc`/`*.jungle` files (replaces the old `scripts/format.sh`/`lint.sh`).
-
-```bash
-cd crates && cargo build --release
-./target/release/monkey check ..   # lint + format-check the repo
-./target/release/monkey format --write <paths>
-```
-
-## CI and releases
-
-`.github/workflows/ci.yaml` runs for changes under `apps/**`, `crates/**`, `packages/extensions/vscode/**`, `packages/extensions/zed/**`, `packages/landing/**`, and on workflow dispatch. On pushes to `master`, it updates the rolling GitHub release tagged `latest`:
-
-- assets: `monkey-c.vsix` (VS Code), `monkey-c-zed.zip` (Zed), `monkey-*` CLI binaries (Linux/macOS/Windows)
-- release notes: [`RELEASE.md`](RELEASE.md)
+- builds every app in `apps/` into a signed `*-fr55.prg` with the Connect IQ SDK and publishes them to the rolling `latest` GitHub release (notes: [`RELEASE.md`](RELEASE.md)) — CI generates a throwaway signing key, so no secrets are needed
+- builds the landing page and deploys it to GitHub Pages at <https://hieudoanm.github.io/fr55/>
 
 ## Device notes
 

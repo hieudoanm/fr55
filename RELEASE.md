@@ -1,36 +1,36 @@
-## Monkey C — latest build
+## FR55 Watchfaces — latest build
 
-Language support and tooling for Garmin Connect IQ Monkey C and Jungle:
+Compiled Connect IQ watchface apps (`.prg`) for the **Garmin Forerunner 55**
+(`fr55`, 240×240 MIP), built from `master` with the Connect IQ SDK.
 
-- `monkey` — standalone CLI (`format`, `lint`, `check`, `tokens`) for
-  `*.mc`/`*.jungle` files. Prebuilt binaries for Linux (x86_64), macOS
-  (Apple Silicon), and Windows (x86_64) are attached below.
-- `monkey-c.vsix` — VS Code extension with syntax highlighting,
-  formatting, snippets, and a runtime-preview command.
-- `monkey-c-zed.zip` — Zed extension source (Tree-sitter languages,
-  formatter, theme, icon theme). Install via `zed: install` from a local
-  checkout or the extension registry.
-- Companion Zed extension lives in the same repo.
+### Apps
+
+| File                  | Watchface                                             |
+| --------------------- | ----------------------------------------------------- |
+| `hands-fr55.prg`      | Analog hour/minute hands                              |
+| `minimalism-fr55.prg` | Hour/minute dots on a ring with heart rate/time       |
+| `maximalism-fr55.prg` | 12-hour dot ring, minute marker, battery + heart rate |
+| `timezones-fr55.prg`  | Stacked London, local/Saigon, and Melbourne times     |
 
 ### Install
 
-**CLI:** download the `monkey-*` binary for your platform and put it on
-your `PATH` (e.g. `~/.local/bin`).
-
-**VS Code:** download `monkey-c.vsix` from the assets below and install via
-**Extensions → Install from VSIX**.
-
-**Zed:** the extension is declarative — clone the repo and run
-`./scripts/install.sh` inside `packages/extensions/zed`, or use the
-`monkey-c-zed.zip` asset as a source snapshot.
+Copy the `.prg` to `GARMIN/APPS/` on the watch over USB mass storage, or push
+it with Garmin Express / the Connect IQ simulator (`monkeydo <file>.prg fr55`).
 
 ### Build from source
 
+Requires the [Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/)
+and a developer key:
+
 ```bash
-cd crates && cargo build --release   # binary: crates/target/release/monkey
+cd apps/hands
+make build DEVICE=fr55 \
+  SDK="/path/to/connectiq-sdk" \
+  DEVELOPER_KEY="/path/to/developer_key.der"
 ```
 
 ### Documentation
 
 - [Repo README](https://github.com/hieudoanm/fr55#readme)
-- [Extension README](https://github.com/hieudoanm/fr55/tree/master/packages/extensions/vscode)
+- [Site & docs](https://hieudoanm.github.io/fr55/)
+- [Watchface gallery](https://hieudoanm.github.io/fr55/gallery/)

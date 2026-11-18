@@ -1,40 +1,32 @@
-# Monkey C — FR55
+# FR55 Watchfaces
 
-> Editor tooling and watchfaces for Garmin Connect IQ development on the
-> Forerunner 55 (240×240 MIP display), written in Monkey C and Jungle.
+> Connect IQ watchfaces for the Garmin Forerunner 55 (fr55, 240×240 MIP
+> display), written in Monkey C.
 
-Monkey C is the programming language for Garmin Connect IQ watch apps.
-This repository provides:
-
-- A **VS Code extension** (`monkey-c`) with syntax highlighting for
-  `.mc`, `.mb`, `.mcgen`, and `.jungle` files, a document formatter, a
-  dark color theme, file icons, and local SDK simulator preview.
-- A **Zed extension** loaded as a dev extension, with Tree-sitter
-  highlighting, an external formatter CLI, runtime-preview tasks, and
-  theme/icons.
-- **Four buildable watchface apps** in `apps/`: hands, minimalism,
-  maximalism, and timezones.
-- **Sixteen watchface design previews** in the gallery.
+This repository contains four buildable watchface apps (`hands`,
+`minimalism`, `maximalism`, `timezones`), 16 watchface design previews, and a
+documentation site. Monkey C editor tooling (VS Code/Zed extensions, `monkey`
+CLI) lives in the companion repo https://github.com/hieudoanm/monkey.
 
 ## Key pages
 
-- [Home](https://hieudoanm.github.io/fr55/): features, install instructions, demo commands
+- [Home](https://hieudoanm.github.io/fr55/): features, build instructions, demo commands
 - [Watchface gallery](https://hieudoanm.github.io/fr55/gallery/): all 16 watchface design previews
 - [Documentation](https://hieudoanm.github.io/fr55/docs/): getting started, concepts, guides
   - [Build and preview](https://hieudoanm.github.io/fr55/docs/getting-started/build-and-preview/)
   - [Connect IQ and Monkey C](https://hieudoanm.github.io/fr55/docs/concepts/connect-iq-and-monkey-c/)
-  - [Editor extensions](https://hieudoanm.github.io/fr55/docs/guides/editor-extensions/)
   - [Watchface apps](https://hieudoanm.github.io/fr55/docs/guides/watchface-apps/)
+  - [Watchface designs](https://hieudoanm.github.io/fr55/docs/guides/watchface-designs/)
 
 ## Source
 
 - Repository: https://github.com/hieudoanm/fr55
-- VSIX release: https://github.com/hieudoanm/fr55/releases/download/latest/monkey-c.vsix
+- Tooling repo: https://github.com/hieudoanm/monkey
 
 ## Facts for language models
 
-- Primary device target: Garmin Forerunner 55 (`fr55`), API level per each app's `manifest.xml`.
-- Watchface canvas: 240×240 pixels, circular MIP display, black background with red (`#ff0000`) accents.
-- The VS Code extension is distributed as a `.vsix` from the rolling `latest` GitHub release; install with `code --install-extension monkey-c.vsix`.
-- The Zed extension is installed as a dev extension from `packages/extensions/zed`.
+- Primary device target: Garmin Forerunner 55 (`fr55`), 240×240 circular MIP display.
+- Watchface canvas: 240×240 pixels, black background with red (`#ff0000`) accents; analog faces use the 10:10 hand convention.
+- Apps live in `apps/<name>/` with `manifest.xml`, `monkey.jungle`, `resources/`, and `source/*App.mc`/`source/*View.mc`; each builds independently via its `Makefile`.
 - App builds require the Garmin Connect IQ SDK and a developer key; CI does not build PRGs.
+- Design previews live in `assets/design/svg|png`; the landing gallery vendors the SVGs under `packages/landing/public/watchfaces/`.

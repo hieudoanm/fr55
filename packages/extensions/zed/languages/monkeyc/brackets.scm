@@ -1,7 +1,0 @@
-("(" @open ")" @close)
-("[" @open "]" @close)
-("[" @open "]b" @close)
-("{" @open "}" @close)
-(generic_type "<" @open ">" @close)
-(string "\"" @open "\"" @close)
-(character "'" @open "'" @close)

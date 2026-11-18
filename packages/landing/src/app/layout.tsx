@@ -14,38 +14,38 @@ const LOGO =
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'Demo', href: '#demo' },
-  { label: 'How it works', href: '#how-it-works' },
+  { label: 'Build', href: '#build' },
   { label: 'Install', href: '#install' },
   { label: 'Gallery', href: '/gallery/' },
   { label: 'Docs', href: '/docs/' },
 ];
 
 const DESCRIPTION =
-  'Monkey C and Jungle editor support for Garmin Connect IQ / Forerunner 55 development: VS Code extension and Zed extension — syntax highlighting, formatting, dark theme, file icons, and simulator preview.';
+  'Connect IQ watchfaces for the Garmin Forerunner 55 (fr55, 240×240 MIP): four buildable Monkey C apps — hands, minimalism, maximalism, and timezones — plus 16 design concepts.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hieudoanm.github.io/fr55/'),
   title: {
-    default: 'Monkey C — FR55',
+    default: 'FR55 Watchfaces',
     template: '%s — FR55',
   },
   description: DESCRIPTION,
   keywords: [
-    'Monkey C',
-    'Connect IQ',
     'Garmin',
     'Forerunner 55',
+    'fr55',
+    'Connect IQ',
+    'Monkey C',
     'watchface',
-    'VS Code extension',
-    'Zed extension',
-    'Monkey C formatter',
+    'watch faces',
+    'MIP display',
   ],
   authors: [{ name: 'hieudoan', url: GITHUB }],
-  category: 'developer tools',
+  category: 'electronics',
   openGraph: {
-    siteName: 'Monkey C — FR55',
+    siteName: 'FR55 Watchfaces',
     type: 'website',
-    title: 'Monkey C — FR55',
+    title: 'FR55 Watchfaces',
     description: DESCRIPTION,
     url: 'https://hieudoanm.github.io/fr55/',
     images: ['/og.png'],
@@ -64,15 +64,15 @@ const JSON_LD = {
   '@graph': [
     {
       '@type': 'WebSite',
-      name: 'Monkey C — FR55',
+      name: 'FR55 Watchfaces',
       url: 'https://hieudoanm.github.io/fr55/',
       description: DESCRIPTION,
     },
     {
       '@type': 'SoftwareApplication',
-      name: 'Monkey C — FR55',
-      applicationCategory: 'DeveloperApplication',
-      operatingSystem: 'VS Code, Zed',
+      name: 'FR55 Watchfaces',
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Garmin Connect IQ',
       description: DESCRIPTION,
       url: 'https://hieudoanm.github.io/fr55/',
       codeRepository: GITHUB,
@@ -96,7 +96,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
       <Navbar
-        name="FR55 / Monkey C"
+        name="FR55 Watchfaces"
         logoSrc={LOGO}
         links={NAV_LINKS}
         githubUrl={GITHUB}
@@ -104,7 +104,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
       {children}
       <Footer
         name="fr55"
-        tagline="Connect IQ tooling for Garmin Forerunner 55"
+        tagline="Connect IQ watchfaces for Garmin Forerunner 55"
         githubUrl={GITHUB}
       />
     </body>
