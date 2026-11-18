@@ -5,7 +5,7 @@ import Toybox.WatchUi;
 
 class View extends WatchUi.WatchFace {
   // Star field in 240x240 design space
-  var STARS = [[84.8,33.6],[150.2,26.5],[31.6,65.7],[27.5,59.0],[34.0,28.2],[44.8,40.1],[215.3,24.2],[191.7,46.1],[48.9,30.6]];
+  var STARS = [[84.8, 33.6], [150.2, 26.5], [31.6, 65.7], [27.5, 59.0], [34.0, 28.2], [44.8, 40.1], [215.3, 24.2], [191.7, 46.1], [48.9, 30.6]];
 
   function initialize() {
     WatchFace.initialize();

@@ -14,7 +14,6 @@ class View extends WatchUi.WatchFace {
     setLayout(Rez.Layouts.HandsLayout(dc));
   }
 
-
   function onUpdate(dc as Dc) as Void {
     // Draw a circle at the center
     var screenWidth = dc.getWidth();
@@ -30,8 +29,8 @@ class View extends WatchUi.WatchFace {
     var minutes = clockTime.min;
 
     // Convert to angles
-    var hourAngle = (hours * 30) + (minutes / 60.0 * 30); // Hour moves slightly with minutes
-    var minuteAngle = minutes * 6.0;
+    var hourAngle = hourHandAngle(hours, minutes); // Hour moves slightly with minutes
+    var minuteAngle = minuteHandAngle(minutes);
 
     // Draw hour hand (shorter)
     drawHand(dc, centerX, centerY, hourAngle, screenWidth * 0.35, 6);
@@ -49,4 +48,14 @@ class View extends WatchUi.WatchFace {
     dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
     dc.drawLine(x, y, endX.toNumber(), endY.toNumber());
   }
+}
+
+// Hour hand angle in degrees: 30° per hour plus 0.5° per minute.
+function hourHandAngle(hours as Lang.Number, minutes as Lang.Number) as Lang.Float {
+  return hours * 30 + minutes / 60.0 * 30;
+}
+
+// Minute hand angle in degrees: 6° per minute.
+function minuteHandAngle(minutes as Lang.Number) as Lang.Float {
+  return minutes * 6.0;
 }

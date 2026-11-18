@@ -26,11 +26,15 @@ companion repo `hieudoanm/monkey` — do not re-add it here.
 
 ## Monkey C (`apps/`, `*.mc`)
 
-- Formatting/linting for `*.mc`/`*.jungle` is handled by the `monkey` CLI in the
-  `hieudoanm/monkey` repo (`cd crates && cargo build --release` there, then
-  `monkey check`/`monkey format`). It is not part of this repo.
-- Match the surrounding code style manually; the formatter is conservative
-  (indentation/brace/common spacing).
+- Formatting/linting for `*.mc`/`*.jungle` uses the `monkey` CLI (installed
+  from `hieudoanm/monkey`, on PATH as `monkey`):
+
+```bash
+monkey check apps/            # lint + format-check
+monkey format --write apps/   # apply formatting
+```
+
+- `monkey check apps/` must pass before considering `.mc` edits complete.
 - App builds require the Connect IQ SDK and a developer key:
 
 ```bash
