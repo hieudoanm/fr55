@@ -3,9 +3,10 @@
 > Connect IQ watchfaces for the Garmin Forerunner 55 (fr55, 240×240 MIP
 > display), written in Monkey C.
 
-This repository contains four buildable watchface apps (`hands`,
-`minimalism`, `maximalism`, `timezones`), 16 watchface design previews, and a
-documentation site. Monkey C editor tooling (VS Code/Zed extensions, `monkey`
+This repository contains 16 buildable watchface apps (`hands`, `minimalism`,
+`maximalism`, `timezones`, `chronograph`, `rings`, `binary`, `dotmatrix`,
+`roman`, `pie`, `ecg`, `barcode`, `spiral`, `split`, `compass`, `moon`) — one
+per design preview — plus a documentation site. Monkey C editor tooling (VS Code/Zed extensions, `monkey`
 CLI) lives in the companion repo https://github.com/hieudoanm/monkey.
 
 ## Key pages
@@ -27,6 +28,6 @@ CLI) lives in the companion repo https://github.com/hieudoanm/monkey.
 
 - Primary device target: Garmin Forerunner 55 (`fr55`), 240×240 circular MIP display.
 - Watchface canvas: 240×240 pixels, black background with red (`#ff0000`) accents; analog faces use the 10:10 hand convention.
-- Apps live in `apps/<name>/` with `manifest.xml`, `monkey.jungle`, `resources/`, and `source/*App.mc`/`source/*View.mc`; each builds independently via its `Makefile`.
-- App builds require the Garmin Connect IQ SDK and a developer key; CI does not build PRGs.
+- Apps live in `apps/<name>/` with `manifest.xml`, `monkey.jungle`, `resources/`, and `source/App.mc`/`source/View.mc`; each builds independently via its `Makefile`.
+- App builds require the Garmin Connect IQ SDK and a developer key; CI builds signed PRGs and publishes them to the rolling `latest` GitHub release.
 - Design previews live in `assets/design/svg|png`; the landing gallery vendors the SVGs under `packages/landing/public/watchfaces/`.

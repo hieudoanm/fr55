@@ -8,9 +8,9 @@ Guidance for coding agents working in `apps/minimalism`.
 
 ## Key files
 
-- `manifest.xml` — app id `97632e2e-318b-41f7-a444-d911596b8bf9`, `type="watchface"`, entry `MinimalismApp`, `minApiLevel="1.2.0"`, products include `fr55`/`venu3`/`fenix7`/`epix2`/`fr965`/`vivoactive5`, `eng`, no permissions.
-- `source/MinimalismApp.mc` — app entry.
-- `source/MinimalismView.mc` — drawing logic:
+- `manifest.xml` — app id `97632e2e-318b-41f7-a444-d911596b8bf9`, `type="watchface"`, entry `App`, `minApiLevel="1.2.0"`, products include `fr55`/`venu3`/`fenix7`/`epix2`/`fr965`/`vivoactive5`, `eng`, no permissions.
+- `source/App.mc` — app entry.
+- `source/View.mc` — drawing logic:
   - Ring radius `((centerX + centerY) / 2.0) / 1.25`.
   - Hour dot: continuous hour (`clockHour + clockMinute/60`), angle `(hour - 3) * 30` degrees (radians), red filled circle radius `10`.
   - Minute dot: angle `(clockMinute + 45) * 6` degrees (radians), red filled circle radius `5`.

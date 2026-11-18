@@ -21,7 +21,7 @@ const NAV_LINKS = [
 ];
 
 const DESCRIPTION =
-  'Connect IQ watchfaces for the Garmin Forerunner 55 (fr55, 240×240 MIP): four buildable Monkey C apps — hands, minimalism, maximalism, and timezones — plus 16 design concepts.';
+  'Connect IQ watchfaces for the Garmin Forerunner 55 (fr55, 240×240 MIP): 16 buildable Monkey C watchfaces — hands, rings, dotmatrix, compass, and more.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hieudoanm.github.io/fr55/'),

@@ -1,65 +1,69 @@
 # Apps
 
-Buildable Connect IQ watchface apps for FR55 / Garmin Connect IQ devices (focused on Forerunner 55, `fr55`, 240×240 MIP). Each app is a buildable Connect IQ watchface with its own `manifest.xml`, `monkey.jungle`, `resources/`, `*View.mc`, and `*App.mc`. This matches the buildable-app shape used in `hieudoanm.github.io/packages/watch/garmin` (manifest + app entry + view), while keeping each face in its own app for independent build/preview.
+Sixteen buildable Connect IQ watchface apps for the **Garmin Forerunner 55**
+(`fr55`, 240×240 MIP). Each app is self-contained — `manifest.xml`,
+`monkey.jungle`, `resources/`, `source/App.mc`, `source/View.mc`, and a
+`Makefile` — and builds independently.
 
-Design previews live in [`../assets/design/svg/`](../assets/design/svg/).
+Every app implements one of the designs previewed in
+[`../assets/design/svg/`](../assets/design/svg/) and showcased in the
+[site gallery](https://hieudoanm.github.io/fr55/gallery/).
 
-## Hands (`hands/`)
+## Apps
 
-**Preview:** [`../assets/design/svg/hands.svg`](../assets/design/svg/hands.svg)
-**App:** `HandsApp` (`hands/source/HandsApp.mc`) → `HandsView` (`hands/source/HandsView.mc`)
+| App           | Design                                                      |
+| ------------- | ----------------------------------------------------------- |
+| `hands`       | Pure analog — red hour/minute hands, no numerals or text    |
+| `minimalism`  | Hour/minute dots on a ring with centered heart rate or time |
+| `maximalism`  | 12-dot hour ring, minute marker, battery + heart rate       |
+| `timezones`   | Stacked London, local/Saigon, and Melbourne times           |
+| `chronograph` | 60-tick chapter ring, hour/minute/second hands              |
+| `rings`       | Concentric progress rings for hour/minute/second            |
+| `binary`      | Hour/minute as binary dot rows                              |
+| `dotmatrix`   | 3×5 dot-matrix digits spelling the time                     |
+| `roman`       | Roman numerals at the cardinal points, analog hands         |
+| `pie`         | 12 pie sectors, current hour in red                         |
+| `ecg`         | Heartbeat trace, time, and live BPM                         |
+| `barcode`     | Hour/minute encoded as vertical bars                        |
+| `spiral`      | Golden-angle dot spiral                                     |
+| `split`       | Mini analog dial on top, large digital readout below        |
+| `compass`     | Cardinal markers with time-as-compass needles               |
+| `moon`        | Crescent moon over a starfield                              |
 
-- **Look:** pure black background with two red analog hands and a small red center pivot — no numerals, ticks, or text.
-- **Drawing:** computes `centerX/Y` from device size. Reads `System.getClockTime()` (`hours % 12`, `minutes`).
-  - Hour angle: `(hours * 30) + (minutes / 60.0 * 30)` degrees (hour advances with minutes).
-  - Minute angle: `minutes * 6` degrees.
-  - Hour hand: length `screenWidth * 0.35`, stroke width `6`, red (`Graphics.COLOR_RED`).
-  - Minute hand: length `screenWidth * 0.45`, stroke width `4`, red.
-  - `drawHand` converts degrees to radians and draws a line from center using `sin`/`cos`.
-- **Behavior:** the face redraws automatically — Connect IQ calls `onUpdate()` once per minute in low-power mode and once per second in high-power mode.
+## Structure
 
-## Minimalism (`minimalism/`)
+Each app follows the same shape:
 
-**Preview:** [`../assets/design/svg/minimalism.svg`](../assets/design/svg/minimalism.svg)
-**App:** `MinimalismApp` → `MinimalismView`
+- `source/App.mc` — `App` entry point (`Application.AppBase`), returns the view.
+- `source/View.mc` — `View` (`WatchUi.WatchFace`) with all drawing in `onUpdate`.
+- `manifest.xml` — `type="watchface"`, `entry="App"`, `minApiLevel="1.2.0"`,
+  products include `fr55`/`venu3`/`fenix7`/`epix2`/`fr965`/`vivoactive5`, `eng`,
+  no permissions.
+- `Makefile` — `build`, `simulator`, `run`, `clean` (outputs `bin/<app>.prg`).
 
-- **Look:** black background, two red dots on an invisible ring, and a centered value — minimal analog indicator plus a single metric.
-- **Drawing:** ring radius `((centerX + centerY) / 2.0) / 1.25` from device center.
-  - Hour dot: continuous hour value (`clockHour + clockMinute/60`), angle `(hour - 3) * 30` degrees, red filled circle radius `10`.
-  - Minute dot: angle `(clockMinute + 45) * 6` degrees, red filled circle radius `5`.
-  - Center text (`FONT_SYSTEM_SMALL`, centered): shows current heart rate (`Activity.getActivityInfo().currentHeartRate`) when available; otherwise falls back to local time formatted as `HH:mm`.
-- **Readability:** no labels or ticks; relies on dot position and high-contrast red on black for the MIP display.
+## Conventions
 
-## Maximalism (`maximalism/`)
-
-**Preview:** [`../assets/design/svg/maximalism.svg`](../assets/design/svg/maximalism.svg)
-**App:** `MaximalismApp` → `MaximalismView`
-
-- **Look:** black background, a 12-dot hour ring, a minute marker, and centered status text.
-- **Drawing:** same ring radius formula as Minimalism.
-  - Hour ring: 12 dots placed every 30 degrees. Non-current hours are white, radius `5`. The current hour is highlighted red, radius `10` (`clockHour % 12`, with `0` mapped to `12` so midnight/noon highlight correctly).
-  - Minute marker: angle `(clockMinute + 45) * 6` degrees, red filled circle radius `5`.
-  - Center text (`FONT_SYSTEM_SMALL`, centered): battery percentage from `System.getSystemStats().battery` (or `N/A` on error) and heart rate from `Activity.getActivityInfo().currentHeartRate` (falls back to `HH:mm` if unavailable).
-- **State:** all text is computed in `onUpdate`.
-
-## TimeZones (`timezones/`)
-
-**Preview:** [`../assets/design/svg/timezones.svg`](../assets/design/svg/timezones.svg)
-**App:** `TimeZonesApp` → `TimeZonesView`
-
-- **Look:** black background with three stacked red time rows for quick comparison.
-- **Drawing:** centered red text block using `FONT_SYSTEM_NUMBER_MILD`.
-  - `getTimeForTimezone(offsetHours)`: converts device time to minutes-since-midnight, subtracts `timeZoneOffset`, adds the target UTC offset, normalizes to `0..1439`, and returns a zero-padded `HH:mm` string (handles half-hour offsets and day rollover).
-  - Rows: **London** = UTC+0, **Saigon** = device local time, **Melbourne** = UTC+10.
-- **Limitations:** London/Melbourne use fixed offsets (no daylight saving rules). Saigon is represented by the watch’s local time.
+- Geometry is device-size aware (`dc.getWidth()/getHeight()`), not hard-coded
+  to 240×240.
+- Watchfaces redraw automatically — Connect IQ calls `onUpdate()` once per
+  minute in low-power mode and once per second in high-power mode. Do **not**
+  call `WatchUi.requestUpdate()` inside `onUpdate()` (redraw loop).
+- Heart rate (`Activity.getActivityInfo().currentHeartRate`) may be `null`;
+  keep safe fallbacks.
+- Formatting/linting lives in the companion repo `hieudoanm/monkey`
+  (`monkey check` / `monkey format`).
 
 ## Build / runtime preview
 
-Each app can be built independently with the Connect IQ SDK:
+```bash
+cd apps/hands
+make build DEVICE=fr55
+make run    # builds, launches the simulator, and pushes the PRG
+```
+
+Or directly with the SDK:
 
 ```bash
 monkeyc -f apps/hands/monkey.jungle -d fr55 -o apps/hands/bin/hands.prg -y /path/to/developer_key.der -w
 monkeydo apps/hands/bin/hands.prg fr55
 ```
-
-Editor integrations (VS Code/Zed extensions, `monkey` CLI) live in the companion repo `hieudoanm/monkey`; the official Garmin Monkey C extension workflow also works for SDK builds.

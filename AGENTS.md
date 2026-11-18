@@ -10,8 +10,7 @@ companion repo `hieudoanm/monkey` — do not re-add it here.
 
 ## Layout
 
-- `apps/` — buildable Connect IQ watchface apps. Each app is self-contained: `manifest.xml`, `monkey.jungle`, `resources/`, `source/*App.mc`, `source/*View.mc`, and a `Makefile`.
-  - Current apps: `hands`, `minimalism`, `maximalism`, `timezones`.
+- `apps/` — 16 buildable Connect IQ watchface apps. Each app is self-contained: `manifest.xml`, `monkey.jungle`, `resources/`, `source/App.mc`, `source/View.mc`, and a `Makefile` — one app per design in `assets/design/svg/`.
 - `packages/landing/` — Next.js static-export landing page + docs, deployed to GitHub Pages. Has its own `AGENTS.md`.
 - `assets/` — design previews (`design/svg|png`), branding, `svg-to-png.sh`, `sync-assets.sh`.
 - `.github/workflows/ci.yaml` — apps PRG build (throwaway openssl signing key generated in CI), rolling `latest` GitHub release with `.prg` files, and landing build + GitHub Pages deploy on `master`/`main`.

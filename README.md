@@ -14,11 +14,7 @@ Connect IQ watchfaces for the **Garmin Forerunner 55** (`fr55`, 240×240 MIP), w
 
 ## What's in this repo
 
-- **[`apps/`](apps/)** — buildable Connect IQ watchface apps. Each app has its own `manifest.xml`, `monkey.jungle`, `resources/`, `*View.mc`, and `*App.mc` so it can be built/run independently.
-  - `hands/` — analog hour/minute hands.
-  - `minimalism/` — hour/minute dots on a ring with centered heart rate/time.
-  - `maximalism/` — 12-hour dot ring, minute marker, battery + heart rate.
-  - `timezones/` — stacked London, local/Saigon, and Melbourne times.
+- **[`apps/`](apps/)** — 16 buildable Connect IQ watchface apps. Each app has its own `manifest.xml`, `monkey.jungle`, `resources/`, `App.mc`, and `View.mc` so it can be built/run independently — see [`apps/README.md`](apps/README.md) for the full list.
 - **[`packages/landing/`](packages/landing/)** — static landing page and documentation site deployed to GitHub Pages.
 - **[`assets/`](assets/)** — design previews (`assets/design/svg|png`, 16 watchface concepts) and branding (`assets/branding/`).
 - **[`.github/workflows/ci.yaml`](.github/workflows/ci.yaml)** — builds all watchface apps into `.prg` files, publishes them to a rolling `latest` GitHub release, and deploys the landing page to GitHub Pages on `master`.
@@ -31,11 +27,7 @@ Monkey C editor tooling (VS Code/Zed extensions, `monkey` CLI) lives in the comp
 ```text
 .
 ├── .github/workflows/ci.yaml   # build landing + deploy to GitHub Pages
-├── apps/                       # buildable Connect IQ watchface apps
-│   ├── hands/
-│   ├── maximalism/
-│   ├── minimalism/
-│   └── timezones/
+├── apps/                       # 16 buildable Connect IQ watchface apps
 ├── assets/                     # design previews, logos, OG images, svg-to-png.sh
 └── packages/
     └── landing/                # GitHub Pages landing page + docs
@@ -77,7 +69,7 @@ vendors the SVGs for the site.
 
 `.github/workflows/ci.yaml` runs for changes under `apps/**`, `assets/**`, `packages/landing/**`, `ci/**`, and on workflow dispatch. On pushes to `master`, it:
 
-- builds every app in `apps/` into a signed `*-fr55.prg` with the Connect IQ SDK and publishes them to the rolling `latest` GitHub release (notes: [`RELEASE.md`](RELEASE.md)) — CI generates a throwaway signing key, so no secrets are needed
+- builds every app in `apps/` into a signed `fr55-*.prg` with the Connect IQ SDK and publishes them to the rolling `latest` GitHub release (notes: [`RELEASE.md`](RELEASE.md)) — CI generates a throwaway signing key, so no secrets are needed
 - builds the landing page and deploys it to GitHub Pages at <https://hieudoanm.github.io/fr55/>
 
 ## Device notes

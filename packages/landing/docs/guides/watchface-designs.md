@@ -24,6 +24,5 @@ conventional 10:10 hand position for analog faces. The rendered PNGs live in
 | `compass`     | Cardinal N/E/S/W markers with a red needle on the minute bearing.   |
 | `moon`        | Waxing moon phase over a starfield with the time underneath.        |
 
-The four apps under `apps/` (`hands`, `minimalism`, `maximalism`, `timezones`)
-are buildable Connect IQ implementations; the remaining designs are visual
-concepts that can be turned into apps the same way.
+All 16 designs are buildable Connect IQ apps under `apps/` — see
+[Watchface apps](watchface-apps.md) for the full list.
