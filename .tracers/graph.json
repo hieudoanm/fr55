@@ -3,8 +3,8 @@
   "tracersVersion": "0.0.1",
   "repository": {
     "id": "repository:.",
-    "name": "fr55",
-    "root": "fr55",
+    "name": "repository",
+    "root": ".",
     "fileCount": 73,
     "languageCount": 23
   },
@@ -2033,21 +2033,291 @@
       "exported": true
     },
     {
-      "id": "external:tsx:Date",
-      "kind": "external_symbol",
-      "name": "Date",
-      "language": "tsx"
-    },
-    {
       "id": "external:tsx:URL",
       "kind": "external_symbol",
       "name": "URL",
       "language": "tsx"
     },
     {
-      "id": "external:typescript:Map",
+      "id": "external:tsx:lib::Date",
+      "kind": "external_symbol",
+      "name": "Date",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::String",
+      "kind": "external_symbol",
+      "name": "String",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::catch",
+      "kind": "external_symbol",
+      "name": "catch",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::every",
+      "kind": "external_symbol",
+      "name": "every",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::fetch",
+      "kind": "external_symbol",
+      "name": "fetch",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::filter",
+      "kind": "external_symbol",
+      "name": "filter",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::find",
+      "kind": "external_symbol",
+      "name": "find",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::findIndex",
+      "kind": "external_symbol",
+      "name": "findIndex",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::includes",
+      "kind": "external_symbol",
+      "name": "includes",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::indexOf",
+      "kind": "external_symbol",
+      "name": "indexOf",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::join",
+      "kind": "external_symbol",
+      "name": "join",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::localeCompare",
+      "kind": "external_symbol",
+      "name": "localeCompare",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::map",
+      "kind": "external_symbol",
+      "name": "map",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::match",
+      "kind": "external_symbol",
+      "name": "match",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::max",
+      "kind": "external_symbol",
+      "name": "max",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::min",
+      "kind": "external_symbol",
+      "name": "min",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::padStart",
+      "kind": "external_symbol",
+      "name": "padStart",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::push",
+      "kind": "external_symbol",
+      "name": "push",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::reject",
+      "kind": "external_symbol",
+      "name": "reject",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::replace",
+      "kind": "external_symbol",
+      "name": "replace",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::slice",
+      "kind": "external_symbol",
+      "name": "slice",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::sort",
+      "kind": "external_symbol",
+      "name": "sort",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::split",
+      "kind": "external_symbol",
+      "name": "split",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::stringify",
+      "kind": "external_symbol",
+      "name": "stringify",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::test",
+      "kind": "external_symbol",
+      "name": "test",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::then",
+      "kind": "external_symbol",
+      "name": "then",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::toLowerCase",
+      "kind": "external_symbol",
+      "name": "toLowerCase",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::trim",
+      "kind": "external_symbol",
+      "name": "trim",
+      "language": "tsx"
+    },
+    {
+      "id": "external:typescript:lib::Map",
       "kind": "external_symbol",
       "name": "Map",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::Number",
+      "kind": "external_symbol",
+      "name": "Number",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::filter",
+      "kind": "external_symbol",
+      "name": "filter",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::find",
+      "kind": "external_symbol",
+      "name": "find",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::get",
+      "kind": "external_symbol",
+      "name": "get",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::join",
+      "kind": "external_symbol",
+      "name": "join",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::map",
+      "kind": "external_symbol",
+      "name": "map",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::match",
+      "kind": "external_symbol",
+      "name": "match",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::matchAll",
+      "kind": "external_symbol",
+      "name": "matchAll",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::parse",
+      "kind": "external_symbol",
+      "name": "parse",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::pop",
+      "kind": "external_symbol",
+      "name": "pop",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::push",
+      "kind": "external_symbol",
+      "name": "push",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::replace",
+      "kind": "external_symbol",
+      "name": "replace",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::set",
+      "kind": "external_symbol",
+      "name": "set",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::slice",
+      "kind": "external_symbol",
+      "name": "slice",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::sort",
+      "kind": "external_symbol",
+      "name": "sort",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::split",
+      "kind": "external_symbol",
+      "name": "split",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::toLowerCase",
+      "kind": "external_symbol",
+      "name": "toLowerCase",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::trim",
+      "kind": "external_symbol",
+      "name": "trim",
       "language": "typescript"
     },
     {
@@ -6374,21 +6644,9 @@
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:String",
-      "kind": "unknown",
-      "name": "String",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:addEventListener",
       "kind": "unknown",
       "name": "addEventListener",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:catch",
-      "kind": "unknown",
-      "name": "catch",
       "language": "tsx"
     },
     {
@@ -6398,39 +6656,9 @@
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:every",
-      "kind": "unknown",
-      "name": "every",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:exec",
       "kind": "unknown",
       "name": "exec",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:fetch",
-      "kind": "unknown",
-      "name": "fetch",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:filter",
-      "kind": "unknown",
-      "name": "filter",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:find",
-      "kind": "unknown",
-      "name": "find",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:findIndex",
-      "kind": "unknown",
-      "name": "findIndex",
       "language": "tsx"
     },
     {
@@ -6446,63 +6674,9 @@
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:includes",
-      "kind": "unknown",
-      "name": "includes",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:indexOf",
-      "kind": "unknown",
-      "name": "indexOf",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:join",
-      "kind": "unknown",
-      "name": "join",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:json",
       "kind": "unknown",
       "name": "json",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:localeCompare",
-      "kind": "unknown",
-      "name": "localeCompare",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:map",
-      "kind": "unknown",
-      "name": "map",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:match",
-      "kind": "unknown",
-      "name": "match",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:max",
-      "kind": "unknown",
-      "name": "max",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:min",
-      "kind": "unknown",
-      "name": "min",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:padStart",
-      "kind": "unknown",
-      "name": "padStart",
       "language": "tsx"
     },
     {
@@ -6512,27 +6686,9 @@
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:push",
-      "kind": "unknown",
-      "name": "push",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:reject",
-      "kind": "unknown",
-      "name": "reject",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:removeEventListener",
       "kind": "unknown",
       "name": "removeEventListener",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:replace",
-      "kind": "unknown",
-      "name": "replace",
       "language": "tsx"
     },
     {
@@ -6566,69 +6722,15 @@
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:slice",
-      "kind": "unknown",
-      "name": "slice",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:sort",
-      "kind": "unknown",
-      "name": "sort",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:split",
-      "kind": "unknown",
-      "name": "split",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:startsWith",
       "kind": "unknown",
       "name": "startsWith",
       "language": "tsx"
     },
     {
-      "id": "unresolved:tsx:stringify",
-      "kind": "unknown",
-      "name": "stringify",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:test",
-      "kind": "unknown",
-      "name": "test",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:then",
-      "kind": "unknown",
-      "name": "then",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:toLowerCase",
-      "kind": "unknown",
-      "name": "toLowerCase",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:trim",
-      "kind": "unknown",
-      "name": "trim",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:typescript:NextConfig",
       "kind": "unknown",
       "name": "NextConfig",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:Number",
-      "kind": "unknown",
-      "name": "Number",
       "language": "typescript"
     },
     {
@@ -6650,117 +6752,15 @@
       "language": "typescript"
     },
     {
-      "id": "unresolved:typescript:filter",
-      "kind": "unknown",
-      "name": "filter",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:find",
-      "kind": "unknown",
-      "name": "find",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:get",
-      "kind": "unknown",
-      "name": "get",
-      "language": "typescript"
-    },
-    {
       "id": "unresolved:typescript:isDirectory",
       "kind": "unknown",
       "name": "isDirectory",
       "language": "typescript"
     },
     {
-      "id": "unresolved:typescript:join",
-      "kind": "unknown",
-      "name": "join",
-      "language": "typescript"
-    },
-    {
       "id": "unresolved:typescript:json",
       "kind": "unknown",
       "name": "json",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:map",
-      "kind": "unknown",
-      "name": "map",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:match",
-      "kind": "unknown",
-      "name": "match",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:matchAll",
-      "kind": "unknown",
-      "name": "matchAll",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:parse",
-      "kind": "unknown",
-      "name": "parse",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:pop",
-      "kind": "unknown",
-      "name": "pop",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:push",
-      "kind": "unknown",
-      "name": "push",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:replace",
-      "kind": "unknown",
-      "name": "replace",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:set",
-      "kind": "unknown",
-      "name": "set",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:slice",
-      "kind": "unknown",
-      "name": "slice",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:sort",
-      "kind": "unknown",
-      "name": "sort",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:split",
-      "kind": "unknown",
-      "name": "split",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:toLowerCase",
-      "kind": "unknown",
-      "name": "toLowerCase",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:trim",
-      "kind": "unknown",
-      "name": "trim",
       "language": "typescript"
     },
     {
@@ -11266,6 +11266,39 @@
     },
     {
       "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
+      "target": "external:typescript:lib::map",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 17,
+            "byte": 123
+          },
+          "end": {
+            "line": 12,
+            "column": 6,
+            "byte": 272
+          }
+        },
+        {
+          "start": {
+            "line": 10,
+            "column": 15,
+            "byte": 233
+          },
+          "end": {
+            "line": 10,
+            "column": 37,
+            "byte": 255
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
       "target": "external:unresolved:@/lib/docs.getDocPages",
       "kind": "calls",
       "status": "resolved_internal",
@@ -11307,34 +11340,109 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
-      "target": "unresolved:typescript:map",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
+      "target": "external:tsx:lib::filter",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 6,
-            "column": 17,
-            "byte": 123
+            "line": 68,
+            "column": 29,
+            "byte": 2436
           },
           "end": {
-            "line": 12,
-            "column": 6,
-            "byte": 272
+            "line": 68,
+            "column": 68,
+            "byte": 2475
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
+      "target": "external:tsx:lib::find",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 20,
+            "byte": 1253
+          },
+          "end": {
+            "line": 41,
+            "column": 52,
+            "byte": 1285
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
+      "target": "external:tsx:lib::findIndex",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 42,
+            "column": 24,
+            "byte": 1310
+          },
+          "end": {
+            "line": 42,
+            "column": 67,
+            "byte": 1353
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
+      "target": "external:tsx:lib::map",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 67,
+            "column": 14,
+            "byte": 2382
+          },
+          "end": {
+            "line": 85,
+            "column": 15,
+            "byte": 3241
           }
         },
         {
           "start": {
-            "line": 10,
-            "column": 15,
-            "byte": 233
+            "line": 75,
+            "column": 20,
+            "byte": 2767
           },
           "end": {
-            "line": 10,
-            "column": 37,
-            "byte": 255
+            "line": 82,
+            "column": 21,
+            "byte": 3185
+          }
+        },
+        {
+          "start": {
+            "line": 98,
+            "column": 22,
+            "byte": 3891
+          },
+          "end": {
+            "line": 106,
+            "column": 23,
+            "byte": 4291
           }
         }
       ]
@@ -11403,109 +11511,43 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
-      "target": "unresolved:tsx:filter",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::findDoc",
+      "target": "external:tsx:lib::find",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 68,
-            "column": 29,
-            "byte": 2436
+            "line": 15,
+            "column": 10,
+            "byte": 505
           },
           "end": {
-            "line": 68,
-            "column": 68,
-            "byte": 2475
+            "line": 15,
+            "column": 51,
+            "byte": 546
           }
         }
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
-      "target": "unresolved:tsx:find",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::findDoc",
+      "target": "external:tsx:lib::join",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 41,
-            "column": 20,
-            "byte": 1253
-          },
-          "end": {
-            "line": 41,
-            "column": 52,
-            "byte": 1285
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
-      "target": "unresolved:tsx:findIndex",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 42,
-            "column": 24,
-            "byte": 1310
-          },
-          "end": {
-            "line": 42,
-            "column": 67,
-            "byte": 1353
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage",
-      "target": "unresolved:tsx:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 67,
-            "column": 14,
-            "byte": 2382
-          },
-          "end": {
-            "line": 85,
+            "line": 14,
             "column": 15,
-            "byte": 3241
-          }
-        },
-        {
-          "start": {
-            "line": 75,
-            "column": 20,
-            "byte": 2767
+            "byte": 480
           },
           "end": {
-            "line": 82,
-            "column": 21,
-            "byte": 3185
-          }
-        },
-        {
-          "start": {
-            "line": 98,
-            "column": 22,
-            "byte": 3891
-          },
-          "end": {
-            "line": 106,
-            "column": 23,
-            "byte": 4291
+            "line": 14,
+            "column": 29,
+            "byte": 494
           }
         }
       ]
@@ -11532,43 +11574,85 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::findDoc",
-      "target": "unresolved:tsx:find",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
+      "target": "external:tsx:lib::join",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 15,
-            "column": 10,
-            "byte": 505
+            "line": 27,
+            "column": 44,
+            "byte": 824
           },
           "end": {
-            "line": 15,
-            "column": 51,
-            "byte": 546
+            "line": 27,
+            "column": 58,
+            "byte": 838
           }
         }
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::findDoc",
-      "target": "unresolved:tsx:join",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
+      "target": "external:tsx:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 14,
-            "column": 15,
-            "byte": 480
+            "line": 28,
+            "column": 23,
+            "byte": 876
           },
           "end": {
-            "line": 14,
-            "column": 29,
-            "byte": 494
+            "line": 28,
+            "column": 53,
+            "byte": 906
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
+      "target": "external:tsx:lib::slice",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 23,
+            "byte": 876
+          },
+          "end": {
+            "line": 28,
+            "column": 74,
+            "byte": 927
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
+      "target": "external:tsx:lib::trim",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 23,
+            "byte": 876
+          },
+          "end": {
+            "line": 28,
+            "column": 60,
+            "byte": 913
           }
         }
       ]
@@ -11595,85 +11679,43 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
-      "target": "unresolved:tsx:join",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateStaticParams",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 27,
-            "column": 44,
-            "byte": 824
+            "line": 9,
+            "column": 3,
+            "byte": 321
           },
           "end": {
-            "line": 27,
-            "column": 58,
-            "byte": 838
+            "line": 11,
+            "column": 6,
+            "byte": 404
           }
         }
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
-      "target": "unresolved:tsx:replace",
+      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateStaticParams",
+      "target": "external:tsx:lib::split",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 28,
-            "column": 23,
-            "byte": 876
+            "line": 10,
+            "column": 32,
+            "byte": 380
           },
           "end": {
-            "line": 28,
-            "column": 53,
-            "byte": 906
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
-      "target": "unresolved:tsx:slice",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 28,
-            "column": 23,
-            "byte": 876
-          },
-          "end": {
-            "line": 28,
-            "column": 74,
-            "byte": 927
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateMetadata",
-      "target": "unresolved:tsx:trim",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 28,
-            "column": 23,
-            "byte": 876
-          },
-          "end": {
-            "line": 28,
-            "column": 60,
-            "byte": 913
+            "line": 10,
+            "column": 49,
+            "byte": 397
           }
         }
       ]
@@ -11700,53 +11742,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateStaticParams",
-      "target": "unresolved:tsx:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 9,
-            "column": 3,
-            "byte": 321
-          },
-          "end": {
-            "line": 11,
-            "column": 6,
-            "byte": 404
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::generateStaticParams",
-      "target": "unresolved:tsx:split",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 10,
-            "column": 32,
-            "byte": 380
-          },
-          "end": {
-            "line": 10,
-            "column": 49,
-            "byte": 397
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/app/gallery/page.tsx::GalleryPage",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -11764,10 +11764,10 @@
     },
     {
       "source": "function:packages/landing/src/app/layout.tsx::RootLayout",
-      "target": "unresolved:tsx:stringify",
+      "target": "external:tsx:lib::stringify",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -11785,10 +11785,10 @@
     },
     {
       "source": "function:packages/landing/src/app/page.tsx::HomePage",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -11818,10 +11818,10 @@
     },
     {
       "source": "function:packages/landing/src/app/page.tsx::StepCard",
-      "target": "unresolved:tsx:String",
+      "target": "external:tsx:lib::String",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -11839,10 +11839,10 @@
     },
     {
       "source": "function:packages/landing/src/app/page.tsx::StepCard",
-      "target": "unresolved:tsx:padStart",
+      "target": "external:tsx:lib::padStart",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -11875,6 +11875,144 @@
             "line": 25,
             "column": 32,
             "byte": 519
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::catch",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 89,
+            "column": 5,
+            "byte": 2640
+          },
+          "end": {
+            "line": 96,
+            "column": 9,
+            "byte": 2877
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::fetch",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 89,
+            "column": 5,
+            "byte": 2640
+          },
+          "end": {
+            "line": 89,
+            "column": 21,
+            "byte": 2656
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::map",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 162,
+            "column": 16,
+            "byte": 5052
+          },
+          "end": {
+            "line": 194,
+            "column": 17,
+            "byte": 6432
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::reject",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 90,
+            "column": 39,
+            "byte": 2695
+          },
+          "end": {
+            "line": 90,
+            "column": 63,
+            "byte": 2719
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::then",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 89,
+            "column": 5,
+            "byte": 2640
+          },
+          "end": {
+            "line": 90,
+            "column": 65,
+            "byte": 2721
+          }
+        },
+        {
+          "start": {
+            "line": 89,
+            "column": 5,
+            "byte": 2640
+          },
+          "end": {
+            "line": 93,
+            "column": 9,
+            "byte": 2809
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:lib::trim",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 113,
+            "column": 29,
+            "byte": 3333
+          },
+          "end": {
+            "line": 113,
+            "column": 41,
+            "byte": 3345
           }
         }
       ]
@@ -12097,48 +12235,6 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:catch",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 89,
-            "column": 5,
-            "byte": 2640
-          },
-          "end": {
-            "line": 96,
-            "column": 9,
-            "byte": 2877
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:fetch",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 89,
-            "column": 5,
-            "byte": 2640
-          },
-          "end": {
-            "line": 89,
-            "column": 21,
-            "byte": 2656
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
       "target": "unresolved:tsx:json",
       "kind": "calls",
       "status": "unresolved",
@@ -12154,48 +12250,6 @@
             "line": 90,
             "column": 36,
             "byte": 2692
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 162,
-            "column": 16,
-            "byte": 5052
-          },
-          "end": {
-            "line": 194,
-            "column": 17,
-            "byte": 6432
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:reject",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 90,
-            "column": 39,
-            "byte": 2695
-          },
-          "end": {
-            "line": 90,
-            "column": 63,
-            "byte": 2719
           }
         }
       ]
@@ -12366,65 +12420,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:then",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 89,
-            "column": 5,
-            "byte": 2640
-          },
-          "end": {
-            "line": 90,
-            "column": 65,
-            "byte": 2721
-          }
-        },
-        {
-          "start": {
-            "line": 89,
-            "column": 5,
-            "byte": 2640
-          },
-          "end": {
-            "line": 93,
-            "column": 9,
-            "byte": 2809
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "unresolved:tsx:trim",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 113,
-            "column": 29,
-            "byte": 3333
-          },
-          "end": {
-            "line": 113,
-            "column": 41,
-            "byte": 3345
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.go",
-      "target": "unresolved:tsx:push",
+      "target": "external:tsx:lib::push",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12526,6 +12526,48 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
+      "target": "external:tsx:lib::max",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 130,
+            "column": 24,
+            "byte": 3808
+          },
+          "end": {
+            "line": 130,
+            "column": 43,
+            "byte": 3827
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
+      "target": "external:tsx:lib::min",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 127,
+            "column": 24,
+            "byte": 3683
+          },
+          "end": {
+            "line": 127,
+            "column": 59,
+            "byte": 3718
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
       "target": "function:packages/landing/src/components/molecules/DocsSearch.tsx::docHref",
       "kind": "calls",
       "status": "resolved_internal",
@@ -12562,48 +12604,6 @@
             "line": 133,
             "column": 46,
             "byte": 3971
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
-      "target": "unresolved:tsx:max",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 130,
-            "column": 24,
-            "byte": 3808
-          },
-          "end": {
-            "line": 130,
-            "column": 43,
-            "byte": 3827
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
-      "target": "unresolved:tsx:min",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 127,
-            "column": 24,
-            "byte": 3683
-          },
-          "end": {
-            "line": 127,
-            "column": 59,
-            "byte": 3718
           }
         }
       ]
@@ -12721,10 +12721,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:every",
+      "target": "external:tsx:lib::every",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12766,10 +12766,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:filter",
+      "target": "external:tsx:lib::filter",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12787,10 +12787,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:find",
+      "target": "external:tsx:lib::find",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12808,10 +12808,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:includes",
+      "target": "external:tsx:lib::includes",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12865,10 +12865,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:indexOf",
+      "target": "external:tsx:lib::indexOf",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12886,10 +12886,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:localeCompare",
+      "target": "external:tsx:lib::localeCompare",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12907,10 +12907,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12928,10 +12928,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:max",
+      "target": "external:tsx:lib::max",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12949,10 +12949,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:min",
+      "target": "external:tsx:lib::min",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12970,10 +12970,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:push",
+      "target": "external:tsx:lib::push",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -12991,10 +12991,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:slice",
+      "target": "external:tsx:lib::slice",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13024,10 +13024,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:sort",
+      "target": "external:tsx:lib::sort",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13045,10 +13045,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:split",
+      "target": "external:tsx:lib::split",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13066,10 +13066,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "unresolved:tsx:toLowerCase",
+      "target": "external:tsx:lib::toLowerCase",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13135,10 +13135,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Features.tsx::Features",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13156,7 +13156,7 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Footer.tsx::Footer",
-      "target": "external:tsx:Date",
+      "target": "external:tsx:lib::Date",
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
@@ -13198,10 +13198,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Hero.tsx::Hero",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13240,10 +13240,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Navbar.tsx::Dropdown",
-      "target": "unresolved:tsx:map",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13282,31 +13282,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Navbar.tsx::Navbar",
-      "target": "external:unresolved:react.useState",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "resolved_internal",
+      "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 85,
-            "column": 35,
-            "byte": 2075
-          },
-          "end": {
-            "line": 85,
-            "column": 64,
-            "byte": 2104
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/Navbar.tsx::Navbar",
-      "target": "unresolved:tsx:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
@@ -13330,6 +13309,27 @@
             "line": 120,
             "column": 13,
             "byte": 3363
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/Navbar.tsx::Navbar",
+      "target": "external:unresolved:react.useState",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 85,
+            "column": 35,
+            "byte": 2075
+          },
+          "end": {
+            "line": 85,
+            "column": 64,
+            "byte": 2104
           }
         }
       ]
@@ -13378,31 +13378,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::Terminal",
-      "target": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
+      "target": "external:tsx:lib::map",
       "kind": "calls",
-      "status": "resolved_internal",
+      "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 72,
-            "column": 20,
-            "byte": 2049
-          },
-          "end": {
-            "line": 72,
-            "column": 51,
-            "byte": 2080
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/Terminal.tsx::Terminal",
-      "target": "unresolved:tsx:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
@@ -13432,10 +13411,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::Terminal",
-      "target": "unresolved:tsx:match",
+      "target": "external:tsx:lib::match",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13453,10 +13432,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::Terminal",
-      "target": "unresolved:tsx:slice",
+      "target": "external:tsx:lib::slice",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13473,32 +13452,32 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
-      "target": "unresolved:tsx:exec",
+      "source": "function:packages/landing/src/components/molecules/Terminal.tsx::Terminal",
+      "target": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
-            "line": 40,
-            "column": 15,
-            "byte": 1200
+            "line": 72,
+            "column": 20,
+            "byte": 2049
           },
           "end": {
-            "line": 40,
-            "column": 28,
-            "byte": 1213
+            "line": 72,
+            "column": 51,
+            "byte": 2080
           }
         }
       ]
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
-      "target": "unresolved:tsx:match",
+      "target": "external:tsx:lib::match",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13516,10 +13495,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
-      "target": "unresolved:tsx:push",
+      "target": "external:tsx:lib::push",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13573,10 +13552,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
-      "target": "unresolved:tsx:slice",
+      "target": "external:tsx:lib::slice",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13618,10 +13597,10 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
-      "target": "unresolved:tsx:test",
+      "target": "external:tsx:lib::test",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13633,6 +13612,27 @@
             "line": 32,
             "column": 36,
             "byte": 1025
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/Terminal.tsx::tokenize",
+      "target": "unresolved:tsx:exec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 15,
+            "byte": 1200
+          },
+          "end": {
+            "line": 40,
+            "column": 28,
+            "byte": 1213
           }
         }
       ]
@@ -13702,7 +13702,7 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
-      "target": "external:typescript:Map",
+      "target": "external:typescript:lib::Map",
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
@@ -13717,6 +13717,69 @@
             "line": 104,
             "column": 41,
             "byte": 3455
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
+      "target": "external:typescript:lib::get",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 109,
+            "column": 17,
+            "byte": 3610
+          },
+          "end": {
+            "line": 109,
+            "column": 29,
+            "byte": 3622
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
+      "target": "external:typescript:lib::replace",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 105,
+            "column": 10,
+            "byte": 3466
+          },
+          "end": {
+            "line": 114,
+            "column": 4,
+            "byte": 3760
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
+      "target": "external:typescript:lib::set",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 110,
+            "column": 7,
+            "byte": 3635
+          },
+          "end": {
+            "line": 110,
+            "column": 26,
+            "byte": 3654
           }
         }
       ]
@@ -13743,74 +13806,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
-      "target": "unresolved:typescript:get",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 109,
-            "column": 17,
-            "byte": 3610
-          },
-          "end": {
-            "line": 109,
-            "column": 29,
-            "byte": 3622
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
-      "target": "unresolved:typescript:replace",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 105,
-            "column": 10,
-            "byte": 3466
-          },
-          "end": {
-            "line": 114,
-            "column": 4,
-            "byte": 3760
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::addHeadingIds",
-      "target": "unresolved:typescript:set",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 110,
-            "column": 7,
-            "byte": 3635
-          },
-          "end": {
-            "line": 110,
-            "column": 26,
-            "byte": 3654
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/lib/docs.ts::extractToc",
-      "target": "unresolved:typescript:Number",
+      "target": "external:typescript:lib::Number",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13828,10 +13828,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::extractToc",
-      "target": "unresolved:typescript:matchAll",
+      "target": "external:typescript:lib::matchAll",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13849,10 +13849,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::extractToc",
-      "target": "unresolved:typescript:push",
+      "target": "external:typescript:lib::push",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13870,10 +13870,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::extractToc",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13912,10 +13912,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::frameSvgs",
-      "target": "unresolved:typescript:match",
+      "target": "external:typescript:lib::match",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13933,10 +13933,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::frameSvgs",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -13960,6 +13960,111 @@
             "line": 128,
             "column": 8,
             "byte": 4226
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:lib::join",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 175,
+            "column": 35,
+            "byte": 5422
+          },
+          "end": {
+            "line": 175,
+            "column": 60,
+            "byte": 5447
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:lib::map",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 173,
+            "column": 10,
+            "byte": 5334
+          },
+          "end": {
+            "line": 187,
+            "column": 5,
+            "byte": 5802
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:lib::parse",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 176,
+            "column": 17,
+            "byte": 5474
+          },
+          "end": {
+            "line": 176,
+            "column": 57,
+            "byte": 5514
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:lib::sort",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 172,
+            "column": 3,
+            "byte": 5311
+          },
+          "end": {
+            "line": 172,
+            "column": 15,
+            "byte": 5323
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:lib::split",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 177,
+            "column": 21,
+            "byte": 5546
+          },
+          "end": {
+            "line": 177,
+            "column": 36,
+            "byte": 5561
           }
         }
       ]
@@ -14154,116 +14259,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "unresolved:typescript:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 175,
-            "column": 35,
-            "byte": 5422
-          },
-          "end": {
-            "line": 175,
-            "column": 60,
-            "byte": 5447
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "unresolved:typescript:map",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 173,
-            "column": 10,
-            "byte": 5334
-          },
-          "end": {
-            "line": 187,
-            "column": 5,
-            "byte": 5802
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "unresolved:typescript:parse",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 176,
-            "column": 17,
-            "byte": 5474
-          },
-          "end": {
-            "line": 176,
-            "column": 57,
-            "byte": 5514
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "unresolved:typescript:sort",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 172,
-            "column": 3,
-            "byte": 5311
-          },
-          "end": {
-            "line": 172,
-            "column": 15,
-            "byte": 5323
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "unresolved:typescript:split",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 177,
-            "column": 21,
-            "byte": 5546
-          },
-          "end": {
-            "line": 177,
-            "column": 36,
-            "byte": 5561
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:filter",
+      "target": "external:typescript:lib::filter",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14281,10 +14281,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:join",
+      "target": "external:typescript:lib::join",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14314,10 +14314,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:pop",
+      "target": "external:typescript:lib::pop",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14335,10 +14335,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:push",
+      "target": "external:typescript:lib::push",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14356,10 +14356,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14389,10 +14389,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:slice",
+      "target": "external:typescript:lib::slice",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14410,10 +14410,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::resolveHref",
-      "target": "unresolved:typescript:split",
+      "target": "external:typescript:lib::split",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14455,6 +14455,27 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::rewriteLinks",
+      "target": "external:typescript:lib::replace",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 87,
+            "column": 10,
+            "byte": 2895
+          },
+          "end": {
+            "line": 89,
+            "column": 5,
+            "byte": 3023
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::rewriteLinks",
       "target": "function:packages/landing/src/lib/docs.ts::resolveHref",
       "kind": "calls",
       "status": "resolved_internal",
@@ -14475,32 +14496,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/lib/docs.ts::rewriteLinks",
-      "target": "unresolved:typescript:replace",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 87,
-            "column": 10,
-            "byte": 2895
-          },
-          "end": {
-            "line": 89,
-            "column": 5,
-            "byte": 3023
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/lib/docs.ts::slugFor",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14518,10 +14518,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::slugify",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14563,10 +14563,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::slugify",
-      "target": "unresolved:typescript:toLowerCase",
+      "target": "external:typescript:lib::toLowerCase",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14584,10 +14584,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::slugify",
-      "target": "unresolved:typescript:trim",
+      "target": "external:typescript:lib::trim",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14605,10 +14605,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::titleFor",
-      "target": "unresolved:typescript:match",
+      "target": "external:typescript:lib::match",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14626,10 +14626,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::titleFor",
-      "target": "unresolved:typescript:trim",
+      "target": "external:typescript:lib::trim",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14647,10 +14647,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::toPlainText",
-      "target": "unresolved:typescript:replace",
+      "target": "external:typescript:lib::replace",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14716,10 +14716,10 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::toPlainText",
-      "target": "unresolved:typescript:trim",
+      "target": "external:typescript:lib::trim",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -14731,6 +14731,48 @@
             "line": 151,
             "column": 12,
             "byte": 4780
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::walk",
+      "target": "external:typescript:lib::join",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 37,
+            "column": 18,
+            "byte": 1253
+          },
+          "end": {
+            "line": 37,
+            "column": 39,
+            "byte": 1274
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::walk",
+      "target": "external:typescript:lib::push",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 7,
+            "byte": 1424
+          },
+          "end": {
+            "line": 41,
+            "column": 54,
+            "byte": 1471
           }
         }
       ]
@@ -14841,53 +14883,11 @@
       ]
     },
     {
-      "source": "function:packages/landing/src/lib/docs.ts::walk",
-      "target": "unresolved:typescript:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 37,
-            "column": 18,
-            "byte": 1253
-          },
-          "end": {
-            "line": 37,
-            "column": 39,
-            "byte": 1274
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::walk",
-      "target": "unresolved:typescript:push",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 41,
-            "column": 7,
-            "byte": 1424
-          },
-          "end": {
-            "line": 41,
-            "column": 54,
-            "byte": 1471
-          }
-        }
-      ]
-    },
-    {
       "source": "function:packages/landing/src/lib/sections.ts::sectionLabel",
-      "target": "unresolved:typescript:find",
+      "target": "external:typescript:lib::find",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -17384,6 +17384,27 @@
     },
     {
       "source": "module:packages/landing/src/lib/docs.ts",
+      "target": "external:typescript:lib::join",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 18,
+            "byte": 144
+          },
+          "end": {
+            "line": 5,
+            "column": 50,
+            "byte": 176
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/lib/docs.ts",
       "target": "unresolved:typescript:cwd",
       "kind": "calls",
       "status": "unresolved",
@@ -17399,27 +17420,6 @@
             "line": 5,
             "column": 41,
             "byte": 167
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/lib/docs.ts",
-      "target": "unresolved:typescript:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 5,
-            "column": 18,
-            "byte": 144
-          },
-          "end": {
-            "line": 5,
-            "column": 50,
-            "byte": 176
           }
         }
       ]
@@ -18829,11 +18829,11 @@
     "nodes": 512,
     "edges": 955,
     "symbols": 223,
-    "unresolvedEdges": 143,
+    "unresolvedEdges": 57,
     "diagnostics": 16,
     "byNodeKind": {
       "constant": 85,
-      "external_symbol": 61,
+      "external_symbol": 106,
       "file": 73,
       "framework": 4,
       "function": 45,
@@ -18843,7 +18843,7 @@
       "property": 63,
       "repository": 1,
       "type": 1,
-      "unknown": 75,
+      "unknown": 30,
       "variable": 9
     },
     "byEdgeKind": {
@@ -18863,9 +18863,9 @@
       "typescript": 94
     },
     "byStatus": {
-      "resolved_external": 94,
+      "resolved_external": 180,
       "resolved_internal": 718,
-      "unresolved": 143
+      "unresolved": 57
     },
     "byFramework": {
       "nextjs": 1,
