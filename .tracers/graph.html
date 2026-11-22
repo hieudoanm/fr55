@@ -2488,6 +2488,12 @@
       "exported": true
     },
     {
+      "id": "external:tsx:@/components/molecules/Features.Feature",
+      "kind": "external_symbol",
+      "name": "Feature",
+      "language": "tsx"
+    },
+    {
       "id": "external:tsx:JSON.stringify",
       "kind": "external_symbol",
       "name": "stringify",
@@ -2536,21 +2542,9 @@
       "language": "tsx"
     },
     {
-      "id": "external:tsx:lib::FC",
-      "kind": "external_symbol",
-      "name": "FC",
-      "language": "tsx"
-    },
-    {
       "id": "external:tsx:lib::Promise",
       "kind": "external_symbol",
       "name": "Promise",
-      "language": "tsx"
-    },
-    {
-      "id": "external:tsx:lib::ReactNode",
-      "kind": "external_symbol",
-      "name": "ReactNode",
       "language": "tsx"
     },
     {
@@ -2692,6 +2686,42 @@
       "language": "tsx"
     },
     {
+      "id": "external:tsx:next.Metadata",
+      "kind": "external_symbol",
+      "name": "Metadata",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:next.NextPage",
+      "kind": "external_symbol",
+      "name": "NextPage",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react-icons.IconType",
+      "kind": "external_symbol",
+      "name": "IconType",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.FC",
+      "kind": "external_symbol",
+      "name": "FC",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.MouseEventHandler",
+      "kind": "external_symbol",
+      "name": "MouseEventHandler",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.ReactNode",
+      "kind": "external_symbol",
+      "name": "ReactNode",
+      "language": "tsx"
+    },
+    {
       "id": "external:typescript:Response.json",
       "kind": "external_symbol",
       "name": "json",
@@ -2815,6 +2845,12 @@
       "id": "external:typescript:marked.parse",
       "kind": "external_symbol",
       "name": "parse",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:next.NextConfig",
+      "kind": "external_symbol",
+      "name": "NextConfig",
       "language": "typescript"
     },
     {
@@ -6883,36 +6919,6 @@
       "exported": false
     },
     {
-      "id": "unresolved:tsx:Feature",
-      "kind": "unknown",
-      "name": "Feature",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:IconType",
-      "kind": "unknown",
-      "name": "IconType",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Metadata",
-      "kind": "unknown",
-      "name": "Metadata",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:MouseEventHandler",
-      "kind": "unknown",
-      "name": "MouseEventHandler",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:NextPage",
-      "kind": "unknown",
-      "name": "NextPage",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:RegExpExecArray",
       "kind": "unknown",
       "name": "RegExpExecArray",
@@ -7001,12 +7007,6 @@
       "kind": "unknown",
       "name": "startsWith",
       "language": "tsx"
-    },
-    {
-      "id": "unresolved:typescript:NextConfig",
-      "kind": "unknown",
-      "name": "NextConfig",
-      "language": "typescript"
     },
     {
       "id": "unresolved:typescript:endsWith",
@@ -14742,7 +14742,7 @@
     },
     {
       "source": "interface:packages/landing/src/app/layout.tsx::RootLayoutProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -14763,7 +14763,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/CTA.tsx::CTAProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -14838,9 +14838,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/Features.tsx::Feature",
-      "target": "unresolved:tsx:IconType",
+      "target": "external:tsx:react-icons.IconType",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -14880,7 +14880,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/Hero.tsx::HeroProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15042,7 +15042,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/SectionHead.tsx::SectionHeadProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15105,9 +15105,9 @@
     },
     {
       "source": "module:packages/landing/next.config.ts",
-      "target": "unresolved:typescript:NextConfig",
+      "target": "external:typescript:next.NextConfig",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15301,7 +15301,7 @@
     },
     {
       "source": "module:packages/landing/src/app/error.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15329,7 +15329,28 @@
     },
     {
       "source": "module:packages/landing/src/app/gallery/page.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 24,
+            "byte": 157
+          },
+          "end": {
+            "line": 5,
+            "column": 32,
+            "byte": 165
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/gallery/page.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15389,27 +15410,6 @@
             "line": 144,
             "column": 47,
             "byte": 3808
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/gallery/page.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 5,
-            "column": 24,
-            "byte": 157
-          },
-          "end": {
-            "line": 5,
-            "column": 32,
-            "byte": 165
           }
         }
       ]
@@ -15514,7 +15514,7 @@
     },
     {
       "source": "module:packages/landing/src/app/global-error.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15584,7 +15584,28 @@
     },
     {
       "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 24,
+            "byte": 906
+          },
+          "end": {
+            "line": 26,
+            "column": 32,
+            "byte": 914
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/layout.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15620,27 +15641,6 @@
             "line": 88,
             "column": 37,
             "byte": 2398
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 26,
-            "column": 24,
-            "byte": 906
-          },
-          "end": {
-            "line": 26,
-            "column": 32,
-            "byte": 914
           }
         }
       ]
@@ -15717,7 +15717,7 @@
     },
     {
       "source": "module:packages/landing/src/app/loading.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15745,7 +15745,7 @@
     },
     {
       "source": "module:packages/landing/src/app/not-found.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -15773,30 +15773,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:@/components/molecules/Features.Feature",
       "kind": "uses_type",
       "status": "resolved_external",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 108,
-            "column": 17,
-            "byte": 3349
-          },
-          "end": {
-            "line": 108,
-            "column": 19,
-            "byte": 3351
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:Feature",
-      "kind": "uses_type",
-      "status": "unresolved",
       "origin": "syntax",
       "sites": [
         {
@@ -15815,9 +15794,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15836,9 +15815,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15851,6 +15830,27 @@
             "line": 126,
             "column": 25,
             "byte": 4024
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/page.tsx",
+      "target": "external:tsx:react.FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 108,
+            "column": 17,
+            "byte": 3349
+          },
+          "end": {
+            "line": 108,
+            "column": 19,
+            "byte": 3351
           }
         }
       ]
@@ -15920,7 +15920,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/CTA.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16072,7 +16072,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/DocsSearch.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16345,7 +16345,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Features.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16450,7 +16450,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Footer.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16527,7 +16527,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Hero.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16686,7 +16686,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -16725,6 +16725,27 @@
             "line": 78,
             "column": 17,
             "byte": 1958
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
+      "target": "external:tsx:react.MouseEventHandler",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 13,
+            "byte": 625
+          },
+          "end": {
+            "line": 32,
+            "column": 30,
+            "byte": 642
           }
         }
       ]
@@ -16788,27 +16809,6 @@
             "line": 78,
             "column": 29,
             "byte": 1970
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
-      "target": "unresolved:tsx:MouseEventHandler",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 32,
-            "column": 13,
-            "byte": 625
-          },
-          "end": {
-            "line": 32,
-            "column": 30,
-            "byte": 642
           }
         }
       ]
@@ -16934,7 +16934,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/SectionHead.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -17004,27 +17004,6 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
-      "target": "external:tsx:lib::FC",
-      "kind": "uses_type",
-      "status": "resolved_external",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 67,
-            "column": 17,
-            "byte": 1794
-          },
-          "end": {
-            "line": 67,
-            "column": 19,
-            "byte": 1796
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
       "target": "external:tsx:lib::Record",
       "kind": "uses_type",
       "status": "resolved_external",
@@ -17040,6 +17019,27 @@
             "line": 10,
             "column": 17,
             "byte": 175
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
+      "target": "external:tsx:react.FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 67,
+            "column": 17,
+            "byte": 1794
+          },
+          "end": {
+            "line": 67,
+            "column": 19,
+            "byte": 1796
           }
         }
       ]
@@ -18573,11 +18573,11 @@
     "nodes": 479,
     "edges": 936,
     "symbols": 223,
-    "unresolvedEdges": 33,
+    "unresolvedEdges": 25,
     "diagnostics": 10,
     "byNodeKind": {
       "constant": 85,
-      "external_symbol": 80,
+      "external_symbol": 86,
       "file": 73,
       "framework": 4,
       "function": 45,
@@ -18587,7 +18587,7 @@
       "property": 63,
       "repository": 1,
       "type": 1,
-      "unknown": 23,
+      "unknown": 17,
       "variable": 9
     },
     "byEdgeKind": {
@@ -18607,9 +18607,9 @@
       "typescript": 94
     },
     "byStatus": {
-      "resolved_external": 169,
+      "resolved_external": 177,
       "resolved_internal": 734,
-      "unresolved": 33
+      "unresolved": 25
     },
     "byFramework": {
       "nextjs": 1,
