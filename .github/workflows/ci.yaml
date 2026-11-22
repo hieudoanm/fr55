@@ -98,7 +98,9 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [apps-build, landing-build]
+    needs:
+      - apps-build
+      - landing-build
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.apps-build.result == 'success'
     permissions:
       contents: write
