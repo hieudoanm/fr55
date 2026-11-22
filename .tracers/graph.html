@@ -600,6 +600,20 @@
       "family": "ecmascript",
       "version": "tailwindcss",
       "confidence": "high"
+    },
+    {
+      "name": "tailwindcss",
+      "displayName": "Tailwind CSS",
+      "family": "ecmascript",
+      "version": "tailwindcss",
+      "confidence": "medium"
+    },
+    {
+      "name": "turborepo",
+      "displayName": "Turborepo",
+      "family": "ecmascript",
+      "version": "commitlint",
+      "confidence": "medium"
     }
   ],
   "nodes": [
@@ -3368,6 +3382,26 @@
         "confidence": "high",
         "family": "ecmascript",
         "framework": "react"
+      }
+    },
+    {
+      "id": "framework:tailwindcss:tailwindcss",
+      "kind": "framework",
+      "name": "Tailwind CSS",
+      "metadata": {
+        "confidence": "medium",
+        "family": "ecmascript",
+        "framework": "tailwindcss"
+      }
+    },
+    {
+      "id": "framework:turborepo:commitlint",
+      "kind": "framework",
+      "name": "Turborepo",
+      "metadata": {
+        "confidence": "medium",
+        "family": "ecmascript",
+        "framework": "turborepo"
       }
     },
     {
@@ -18922,6 +18956,20 @@
       "kind": "uses_framework",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:tailwindcss:tailwindcss",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:turborepo:commitlint",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
     }
   ],
   "diagnostics": [
@@ -19233,8 +19281,8 @@
   "statistics": {
     "files": 73,
     "packages": 2,
-    "nodes": 510,
-    "edges": 953,
+    "nodes": 512,
+    "edges": 955,
     "symbols": 223,
     "unresolvedEdges": 143,
     "diagnostics": 16,
@@ -19242,7 +19290,7 @@
       "constant": 85,
       "external_symbol": 61,
       "file": 73,
-      "framework": 2,
+      "framework": 4,
       "function": 45,
       "interface": 20,
       "module": 73,
@@ -19259,7 +19307,7 @@
       "defines": 223,
       "exports": 36,
       "imports": 93,
-      "uses_framework": 2,
+      "uses_framework": 4,
       "uses_type": 58
     },
     "byLanguage": {
@@ -19271,12 +19319,14 @@
     },
     "byStatus": {
       "resolved_external": 94,
-      "resolved_internal": 716,
+      "resolved_internal": 718,
       "unresolved": 143
     },
     "byFramework": {
       "nextjs": 1,
-      "react": 1
+      "react": 1,
+      "tailwindcss": 1,
+      "turborepo": 1
     }
   }
 };</script>
