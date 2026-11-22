@@ -2033,6 +2033,36 @@
       "exported": true
     },
     {
+      "id": "external:tsx:JSON.stringify",
+      "kind": "external_symbol",
+      "name": "stringify",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:Math.max",
+      "kind": "external_symbol",
+      "name": "max",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:Math.min",
+      "kind": "external_symbol",
+      "name": "min",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:Promise.reject",
+      "kind": "external_symbol",
+      "name": "reject",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:String.padStart",
+      "kind": "external_symbol",
+      "name": "padStart",
+      "language": "tsx"
+    },
+    {
       "id": "external:tsx:URL",
       "kind": "external_symbol",
       "name": "URL",
@@ -2042,6 +2072,36 @@
       "id": "external:tsx:lib::Date",
       "kind": "external_symbol",
       "name": "Date",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::Error",
+      "kind": "external_symbol",
+      "name": "Error",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::FC",
+      "kind": "external_symbol",
+      "name": "FC",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::Promise",
+      "kind": "external_symbol",
+      "name": "Promise",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::ReactNode",
+      "kind": "external_symbol",
+      "name": "ReactNode",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:lib::Record",
+      "kind": "external_symbol",
+      "name": "Record",
       "language": "tsx"
     },
     {
@@ -2123,33 +2183,9 @@
       "language": "tsx"
     },
     {
-      "id": "external:tsx:lib::max",
-      "kind": "external_symbol",
-      "name": "max",
-      "language": "tsx"
-    },
-    {
-      "id": "external:tsx:lib::min",
-      "kind": "external_symbol",
-      "name": "min",
-      "language": "tsx"
-    },
-    {
-      "id": "external:tsx:lib::padStart",
-      "kind": "external_symbol",
-      "name": "padStart",
-      "language": "tsx"
-    },
-    {
       "id": "external:tsx:lib::push",
       "kind": "external_symbol",
       "name": "push",
-      "language": "tsx"
-    },
-    {
-      "id": "external:tsx:lib::reject",
-      "kind": "external_symbol",
-      "name": "reject",
       "language": "tsx"
     },
     {
@@ -2177,12 +2213,6 @@
       "language": "tsx"
     },
     {
-      "id": "external:tsx:lib::stringify",
-      "kind": "external_symbol",
-      "name": "stringify",
-      "language": "tsx"
-    },
-    {
       "id": "external:tsx:lib::test",
       "kind": "external_symbol",
       "name": "test",
@@ -2207,6 +2237,12 @@
       "language": "tsx"
     },
     {
+      "id": "external:typescript:Response.json",
+      "kind": "external_symbol",
+      "name": "json",
+      "language": "typescript"
+    },
+    {
       "id": "external:typescript:lib::Map",
       "kind": "external_symbol",
       "name": "Map",
@@ -2216,6 +2252,12 @@
       "id": "external:typescript:lib::Number",
       "kind": "external_symbol",
       "name": "Number",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:lib::Record",
+      "kind": "external_symbol",
+      "name": "Record",
       "language": "typescript"
     },
     {
@@ -2258,12 +2300,6 @@
       "id": "external:typescript:lib::matchAll",
       "kind": "external_symbol",
       "name": "matchAll",
-      "language": "typescript"
-    },
-    {
-      "id": "external:typescript:lib::parse",
-      "kind": "external_symbol",
-      "name": "parse",
       "language": "typescript"
     },
     {
@@ -2318,6 +2354,18 @@
       "id": "external:typescript:lib::trim",
       "kind": "external_symbol",
       "name": "trim",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:marked.parse",
+      "kind": "external_symbol",
+      "name": "parse",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:process.cwd",
+      "kind": "external_symbol",
+      "name": "cwd",
       "language": "typescript"
     },
     {
@@ -2381,48 +2429,6 @@
       "language": "tsx"
     },
     {
-      "id": "external:unknown:LICENSE",
-      "kind": "external_symbol",
-      "name": "LICENSE",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:RELEASE.md",
-      "kind": "external_symbol",
-      "name": "RELEASE.md",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:apps/",
-      "kind": "external_symbol",
-      "name": "apps/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:apps/README.md",
-      "kind": "external_symbol",
-      "name": "apps/README.md",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:assets/",
-      "kind": "external_symbol",
-      "name": "assets/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:assets/branding/png/og.png",
-      "kind": "external_symbol",
-      "name": "assets/branding/png/og.png",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:ci/devices/",
-      "kind": "external_symbol",
-      "name": "ci/devices/",
-      "language": "markdown"
-    },
-    {
       "id": "external:unknown:eslint-config-next/core-web-vitals",
       "kind": "external_symbol",
       "name": "eslint-config-next/core-web-vitals",
@@ -2439,156 +2445,6 @@
       "kind": "external_symbol",
       "name": "eslint/config",
       "language": "javascript"
-    },
-    {
-      "id": "external:unknown:https://developer.garmin.com/connect-iq/sdk/",
-      "kind": "external_symbol",
-      "name": "https://developer.garmin.com/connect-iq/sdk/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55#readme",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55#readme",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-barcode.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-barcode.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-binary.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-binary.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-chronograph.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-chronograph.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-compass.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-compass.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-dotmatrix.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-dotmatrix.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-ecg.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-ecg.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-hands.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-hands.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-maximalism.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-maximalism.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-minimalism.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-minimalism.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-moon.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-moon.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-pie.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-pie.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-rings.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-rings.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-roman.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-roman.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-spiral.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-spiral.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-split.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-split.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-timezones.prg",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/download/latest/fr55-timezones.prg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://github.com/hieudoanm/fr55/releases/latest",
-      "kind": "external_symbol",
-      "name": "https://github.com/hieudoanm/fr55/releases/latest",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://hieudoanm.github.io/fr55/",
-      "kind": "external_symbol",
-      "name": "https://hieudoanm.github.io/fr55/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://hieudoanm.github.io/fr55/gallery/",
-      "kind": "external_symbol",
-      "name": "https://hieudoanm.github.io/fr55/gallery/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://img.shields.io/badge/license-MIT-blue.svg",
-      "kind": "external_symbol",
-      "name": "https://img.shields.io/badge/license-MIT-blue.svg",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://nodejs.org/",
-      "kind": "external_symbol",
-      "name": "https://nodejs.org/",
-      "language": "markdown"
-    },
-    {
-      "id": "external:unknown:https://pnpm.io/",
-      "kind": "external_symbol",
-      "name": "https://pnpm.io/",
-      "language": "markdown"
     },
     {
       "id": "external:unknown:marked",
@@ -2633,12 +2489,6 @@
       "language": "typescript"
     },
     {
-      "id": "external:unknown:packages/landing/",
-      "kind": "external_symbol",
-      "name": "packages/landing/",
-      "language": "markdown"
-    },
-    {
       "id": "external:unknown:react",
       "kind": "external_symbol",
       "name": "react",
@@ -2661,12 +2511,6 @@
       "kind": "external_symbol",
       "name": "react-icons/pi",
       "language": "tsx"
-    },
-    {
-      "id": "external:unknown:watchface-apps.md",
-      "kind": "external_symbol",
-      "name": "watchface-apps.md",
-      "language": "markdown"
     },
     {
       "id": "file:.github/CODE_OF_CONDUCT.md",
@@ -6584,12 +6428,6 @@
       "exported": false
     },
     {
-      "id": "unresolved:tsx:FC",
-      "kind": "unknown",
-      "name": "FC",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:Feature",
       "kind": "unknown",
       "name": "Feature",
@@ -6617,24 +6455,6 @@
       "id": "unresolved:tsx:NextPage",
       "kind": "unknown",
       "name": "NextPage",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Promise",
-      "kind": "unknown",
-      "name": "Promise",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:ReactNode",
-      "kind": "unknown",
-      "name": "ReactNode",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Record",
-      "kind": "unknown",
-      "name": "Record",
       "language": "tsx"
     },
     {
@@ -6734,18 +6554,6 @@
       "language": "typescript"
     },
     {
-      "id": "unresolved:typescript:Record",
-      "kind": "unknown",
-      "name": "Record",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:cwd",
-      "kind": "unknown",
-      "name": "cwd",
-      "language": "typescript"
-    },
-    {
       "id": "unresolved:typescript:endsWith",
       "kind": "unknown",
       "name": "endsWith",
@@ -6755,12 +6563,6 @@
       "id": "unresolved:typescript:isDirectory",
       "kind": "unknown",
       "name": "isDirectory",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:json",
-      "kind": "unknown",
-      "name": "json",
       "language": "typescript"
     },
     {
@@ -7006,90 +6808,6 @@
       "origin": "syntax"
     },
     {
-      "source": "file:CONTRIBUTING.md",
-      "target": "external:unknown:LICENSE",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2424
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2425
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:CONTRIBUTING.md",
-      "target": "external:unknown:https://developer.garmin.com/connect-iq/sdk/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 534
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 535
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:CONTRIBUTING.md",
-      "target": "external:unknown:https://nodejs.org/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 450
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 451
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:CONTRIBUTING.md",
-      "target": "external:unknown:https://pnpm.io/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 485
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 486
-          }
-        }
-      ]
-    },
-    {
       "source": "file:README.md",
       "target": "module:README.md",
       "kind": "contains",
@@ -7098,30 +6816,9 @@
     },
     {
       "source": "file:README.md",
-      "target": "external:unknown:LICENSE",
+      "target": "file:RELEASE.md",
       "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 3950
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 3951
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:RELEASE.md",
-      "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -7140,30 +6837,9 @@
     },
     {
       "source": "file:README.md",
-      "target": "external:unknown:apps/",
+      "target": "file:apps/README.md",
       "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 675
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 676
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:apps/README.md",
-      "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -7181,132 +6857,6 @@
       ]
     },
     {
-      "source": "file:README.md",
-      "target": "external:unknown:assets/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1053
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1054
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:assets/branding/png/og.png",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 313
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 314
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:ci/devices/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1407
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1408
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/actions/workflows/ci.yaml/badge.svg?branch=master",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 8
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 9
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:https://img.shields.io/badge/license-MIT-blue.svg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 176
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 177
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:README.md",
-      "target": "external:unknown:packages/landing/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 933
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 934
-          }
-        }
-      ]
-    },
-    {
       "source": "file:RELEASE.md",
       "target": "module:RELEASE.md",
       "kind": "contains",
@@ -7314,116 +6864,11 @@
       "origin": "syntax"
     },
     {
-      "source": "file:RELEASE.md",
-      "target": "external:unknown:https://developer.garmin.com/connect-iq/sdk/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1898
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1899
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:RELEASE.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55#readme",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2134
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2135
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:RELEASE.md",
-      "target": "external:unknown:https://hieudoanm.github.io/fr55/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2192
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2193
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:RELEASE.md",
-      "target": "external:unknown:https://hieudoanm.github.io/fr55/gallery/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2243
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2244
-          }
-        }
-      ]
-    },
-    {
       "source": "file:apps/README.md",
       "target": "module:apps/README.md",
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
-    },
-    {
-      "source": "file:apps/README.md",
-      "target": "external:unknown:https://hieudoanm.github.io/fr55/gallery/",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 393
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 394
-          }
-        }
-      ]
     },
     {
       "source": "file:apps/barcode/AGENTS.md",
@@ -7440,6 +6885,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/barcode/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 71
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 72
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/binary/AGENTS.md",
       "target": "module:apps/binary/AGENTS.md",
       "kind": "contains",
@@ -7452,6 +6918,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/binary/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 69
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 70
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/chronograph/AGENTS.md",
@@ -7468,6 +6955,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/chronograph/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 79
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 80
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/compass/AGENTS.md",
       "target": "module:apps/compass/AGENTS.md",
       "kind": "contains",
@@ -7480,6 +6988,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/compass/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 71
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 72
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/dotmatrix/AGENTS.md",
@@ -7496,6 +7025,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/dotmatrix/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 75
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 76
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/ecg/AGENTS.md",
       "target": "module:apps/ecg/AGENTS.md",
       "kind": "contains",
@@ -7508,6 +7058,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/ecg/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 63
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 64
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/hands/AGENTS.md",
@@ -7566,6 +7137,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/moon/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 65
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 66
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/pie/AGENTS.md",
       "target": "module:apps/pie/AGENTS.md",
       "kind": "contains",
@@ -7578,6 +7170,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/pie/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 63
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 64
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/rings/AGENTS.md",
@@ -7594,6 +7207,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/rings/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 67
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 68
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/roman/AGENTS.md",
       "target": "module:apps/roman/AGENTS.md",
       "kind": "contains",
@@ -7606,6 +7240,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/roman/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 67
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 68
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/spiral/AGENTS.md",
@@ -7622,6 +7277,27 @@
       "origin": "syntax"
     },
     {
+      "source": "file:apps/spiral/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 69
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 70
+          }
+        }
+      ]
+    },
+    {
       "source": "file:apps/split/AGENTS.md",
       "target": "module:apps/split/AGENTS.md",
       "kind": "contains",
@@ -7634,6 +7310,27 @@
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "file:apps/split/README.md",
+      "target": "file:README.md",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 67
+          },
+          "end": {
+            "line": 1,
+            "column": 2,
+            "byte": 68
+          }
+        }
+      ]
     },
     {
       "source": "file:apps/timezones/AGENTS.md",
@@ -7713,363 +7410,6 @@
       "origin": "syntax"
     },
     {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-barcode.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2648
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2649
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-binary.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1757
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1758
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-chronograph.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1401
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1402
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-compass.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 3182
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 3183
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-dotmatrix.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1936
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1937
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-ecg.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2470
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2471
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-hands.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 689
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 690
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-maximalism.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1045
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1046
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-minimalism.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 867
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 868
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-moon.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 3360
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 3361
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-pie.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2292
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2293
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-rings.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1579
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1580
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-roman.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2114
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2115
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-spiral.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 2826
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 2827
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-split.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 3004
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 3005
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/download/latest/fr55-timezones.prg",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 1223
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 1224
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:packages/landing/docs/guides/watchface-apps.md",
-      "target": "external:unknown:https://github.com/hieudoanm/fr55/releases/latest",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 1,
-            "column": 1,
-            "byte": 184
-          },
-          "end": {
-            "line": 1,
-            "column": 2,
-            "byte": 185
-          }
-        }
-      ]
-    },
-    {
       "source": "file:packages/landing/docs/guides/watchface-designs.md",
       "target": "module:packages/landing/docs/guides/watchface-designs.md",
       "kind": "contains",
@@ -8078,9 +7418,9 @@
     },
     {
       "source": "file:packages/landing/docs/guides/watchface-designs.md",
-      "target": "external:unknown:watchface-apps.md",
+      "target": "file:packages/landing/docs/guides/watchface-apps.md",
       "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -11266,6 +10606,27 @@
     },
     {
       "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
+      "target": "external:typescript:Response.json",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 10,
+            "byte": 283
+          },
+          "end": {
+            "line": 13,
+            "column": 30,
+            "byte": 303
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
       "target": "external:typescript:lib::map",
       "kind": "calls",
       "status": "resolved_external",
@@ -11314,27 +10675,6 @@
             "line": 6,
             "column": 30,
             "byte": 136
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/api/search-index/route.ts::GET",
-      "target": "unresolved:typescript:json",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 13,
-            "column": 10,
-            "byte": 283
-          },
-          "end": {
-            "line": 13,
-            "column": 30,
-            "byte": 303
           }
         }
       ]
@@ -11764,7 +11104,7 @@
     },
     {
       "source": "function:packages/landing/src/app/layout.tsx::RootLayout",
-      "target": "external:tsx:lib::stringify",
+      "target": "external:tsx:JSON.stringify",
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
@@ -11818,6 +11158,27 @@
     },
     {
       "source": "function:packages/landing/src/app/page.tsx::StepCard",
+      "target": "external:tsx:String.padStart",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 114,
+            "column": 8,
+            "byte": 3596
+          },
+          "end": {
+            "line": 114,
+            "column": 42,
+            "byte": 3630
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/page.tsx::StepCard",
       "target": "external:tsx:lib::String",
       "kind": "calls",
       "status": "resolved_external",
@@ -11833,27 +11194,6 @@
             "line": 114,
             "column": 25,
             "byte": 3613
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/page.tsx::StepCard",
-      "target": "external:tsx:lib::padStart",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 114,
-            "column": 8,
-            "byte": 3596
-          },
-          "end": {
-            "line": 114,
-            "column": 42,
-            "byte": 3630
           }
         }
       ]
@@ -11875,6 +11215,27 @@
             "line": 25,
             "column": 32,
             "byte": 519
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
+      "target": "external:tsx:Promise.reject",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 90,
+            "column": 39,
+            "byte": 2695
+          },
+          "end": {
+            "line": 90,
+            "column": 63,
+            "byte": 2719
           }
         }
       ]
@@ -11938,27 +11299,6 @@
             "line": 194,
             "column": 17,
             "byte": 6432
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch",
-      "target": "external:tsx:lib::reject",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 90,
-            "column": 39,
-            "byte": 2695
-          },
-          "end": {
-            "line": 90,
-            "column": 63,
-            "byte": 2719
           }
         }
       ]
@@ -12526,7 +11866,7 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
-      "target": "external:tsx:lib::max",
+      "target": "external:tsx:Math.max",
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
@@ -12547,7 +11887,7 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::DocsSearch.onKeyDown",
-      "target": "external:tsx:lib::min",
+      "target": "external:tsx:Math.min",
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
@@ -12715,6 +12055,48 @@
             "line": 123,
             "column": 21,
             "byte": 3571
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
+      "target": "external:tsx:Math.max",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 65,
+            "column": 21,
+            "byte": 1833
+          },
+          "end": {
+            "line": 65,
+            "column": 42,
+            "byte": 1854
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
+      "target": "external:tsx:Math.min",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 66,
+            "column": 19,
+            "byte": 1874
+          },
+          "end": {
+            "line": 66,
+            "column": 74,
+            "byte": 1929
           }
         }
       ]
@@ -12928,48 +12310,6 @@
     },
     {
       "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "external:tsx:lib::max",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 65,
-            "column": 21,
-            "byte": 1833
-          },
-          "end": {
-            "line": 65,
-            "column": 42,
-            "byte": 1854
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
-      "target": "external:tsx:lib::min",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 66,
-            "column": 19,
-            "byte": 1874
-          },
-          "end": {
-            "line": 66,
-            "column": 74,
-            "byte": 1929
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
       "target": "external:tsx:lib::push",
       "kind": "calls",
       "status": "resolved_external",
@@ -13129,6 +12469,27 @@
             "line": 54,
             "column": 43,
             "byte": 1620
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/components/molecules/DocsSearch.tsx::search",
+      "target": "interface:packages/landing/src/components/molecules/DocsSearch.tsx::Result",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 18,
+            "byte": 1122
+          },
+          "end": {
+            "line": 41,
+            "column": 24,
+            "byte": 1128
           }
         }
       ]
@@ -14008,27 +13369,6 @@
     },
     {
       "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
-      "target": "external:typescript:lib::parse",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 176,
-            "column": 17,
-            "byte": 5474
-          },
-          "end": {
-            "line": 176,
-            "column": 57,
-            "byte": 5514
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
       "target": "external:typescript:lib::sort",
       "kind": "calls",
       "status": "resolved_external",
@@ -14065,6 +13405,27 @@
             "line": 177,
             "column": 36,
             "byte": 5561
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/lib/docs.ts::getDocPages",
+      "target": "external:typescript:marked.parse",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 176,
+            "column": 17,
+            "byte": 5474
+          },
+          "end": {
+            "line": 176,
+            "column": 57,
+            "byte": 5514
           }
         }
       ]
@@ -14905,9 +14266,9 @@
     },
     {
       "source": "interface:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPageProps",
-      "target": "unresolved:tsx:Promise",
+      "target": "external:tsx:lib::Promise",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -14926,9 +14287,9 @@
     },
     {
       "source": "interface:packages/landing/src/app/layout.tsx::RootLayoutProps",
-      "target": "unresolved:tsx:ReactNode",
+      "target": "external:tsx:lib::ReactNode",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -14941,6 +14302,27 @@
             "line": 85,
             "column": 22,
             "byte": 2357
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:packages/landing/src/components/molecules/CTA.tsx::CTAProps",
+      "target": "external:tsx:lib::ReactNode",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 213
+          },
+          "end": {
+            "line": 12,
+            "column": 25,
+            "byte": 222
           }
         }
       ]
@@ -14974,27 +14356,6 @@
             "line": 14,
             "column": 22,
             "byte": 265
-          }
-        }
-      ]
-    },
-    {
-      "source": "interface:packages/landing/src/components/molecules/CTA.tsx::CTAProps",
-      "target": "unresolved:tsx:ReactNode",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 12,
-            "column": 16,
-            "byte": 213
-          },
-          "end": {
-            "line": 12,
-            "column": 25,
-            "byte": 222
           }
         }
       ]
@@ -15064,6 +14425,51 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/Hero.tsx::HeroProps",
+      "target": "external:tsx:lib::ReactNode",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 10,
+            "byte": 218
+          },
+          "end": {
+            "line": 11,
+            "column": 19,
+            "byte": 227
+          }
+        },
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 244
+          },
+          "end": {
+            "line": 12,
+            "column": 25,
+            "byte": 253
+          }
+        },
+        {
+          "start": {
+            "line": 16,
+            "column": 14,
+            "byte": 332
+          },
+          "end": {
+            "line": 16,
+            "column": 23,
+            "byte": 341
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:packages/landing/src/components/molecules/Hero.tsx::HeroProps",
       "target": "interface:packages/landing/src/components/molecules/CTA.tsx::CTALink",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -15112,51 +14518,6 @@
             "line": 15,
             "column": 18,
             "byte": 315
-          }
-        }
-      ]
-    },
-    {
-      "source": "interface:packages/landing/src/components/molecules/Hero.tsx::HeroProps",
-      "target": "unresolved:tsx:ReactNode",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 11,
-            "column": 10,
-            "byte": 218
-          },
-          "end": {
-            "line": 11,
-            "column": 19,
-            "byte": 227
-          }
-        },
-        {
-          "start": {
-            "line": 12,
-            "column": 16,
-            "byte": 244
-          },
-          "end": {
-            "line": 12,
-            "column": 25,
-            "byte": 253
-          }
-        },
-        {
-          "start": {
-            "line": 16,
-            "column": 14,
-            "byte": 332
-          },
-          "end": {
-            "line": 16,
-            "column": 23,
-            "byte": 341
           }
         }
       ]
@@ -15226,9 +14587,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/SectionHead.tsx::SectionHeadProps",
-      "target": "unresolved:tsx:ReactNode",
+      "target": "external:tsx:lib::ReactNode",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15464,9 +14825,30 @@
     },
     {
       "source": "module:packages/landing/src/app/error.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::Error",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 10,
+            "byte": 76
+          },
+          "end": {
+            "line": 6,
+            "column": 15,
+            "byte": 81
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/error.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15489,6 +14871,39 @@
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "module:packages/landing/src/app/gallery/page.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 144,
+            "column": 22,
+            "byte": 3783
+          },
+          "end": {
+            "line": 144,
+            "column": 24,
+            "byte": 3785
+          }
+        },
+        {
+          "start": {
+            "line": 167,
+            "column": 20,
+            "byte": 4672
+          },
+          "end": {
+            "line": 167,
+            "column": 22,
+            "byte": 4674
+          }
+        }
+      ]
     },
     {
       "source": "module:packages/landing/src/app/gallery/page.tsx",
@@ -15519,39 +14934,6 @@
             "line": 144,
             "column": 47,
             "byte": 3808
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/gallery/page.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 144,
-            "column": 22,
-            "byte": 3783
-          },
-          "end": {
-            "line": 144,
-            "column": 24,
-            "byte": 3785
-          }
-        },
-        {
-          "start": {
-            "line": 167,
-            "column": 20,
-            "byte": 4672
-          },
-          "end": {
-            "line": 167,
-            "column": 22,
-            "byte": 4674
           }
         }
       ]
@@ -15656,9 +15038,30 @@
     },
     {
       "source": "module:packages/landing/src/app/global-error.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::Error",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 10,
+            "byte": 82
+          },
+          "end": {
+            "line": 6,
+            "column": 15,
+            "byte": 87
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/global-error.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15726,6 +15129,27 @@
     },
     {
       "source": "module:packages/landing/src/app/layout.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 88,
+            "column": 19,
+            "byte": 2380
+          },
+          "end": {
+            "line": 88,
+            "column": 21,
+            "byte": 2382
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/layout.tsx",
       "target": "interface:packages/landing/src/app/layout.tsx::RootLayoutProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -15741,27 +15165,6 @@
             "line": 88,
             "column": 37,
             "byte": 2398
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 88,
-            "column": 19,
-            "byte": 2380
-          },
-          "end": {
-            "line": 88,
-            "column": 21,
-            "byte": 2382
           }
         }
       ]
@@ -15859,9 +15262,9 @@
     },
     {
       "source": "module:packages/landing/src/app/loading.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::FC",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15887,9 +15290,9 @@
     },
     {
       "source": "module:packages/landing/src/app/not-found.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::FC",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -15915,9 +15318,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::FC",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -16062,6 +15465,39 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/CTA.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 17,
+            "column": 18,
+            "byte": 287
+          },
+          "end": {
+            "line": 17,
+            "column": 20,
+            "byte": 289
+          }
+        },
+        {
+          "start": {
+            "line": 35,
+            "column": 12,
+            "byte": 705
+          },
+          "end": {
+            "line": 35,
+            "column": 14,
+            "byte": 707
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/CTA.tsx",
       "target": "interface:packages/landing/src/components/molecules/CTA.tsx::CTALink",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -16098,39 +15534,6 @@
             "line": 35,
             "column": 23,
             "byte": 716
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/CTA.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 17,
-            "column": 18,
-            "byte": 287
-          },
-          "end": {
-            "line": 17,
-            "column": 20,
-            "byte": 289
-          }
-        },
-        {
-          "start": {
-            "line": 35,
-            "column": 12,
-            "byte": 705
-          },
-          "end": {
-            "line": 35,
-            "column": 14,
-            "byte": 707
           }
         }
       ]
@@ -16214,9 +15617,9 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/DocsSearch.tsx",
-      "target": "unresolved:tsx:FC",
+      "target": "external:tsx:lib::FC",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -16487,6 +15890,27 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Features.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 16,
+            "column": 17,
+            "byte": 268
+          },
+          "end": {
+            "line": 16,
+            "column": 19,
+            "byte": 270
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Features.tsx",
       "target": "interface:packages/landing/src/components/molecules/Features.tsx::FeaturesProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -16502,27 +15926,6 @@
             "line": 16,
             "column": 33,
             "byte": 284
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Features.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 16,
-            "column": 17,
-            "byte": 268
-          },
-          "end": {
-            "line": 16,
-            "column": 19,
-            "byte": 270
           }
         }
       ]
@@ -16592,6 +15995,27 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Footer.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 15,
+            "byte": 178
+          },
+          "end": {
+            "line": 10,
+            "column": 17,
+            "byte": 180
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Footer.tsx",
       "target": "interface:packages/landing/src/components/molecules/Footer.tsx::FooterProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -16607,27 +16031,6 @@
             "line": 10,
             "column": 29,
             "byte": 192
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Footer.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 10,
-            "column": 15,
-            "byte": 178
-          },
-          "end": {
-            "line": 10,
-            "column": 17,
-            "byte": 180
           }
         }
       ]
@@ -16669,6 +16072,39 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Hero.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 19,
+            "column": 19,
+            "byte": 364
+          },
+          "end": {
+            "line": 19,
+            "column": 21,
+            "byte": 366
+          }
+        },
+        {
+          "start": {
+            "line": 37,
+            "column": 13,
+            "byte": 783
+          },
+          "end": {
+            "line": 37,
+            "column": 15,
+            "byte": 785
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Hero.tsx",
       "target": "interface:packages/landing/src/components/molecules/CTA.tsx::CTALink",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -16705,39 +16141,6 @@
             "line": 37,
             "column": 25,
             "byte": 795
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Hero.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 19,
-            "column": 19,
-            "byte": 364
-          },
-          "end": {
-            "line": 19,
-            "column": 21,
-            "byte": 366
-          }
-        },
-        {
-          "start": {
-            "line": 37,
-            "column": 13,
-            "byte": 783
-          },
-          "end": {
-            "line": 37,
-            "column": 15,
-            "byte": 785
           }
         }
       ]
@@ -16828,6 +16231,51 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 29,
+            "column": 20,
+            "byte": 569
+          },
+          "end": {
+            "line": 29,
+            "column": 22,
+            "byte": 571
+          }
+        },
+        {
+          "start": {
+            "line": 44,
+            "column": 17,
+            "byte": 937
+          },
+          "end": {
+            "line": 44,
+            "column": 19,
+            "byte": 939
+          }
+        },
+        {
+          "start": {
+            "line": 78,
+            "column": 15,
+            "byte": 1956
+          },
+          "end": {
+            "line": 78,
+            "column": 17,
+            "byte": 1958
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
       "target": "interface:packages/landing/src/components/molecules/Navbar.tsx::NavGroup",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -16885,51 +16333,6 @@
             "line": 78,
             "column": 29,
             "byte": 1970
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 29,
-            "column": 20,
-            "byte": 569
-          },
-          "end": {
-            "line": 29,
-            "column": 22,
-            "byte": 571
-          }
-        },
-        {
-          "start": {
-            "line": 44,
-            "column": 17,
-            "byte": 937
-          },
-          "end": {
-            "line": 44,
-            "column": 19,
-            "byte": 939
-          }
-        },
-        {
-          "start": {
-            "line": 78,
-            "column": 15,
-            "byte": 1956
-          },
-          "end": {
-            "line": 78,
-            "column": 17,
-            "byte": 1958
           }
         }
       ]
@@ -17076,6 +16479,27 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/SectionHead.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 20,
+            "byte": 139
+          },
+          "end": {
+            "line": 8,
+            "column": 22,
+            "byte": 141
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/SectionHead.tsx",
       "target": "interface:packages/landing/src/components/molecules/SectionHead.tsx::SectionHeadProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -17091,27 +16515,6 @@
             "line": 8,
             "column": 39,
             "byte": 158
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/SectionHead.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 8,
-            "column": 20,
-            "byte": 139
-          },
-          "end": {
-            "line": 8,
-            "column": 22,
-            "byte": 141
           }
         }
       ]
@@ -17143,6 +16546,48 @@
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
+      "target": "external:tsx:lib::FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 67,
+            "column": 17,
+            "byte": 1794
+          },
+          "end": {
+            "line": 67,
+            "column": 19,
+            "byte": 1796
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
+      "target": "external:tsx:lib::Record",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 11,
+            "byte": 169
+          },
+          "end": {
+            "line": 10,
+            "column": 17,
+            "byte": 175
+          }
+        }
+      ]
     },
     {
       "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
@@ -17182,48 +16627,6 @@
             "line": 10,
             "column": 25,
             "byte": 183
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
-      "target": "unresolved:tsx:FC",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 67,
-            "column": 17,
-            "byte": 1794
-          },
-          "end": {
-            "line": 67,
-            "column": 19,
-            "byte": 1796
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Terminal.tsx",
-      "target": "unresolved:tsx:Record",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 10,
-            "column": 11,
-            "byte": 169
-          },
-          "end": {
-            "line": 10,
-            "column": 17,
-            "byte": 175
           }
         }
       ]
@@ -17405,10 +16808,10 @@
     },
     {
       "source": "module:packages/landing/src/lib/docs.ts",
-      "target": "unresolved:typescript:cwd",
+      "target": "external:typescript:process.cwd",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -17426,9 +16829,9 @@
     },
     {
       "source": "module:packages/landing/src/lib/docs.ts",
-      "target": "unresolved:typescript:Record",
+      "target": "external:typescript:lib::Record",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -18521,6 +17924,82 @@
     {
       "severity": "warning",
       "kind": "unresolved_import",
+      "message": "cannot resolve import `./LICENSE`",
+      "file": "CONTRIBUTING.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 2424
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 2425
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./apps/`",
+      "file": "README.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 675
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 676
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./packages/landing/`",
+      "file": "README.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 933
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 934
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./assets/`",
+      "file": "README.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 1053
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 1054
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
       "message": "cannot resolve import `.github/workflows/ci.yaml`",
       "file": "README.md",
       "range": {
@@ -18540,6 +18019,44 @@
     {
       "severity": "warning",
       "kind": "unresolved_import",
+      "message": "cannot resolve import `./ci/devices/`",
+      "file": "README.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 1407
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 1408
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./LICENSE`",
+      "file": "README.md",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 3950
+        },
+        "end": {
+          "line": 1,
+          "column": 2,
+          "byte": 3951
+        }
+      },
+      "language": "markdown"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
       "message": "cannot resolve import `../assets/design/svg/`",
       "file": "apps/README.md",
       "range": {
@@ -18552,234 +18069,6 @@
           "line": 1,
           "column": 2,
           "byte": 324
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/barcode/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 71
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 72
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/binary/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 69
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 70
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/chronograph/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 79
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 80
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/compass/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 71
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 72
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/dotmatrix/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 75
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 76
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/ecg/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 63
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 64
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/moon/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 65
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 66
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/pie/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 63
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 64
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/rings/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 67
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 68
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/roman/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 67
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 68
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/spiral/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 69
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 70
-        }
-      },
-      "language": "markdown"
-    },
-    {
-      "severity": "warning",
-      "kind": "unresolved_import",
-      "message": "cannot resolve import `../../README.md`",
-      "file": "apps/split/README.md",
-      "range": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "byte": 67
-        },
-        "end": {
-          "line": 1,
-          "column": 2,
-          "byte": 68
         }
       },
       "language": "markdown"
@@ -18826,14 +18115,14 @@
   "statistics": {
     "files": 73,
     "packages": 2,
-    "nodes": 512,
-    "edges": 955,
+    "nodes": 479,
+    "edges": 936,
     "symbols": 223,
-    "unresolvedEdges": 57,
-    "diagnostics": 16,
+    "unresolvedEdges": 33,
+    "diagnostics": 10,
     "byNodeKind": {
       "constant": 85,
-      "external_symbol": 106,
+      "external_symbol": 80,
       "file": 73,
       "framework": 4,
       "function": 45,
@@ -18843,7 +18132,7 @@
       "property": 63,
       "repository": 1,
       "type": 1,
-      "unknown": 30,
+      "unknown": 23,
       "variable": 9
     },
     "byEdgeKind": {
@@ -18851,21 +18140,21 @@
       "contains": 394,
       "defines": 223,
       "exports": 36,
-      "imports": 93,
+      "imports": 71,
       "uses_framework": 4,
-      "uses_type": 58
+      "uses_type": 61
     },
     "byLanguage": {
       "bash": 4,
       "javascript": 9,
-      "markdown": 130,
-      "tsx": 268,
+      "markdown": 96,
+      "tsx": 269,
       "typescript": 94
     },
     "byStatus": {
-      "resolved_external": 180,
-      "resolved_internal": 718,
-      "unresolved": 57
+      "resolved_external": 169,
+      "resolved_internal": 734,
+      "unresolved": 33
     },
     "byFramework": {
       "nextjs": 1,
