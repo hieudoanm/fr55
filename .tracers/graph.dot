@@ -224,6 +224,8 @@ digraph tracers {
   "file:packages/landing/src/lib/sections.ts" [label="packages/landing/src/lib/sections.ts\nfile", color="blue"];
   "framework:nextjs:tailwindcss" [label="Next.js\nframework", color="magenta"];
   "framework:react:tailwindcss" [label="React\nframework", color="magenta"];
+  "framework:tailwindcss:tailwindcss" [label="Tailwind CSS\nframework", color="magenta"];
+  "framework:turborepo:commitlint" [label="Turborepo\nframework", color="magenta"];
   "function:packages/landing/src/app/api/search-index/route.ts::GET" [label="GET\nfunction", color="red"];
   "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::DocsPage" [label="DocsPage\nfunction", color="red"];
   "function:packages/landing/src/app/docs/[[...slug]]/page.tsx::findDoc" [label="findDoc\nfunction", color="red"];
@@ -1467,4 +1469,6 @@ digraph tracers {
   "repository:." -> "package:packages/landing" [label="contains", style="solid"];
   "repository:." -> "framework:nextjs:tailwindcss" [label="uses_framework", style="dashed"];
   "repository:." -> "framework:react:tailwindcss" [label="uses_framework", style="dashed"];
+  "repository:." -> "framework:tailwindcss:tailwindcss" [label="uses_framework", style="dashed"];
+  "repository:." -> "framework:turborepo:commitlint" [label="uses_framework", style="dashed"];
 }
