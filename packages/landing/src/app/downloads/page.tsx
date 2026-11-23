@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { FC } from 'react';
-import { FaDownload } from 'react-icons/fa';
+import { PiDownloadSimple } from 'react-icons/pi';
 
 export const metadata: Metadata = {
   title: 'Downloads',
@@ -64,7 +64,7 @@ const Downloads: FC = () => (
               <span className="text-base-content text-sm font-semibold">
                 {slug}
               </span>
-              <FaDownload className="text-primary h-4 w-4 shrink-0" />
+              <PiDownloadSimple className="text-primary h-4 w-4 shrink-0" />
             </a>
           ))}
         </div>

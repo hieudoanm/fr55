@@ -7,12 +7,12 @@ import Link from 'next/link';
 import type { Metadata, NextPage } from 'next';
 import type { FC } from 'react';
 import {
-  LuBookOpen,
-  LuGlobe,
-  LuHeartPulse,
-  LuImages,
-  LuWatch,
-} from 'react-icons/lu';
+  PiBookOpen,
+  PiGlobe,
+  PiHeartbeat,
+  PiImages,
+  PiWatch,
+} from 'react-icons/pi';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -22,32 +22,32 @@ const GITHUB = 'https://github.com/hieudoanm/fr55';
 
 const FEATURES: Feature[] = [
   {
-    icon: LuWatch,
+    icon: PiWatch,
     title: '16 watchfaces',
     body: 'hands, rings, dotmatrix, compass, and more — each a self-contained Connect IQ app under apps/ that builds independently.',
   },
   {
-    icon: LuImages,
+    icon: PiImages,
     title: 'Design previews',
     body: 'Every app ships with an SVG/PNG design preview — analog, minimal, world clock, chronograph, rings, binary, dot-matrix, and more.',
   },
   {
-    icon: LuGlobe,
+    icon: PiGlobe,
     title: 'World clock',
     body: 'The timezones face stacks London, your local time, and Melbourne at a glance.',
   },
   {
-    icon: LuHeartPulse,
+    icon: PiHeartbeat,
     title: 'Health at a glance',
     body: 'Minimalism and maximalism surface heart rate, battery, and the time in clean monochrome layouts.',
   },
   {
-    icon: LuBookOpen,
+    icon: PiBookOpen,
     title: 'Docs included',
     body: 'Getting-started, Connect IQ concepts, and per-app guides — readable right here on the site.',
   },
   {
-    icon: LuWatch,
+    icon: PiWatch,
     title: 'Forerunner 55 first',
     body: 'Targeted at the fr55 240×240 MIP display, with resolution-aware drawing for other Connect IQ devices.',
   },
