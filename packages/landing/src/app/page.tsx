@@ -206,8 +206,8 @@ const HomePage: NextPage = () => (
     <CTA
       title="Ready for a new face?"
       description="Pick a design from the gallery, or build any of the 16 apps yourself."
-      primary={{ label: 'Open the gallery', href: '/gallery/' }}
-      secondary={{ label: 'View on GitHub', href: GITHUB, external: true }}
+      primary={{ label: 'Download', href: '/downloads/' }}
+      secondary={{ label: 'View Docs', href: '/docs/' }}
     />
   </main>
 );
