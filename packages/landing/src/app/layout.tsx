@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { label: 'Install', href: '#install' },
   { label: 'Gallery', href: '/gallery/' },
   { label: 'Docs', href: '/docs/' },
+  { label: 'Downloads', href: '/downloads/' },
 ];
 
 const DESCRIPTION =
