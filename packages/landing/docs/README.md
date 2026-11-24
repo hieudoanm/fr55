@@ -17,3 +17,7 @@ companion repo `hieudoanm/monkey`.
 - **Getting started** — build and preview a watchface app.
 - **Concepts** — Connect IQ and the Monkey C language.
 - **Guides** — the watchface apps and the design gallery.
+
+## Installation guides
+
+- [Install a watchface on the Forerunner 55](guides/how-to-install-watchface.md)
