@@ -44,3 +44,4 @@ node_modules
 
 .turbo
 .tracers-cache/
+.tracers/cache/
